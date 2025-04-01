@@ -1,1 +1,1 @@
-# SPANetV2 Official (ongoing)
+# SPANetV2 Official (Coming Soon)
