@@ -1,4 +1,4 @@
-#SPANetV2 for Classification
+# SPANetV2 for Classification
 
 <p align="left">
 <a href="https://arxiv.org/abs/2503.23947" alt="arXiv">
