@@ -1,5 +1,9 @@
 # SPANetV2 Official (Coming Soon)
 
+<p align="left">
+<a href="https://arxiv.org/abs/2503.23947" alt="arXiv">
+    <img src="https://img.shields.io/badge/arXiv-2503.23947-b31b1b.svg?style=flat" /></a>
+</p>
 
 ## Bibtex
 ```latex
