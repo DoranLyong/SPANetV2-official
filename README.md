@@ -5,7 +5,20 @@
     <img src="https://img.shields.io/badge/arXiv-2503.23947-b31b1b.svg?style=flat" /></a>
 </p>
 
-## Bibtex
+### 💬 This repo is the official implementation of:
+- ***arXiv2025***: Spectral-Adaptive Modulation Networks for Visual Perception
+
+  
+
+### 🤖 It currently includes code and models for the following tasks:
+- [x] [Image Classification](./image_classification)
+- [] [Object Detection](object_detection)
+- [] [Semantic Segmentation](semantic_segmentation)
+
+
+## ⭐ Cite SPANetV2
+If you find this repository useful, please give us stars and use the following BibTeX entry for citation.
+
 ```latex
 @article{yun2025spectral,
   title={Spectral-Adaptive Modulation Networks for Visual Perception},
