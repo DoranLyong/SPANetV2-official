@@ -19,13 +19,17 @@
 ## Main results on ImageNet-1K
 Please see [image_classification](image_classification) for more details.
 
-| Model      | Pretrain    | Resolution | Top-1 | #Param. | FLOPs |
+| Model      | Pretrain    | Resolution | Top-1 | #Param. | MACs |
 | ---------- | ----------- | ---------- | ----- | ------- | ----- |
-| SPANet-S   | ImageNet-1K | 224x224    | 83.1  | 28.7M   | 4.6G |
-| SPANet-M   | ImageNet-1K | 224x224    | 83.5  | 41.8M   | 6.8G |
-| SPANet-MX   | ImageNet-1K | 224x224    | 83.8  | 54.9M   | 9.0G |
-| SPANet-B   | ImageNet-1K | 224x224    | 84.0  | 75.9M   | 12.0G |
-| SPANet-BX   | ImageNet-1K | 224x224    | 84.4  | 99.8 M   | 15.8G |
+| SPANeV2-S18-pure     | ImageNet-1K | 224x224  | 83.4  | 29M   | 4.2G |
+| SPANeV2-S18-hybrid   | ImageNet-1K | 224x224  | 83.9  | 27M   | 4.2G |
+| SPANeV2-S36-pure     | ImageNet-1K | 224x224  | 84.4  | 44M   | 8.1G |
+| SPANeV2-S36-hybrid   | ImageNet-1K | 224x224  | 84.7  | 41M   | 8.1G |
+| SPANeV2-M36-pure     | ImageNet-1K | 224x224  | 84.9  | 61M   | 13.7G |
+| SPANeV2-M36-hybrid   | ImageNet-1K | 224x224  | 85.3  | 58M   | 13.6G |
+| SPANeV2-B36-pure     | ImageNet-1K | 224x224  | 85.0  | 100M  | 24.3G |
+| SPANeV2-B36-hybrid   | ImageNet-1K | 224x224  | 85.6  | 100M  | 23.9G |
+
 
 
 ## ⭐ Cite SPANetV2
