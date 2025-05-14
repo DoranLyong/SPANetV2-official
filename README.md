@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/arXiv-2503.23947-b31b1b.svg?style=flat" /></a>
 </p>
 
-### 💬 News:
+### 📜 History:
 - ***arXiv2025***: Spectral-Adaptive Modulation Networks for Visual Perception
 - ***ICCV2023***: [SPANet: Frequency-balancing Token Mixer using Spectral Pooling Aggregation Modulation](https://doranlyong.github.io/projects/spanet/)
 
