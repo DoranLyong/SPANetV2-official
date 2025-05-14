@@ -21,14 +21,14 @@ Please see [image_classification](image_classification) for more details.
 
 | Model      | Pretrain    | Resolution | Top-1 | #Param. | MACs |
 | ---------- | ----------- | ---------- | ----- | ------- | ----- |
-| SPANeV2-S18-pure     | ImageNet-1K | 224x224  | 83.4  | 29M   | 4.2G |
-| SPANeV2-S18-hybrid   | ImageNet-1K | 224x224  | 83.9  | 27M   | 4.2G |
-| SPANeV2-S36-pure     | ImageNet-1K | 224x224  | 84.4  | 44M   | 8.1G |
-| SPANeV2-S36-hybrid   | ImageNet-1K | 224x224  | 84.7  | 41M   | 8.1G |
-| SPANeV2-M36-pure     | ImageNet-1K | 224x224  | 84.9  | 61M   | 13.7G |
-| SPANeV2-M36-hybrid   | ImageNet-1K | 224x224  | 85.3  | 58M   | 13.6G |
-| SPANeV2-B36-pure     | ImageNet-1K | 224x224  | 85.0  | 100M  | 24.3G |
-| SPANeV2-B36-hybrid   | ImageNet-1K | 224x224  | 85.6  | 100M  | 23.9G |
+| SPANeV2-S18-pure     | ImageNet-1K | 224x224 | 83.4 | 29M  | 4.2G |
+| SPANeV2-S18-hybrid   | ImageNet-1K | 224x224 | 83.9 | 27M  | 4.2G |
+| SPANeV2-S36-pure     | ImageNet-1K | 224x224 | 84.4 | 44M  | 8.1G |
+| SPANeV2-S36-hybrid   | ImageNet-1K | 224x224 | 84.7 | 41M  | 8.1G |
+| SPANeV2-M36-pure     | ImageNet-1K | 224x224 | 84.9 | 61M  | 13.7G |
+| SPANeV2-M36-hybrid   | ImageNet-1K | 224x224 | 85.3 | 58M  | 13.6G |
+| SPANeV2-B36-pure     | ImageNet-1K | 224x224 | 85.0 | 100M | 24.3G |
+| SPANeV2-B36-hybrid   | ImageNet-1K | 224x224 | 85.6 | 100M | 23.9G |
 
 
 
