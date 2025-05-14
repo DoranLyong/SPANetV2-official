@@ -16,6 +16,17 @@
 - [] [Object Detection](object_detection)
 - [] [Semantic Segmentation](semantic_segmentation)
 
+## Main results on ImageNet-1K
+Please see [image_classification](image_classification) for more details.
+
+| Model      | Pretrain    | Resolution | Top-1 | #Param. | FLOPs |
+| ---------- | ----------- | ---------- | ----- | ------- | ----- |
+| SPANet-S   | ImageNet-1K | 224x224    | 83.1  | 28.7M   | 4.6G |
+| SPANet-M   | ImageNet-1K | 224x224    | 83.5  | 41.8M   | 6.8G |
+| SPANet-MX   | ImageNet-1K | 224x224    | 83.8  | 54.9M   | 9.0G |
+| SPANet-B   | ImageNet-1K | 224x224    | 84.0  | 75.9M   | 12.0G |
+| SPANet-BX   | ImageNet-1K | 224x224    | 84.4  | 99.8 M   | 15.8G |
+
 
 ## ⭐ Cite SPANetV2
 If you find this repository useful, please give us stars and use the following BibTeX entry for citation.
