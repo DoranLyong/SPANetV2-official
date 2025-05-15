@@ -35,14 +35,14 @@ Please see [image_classification](image_classification) for more details.
 Please see [object_detection](object_detection) for more details.
 
 
-### Mask R-CNN 3x
+### Mask R-CNN 
 |         Backbone          | Lr Schd | box mAP | mask mAP | MACs (G)|
 | :---------------          | :-----  | :-----  | :------  | :-----  | 
 | SPANet-S18-pure           |   3x    |  48.0   |   42.9   |   255   | 
 | SPANet-S18-hybrid         |   3x    |  49.6   |   44.3   |   251   | 
 
 
-### Cascade Mask R-CNN 3x
+### Cascade Mask R-CNN 
 |         Backbone          | Lr Schd | box mAP | mask mAP | MACs (G)|
 | :---------------          | :-----  | :-----  | :------  | :-----  | 
 | SPANet-S18-pure           |   3x    |  51.6   |   44.7   |   734   | 
