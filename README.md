@@ -1,4 +1,4 @@
-# SPANetV2 Official (Coming Soon)
+# SPANetV2 Official (Ongoing)
 
 <p align="left">
 <a href="https://arxiv.org/abs/2503.23947" alt="arXiv">
@@ -14,7 +14,7 @@
 ### 🤖 It currently includes code and models for the following tasks:
 - [x] [Image Classification](./image_classification)
 - [x] [Object Detection](object_detection)
-- [] [Semantic Segmentation](semantic_segmentation)
+- [x] [Semantic Segmentation](semantic_segmentation)
 
 ## Main results on ImageNet-1K
 Please see [image_classification](image_classification) for more details.
