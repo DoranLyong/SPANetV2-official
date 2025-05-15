@@ -26,6 +26,9 @@ To train SPANetV2 + {`Mask R-CNN` or `Cascade Mask-RCNN`} on a single node with 
 bash run_train.sh
 ```
 
+Before training, make sure that the pretrained weights on ImageNet-1K are placed in `ckpt` directory. 
+
+
 
 ## Evaluation
 To evaluate SPANetV2 + {`Mask R-CNN` or `Cascade Mask-RCNN`} on a single GPU, run:
