@@ -21,6 +21,8 @@ To train SPANetV2 + {`UperNet` or `Semantic FPN`} on a single node with 4 GPUs, 
 bash run_train.sh
 ```
 
+Before training, make sure that the pretrained weights on ImageNet-1K are placed in `ckpt` directory. 
+
 
 ## Evaluation
 To evaluate SPANetV2 + {`UperNet` or `Semantic FPN`} on a single GPU, run:
