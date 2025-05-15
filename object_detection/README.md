@@ -13,6 +13,9 @@ Prepare COCO 2017 according to the [guidelines](https://github.com/open-mmlab/mm
 * [COCO homepage](https://cocodataset.org/#download)
 
 
+You can specify the path of the dataset in `./local_configs/_base_/datasets/coco_instance.py`.
+
+
 
 ## Training
 
