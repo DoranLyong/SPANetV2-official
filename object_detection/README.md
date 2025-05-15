@@ -9,7 +9,7 @@ Check the [INSTALL.md](./INSTALL.md).
 
 Prepare COCO 2017 according to the [guidelines](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/useful_tools.md#dataset-download) in MMDetection. If you have interest in this dataset, refer to below links:
 
-* [mmdetection docs](https://mmdetection.readthedocs.io/en/stable/1_exist_data_model.html#prepare-datasets)
+* [mmdetection docs](https://mmdetection.readthedocs.io/en/latest/user_guides/dataset_prepare.html)
 * [COCO homepage](https://cocodataset.org/#download)
 
 
