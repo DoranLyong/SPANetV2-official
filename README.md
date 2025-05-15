@@ -35,37 +35,37 @@ Please see [image_classification](image_classification) for more details.
 Please see [object_detection](object_detection) for more details.
 
 
-### Mask R-CNN 
-|         Backbone          | Lr Schd | box mAP | mask mAP | MACs (G)|
-| :---------------          | :-----  | :-----  | :------  | :-----  | 
-| SPANet-S18-pure           |   3x    |  48.0   |   42.9   |   255   | 
-| SPANet-S18-hybrid         |   3x    |  49.6   |   44.3   |   251   | 
+### Mask R-CNN 3x
+|         Backbone          |box mAP | mask mAP | MACs (G)|
+| :---------------          |  :-----  | :------  | :-----  | 
+| SPANet-S18-pure           |   48.0   |   42.9   |   255   | 
+| SPANet-S18-hybrid         |   49.6   |   44.3   |   251   | 
 
 
-### Cascade Mask R-CNN 
-|         Backbone          | Lr Schd | box mAP | mask mAP | MACs (G)|
-| :---------------          | :-----  | :-----  | :------  | :-----  | 
-| SPANet-S18-pure           |   3x    |  51.6   |   44.7   |   734   | 
-| SPANet-S18-hybrid         |   3x    |  52.8   |   45.7   |   729   | 
+### Cascade Mask R-CNN 3x
+|         Backbone          |  box mAP | mask mAP | MACs (G)|
+| :---------------          |  :-----  | :------  | :-----  | 
+| SPANet-S18-pure           |   51.6   |   44.7   |   734   | 
+| SPANet-S18-hybrid         |   52.8   |   45.7   |   729   | 
 
 ## Main results on ADE20K semantice segmentation 
 Please see [semantic_segmentation](semantic_segmentation) for more details.
 
 ### Semantic FPN
-|         Backbone     | Lr Schd | mIoU | #params (M) | MACs (G) |
-| :------------------- | :-----  | :--  | :-----  | :--- |
-| SPANet-S18-pure      |   40K   | 46.7 |   33   | 43   |
-| SPANet-S18-hybrid    |   40K   | 47.8 |   31   | 48   |
-| SPANet-S36-pure      |   40K   | 47.9 |   48   | 64   |
-| SPANet-S36-hybrid    |   40K   | 48.6 |   45   | 74   |
+|         Backbone     |  mIoU | #params (M) | MACs (G) |
+| :------------------- |  :--  | :-----  | :--- |
+| SPANet-S18-pure      |  46.7 |   33   | 43   |
+| SPANet-S18-hybrid    |  47.8 |   31   | 48   |
+| SPANet-S36-pure      |  47.9 |   48   | 64   |
+| SPANet-S36-hybrid    |  48.6 |   45   | 74   |
 
 ### UperNet
-|         Backbone     | Lr Schd | mIoU | #params (M) | MACs (G) |
-| :------------------- | :-----  | :--  | :----- | :--- |
-| SPANet-S18-pure      |   160K  | 48.7 |   60   | 930  |
-| SPANet-S18-hybrid    |   160K  | 49.1 |   58   | 925  |
-| SPANet-S36-pure      |   160K  | 49.8 |   75   | 1012 |
-| SPANet-S36-hybrid    |   160K  | 51.6 |   71   | 1004 |
+|         Backbone     |  mIoU | #params (M) | MACs (G) |
+| :------------------- |  :--  | :----- | :--- |
+| SPANet-S18-pure      |  48.7 |   60   | 930  |
+| SPANet-S18-hybrid    |  49.1 |   58   | 925  |
+| SPANet-S36-pure      |  49.8 |   75   | 1012 |
+| SPANet-S36-hybrid    |  51.6 |   71   | 1004 |
 
 
 ## ⭐ Cite SPANetV2
