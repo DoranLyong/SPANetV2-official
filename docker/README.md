@@ -1,4 +1,6 @@
 # Docker Container Settings 
+You can refer to the list of NVIDIA Docker images [here](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/index.html).
+
 
 Construcsts and runs a docker container using `make_container.sh` and `run_container.sh`
 ```bash
