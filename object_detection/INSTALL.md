@@ -3,7 +3,7 @@ The environment is tested on `PyTorch_2.1` with `CUDA_12.2`.
 
 Prerequisite:
 ```bash 
-pip install opencv-python>=4.8.0.74   #for DictValue of cv2.dnn
+pip install opencv-python==4.8.0.74   #for DictValue of cv2.dnn
 pip install ftfy
 ```
 
