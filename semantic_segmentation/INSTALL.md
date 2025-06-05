@@ -1,22 +1,6 @@
 # Installation 
 The environment is tested on `PyTorch_2.1` with `CUDA_12.2`.
 
-File System:
-```bash 
-./
-├── ckpt/
-├── configs/
-├── demo/
-├── INSTALL.md
-├── README.md
-├── setup.py
-├── requirements/
-├── requirements.txt
-├── mmseg/
-└── tools/
-
-```
-
 Prerequisite:
 ```bash 
 pip install opencv-python==4.8.0.74   #for DictValue of cv2.dnn

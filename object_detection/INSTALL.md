@@ -1,38 +1,19 @@
 # Installation 
 The environment is tested on `PyTorch_2.1` with `CUDA_12.2`.
 
-File System:
-```bash 
-./
-├── configs/
-├── INSTALL.md
-├── README.md
-├── setup.py
-├── requirements/
-├── requirements.txt
-├── mmdet/
-├── demo/
-└── tools/
-
-```
-
 Prerequisite:
 ```bash 
 pip install opencv-python>=4.8.0.74   #for DictValue of cv2.dnn
+pip install ftfy
 ```
 
 ## MMdet Install 
-Step 0. Install [MMCV](https://mmcv.readthedocs.io/en/latest/get_started/build.html#build-on-linux) from source.
+Step 0. Install [MMCV](https://mmcv.readthedocs.io/en/latest/get_started/build.html#build-on-linux) and [MMEngine](https://mmengine.readthedocs.io/en/latest/get_started/installation.html).
 
 ```bash 
-git clone https://github.com/open-mmlab/mmcv.git
-cd mmcv
-
-pip install -r requirements/optional.txt
-
-pip install -e . -v
-
-python .dev_scripts/check_installation.py
+pip install -U openmim
+mim install mmengine
+mim install mmcv
 ```
 
 
