@@ -6,7 +6,7 @@
 </p>
 
 ### To do:
-- [] Training and validation code 
+- [x] Training and validation code 
 - [x] SPANet checkpoints with demo
 - [x] Visualization of features out of SPAM
 
