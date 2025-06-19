@@ -20,3 +20,4 @@ cd $CODE_PATH && sh distributed_train.sh $NUM_GPU $DATA_PATH \
 --model $MODEL --opt $OPT --lr $LR --warmup-epochs $WARMUP_EPOCH \
 -b $BATCH_SIZE --grad-accum-steps $GRAD_ACCUM_STEPS --epochs 300 \
 --drop-path $DROP_PATH --head-dropout $HEAD_DROP --pin-mem \
+--clip-grad 1.0 --clip-mode norm
