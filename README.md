@@ -31,6 +31,13 @@ Please see [image_classification](image_classification) for more details.
 | SPANeV2-B36-hybrid   | ImageNet-1K | 224x224 | 85.6 | 100 | 23.9 |
 
 
+With the scaled sigmoid for `SRF`
+| Model      | Pretrain    | Resolution | Top-1 | #Params (M) | MACs (G)|
+| ---------- | ----------- | ---------- | ----- | ------- | ----- |
+| SPANeV2-S18-pure     | ImageNet-1K | 224x224 | 83.5 | 29  | 4.2 |
+| SPANeV2-S18-hybrid   | ImageNet-1K | 224x224 | -.- | 27  | 4.2 |
+
+
 ## Main results on COCO object detection and instance segmentation 
 Please see [object_detection](object_detection) for more details.
 
