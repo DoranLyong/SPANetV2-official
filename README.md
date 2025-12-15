@@ -36,6 +36,8 @@ With the scaled sigmoid for `SRF`
 | ---------- | ----------- | ---------- | ----- | ------- | ----- |
 | SPANeV2-S18-pure     | ImageNet-1K | 224x224 | 83.5 | 29  | 4.2 |
 | SPANeV2-S18-hybrid   | ImageNet-1K | 224x224 | -.- | 27  | 4.2 |
+| SPANeV2-S36-pure     | ImageNet-1K | 224x224 | -.- | 44  | 8.1 |
+| SPANeV2-S36-hybrid   | ImageNet-1K | 224x224 | 84.9 | 41  | 8.1 |
 
 
 ## Main results on COCO object detection and instance segmentation 
