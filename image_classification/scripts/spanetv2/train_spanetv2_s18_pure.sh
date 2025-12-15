@@ -1,6 +1,7 @@
 DATA_PATH=/workspace/dataset/imagenet
 CODE_PATH=/workspace/projects/SPANetV2_proj/SPANetV2_on_MetaFormer_ver2 # modify code path here
 
+export CUDA_VISIBLE_DEVICES="0,1,2,3"  # GPU IDs to use
 
 ALL_BATCH_SIZE=4096  # 4 * 1024
 NUM_GPU=4
@@ -15,8 +16,9 @@ DROP_PATH=0.2
 HEAD_DROP=0.0
 
 
-
 cd $CODE_PATH && sh distributed_train.sh $NUM_GPU $DATA_PATH \
 --model $MODEL --opt $OPT --lr $LR --warmup-epochs $WARMUP_EPOCH \
 -b $BATCH_SIZE --grad-accum-steps $GRAD_ACCUM_STEPS \
 --drop-path $DROP_PATH --head-dropout $HEAD_DROP --native-amp --pin-mem \
+#--resume ./output/train/20251126-154210-spanetv2_s16_pure-224/checkpoint-26.pth.tar
+#--clip-mode norm
