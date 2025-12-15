@@ -1,6 +1,7 @@
 DATA_PATH=/workspace/dataset/imagenet
 CODE_PATH=/workspace/projects/SPANetV2_on_MetaFormer_ver2 # modify code path here
 
+export CUDA_VISIBLE_DEVICES="0,1,2,3"  # GPU IDs to use
 
 ALL_BATCH_SIZE=4096  # 4 * 1024
 NUM_GPU=4
