@@ -56,6 +56,8 @@ Please see [object_detection](object_detection) for more details.
 | :---------------          |  :-----  | :------  | :-----  | 
 | SPANet-S18-pure           |   51.6   |   44.7   |   734   | 
 | SPANet-S18-hybrid         |   52.8   |   45.7   |   729   | 
+| SPANet-S36-pure           |   53.1   |   45.9   |   814   | 
+| SPANet-S36-hybrid         |   53.8   |   46.4   |   806   | 
 
 ## Main results on ADE20K semantice segmentation 
 Please see [semantic_segmentation](semantic_segmentation) for more details.
