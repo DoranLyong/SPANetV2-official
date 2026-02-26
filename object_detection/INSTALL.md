@@ -13,16 +13,18 @@ Step 0. Install [MMCV](https://mmcv.readthedocs.io/en/latest/get_started/build.h
 ```bash 
 pip install -U openmim
 mim install mmengine
-mim install mmcv
+mim install mmcv==2.1.0
 ```
 
 
 Step 1. Install [MMDetection](https://github.com/open-mmlab/mmdetection) from source.
 
 ```bash
-git clone https://github.com/open-mmlab/mmdetection/tree/v3.3.0
-cd mmdetection
-pip install -v -e .
+mim install mmdet==3.3.0
+
+#git clone https://github.com/open-mmlab/mmdetection/tree/v3.3.0
+#cd mmdetection
+#pip install -v -e .
 # "-v" means verbose, or more output
 # "-e" means installing a project in editable mode,
 # thus any local modifications made to the code will take effect without reinstallation.
