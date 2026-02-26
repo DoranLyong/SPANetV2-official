@@ -3,26 +3,27 @@ The environment is tested on `PyTorch_2.1` with `CUDA_12.2`.
 
 Prerequisite:
 ```bash 
-pip install opencv-python==4.8.0.74   #for DictValue of cv2.dnn
-pip install ftfy
+#-- First, sync the uv env. to MMDetection dependenceis
+pip install uv 
+uv sync --index-strategy unsafe-best-match --upgrade
 ```
 
 ## MMseg Install 
 Step 0. Install [MMCV](https://mmcv.readthedocs.io/en/latest/get_started/build.html#build-on-linux) and [MMEngine](https://mmengine.readthedocs.io/en/latest/get_started/installation.html).
 
 ```bash 
-pip install -U openmim
 mim install mmengine
-mim install mmcv
+mim install mmcv==2.1.0
 ```
 
 
 Step 1. Install [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) from source.
 
 ```bash
-git clone https://github.com/open-mmlab/mmsegmentation/tree/v1.2.2
-cd mmsegmentation
-pip install -v -e .
+pip install mmsegmentation==1.2.2
+#git clone https://github.com/open-mmlab/mmsegmentation/tree/v1.2.2
+#cd mmsegmentation
+#pip install -v -e .
 # "-v" means verbose, or more output
 # "-e" means installing a project in editable mode,
 # thus any local modifications made to the code will take effect without reinstallation.
