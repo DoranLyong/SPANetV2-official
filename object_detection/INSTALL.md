@@ -1,41 +1,42 @@
 # Installation 
-The environment is tested on `PyTorch_2.1` with `CUDA_12.2`.
+The environment is tested on `PyTorch_2.1` with `CUDA_12.1`.
 
 Prerequisite:
 ```bash 
-pip install opencv-python==4.8.0.74   #for DictValue of cv2.dnn
-pip install ftfy
+#-- First, sync the uv env. to MMDetection dependenceis
+pip install uv 
+uv sync --index-strategy unsafe-best-match --upgrade
 ```
 
 ## MMdet Install 
-Step 0. Install [MMCV](https://mmcv.readthedocs.io/en/latest/get_started/build.html#build-on-linux) and [MMEngine](https://mmengine.readthedocs.io/en/latest/get_started/installation.html).
+Step 0. Install `MMCV-Full`
 
 ```bash 
-pip install -U openmim
-mim install mmengine
-mim install mmcv==2.1.0
+#-- Run the uv env. 
+source .venv/bin/activate 
+
+#-- Next,
+mim install mmcv-full
+mim install mmcls
 ```
 
 
-Step 1. Install [MMDetection](https://github.com/open-mmlab/mmdetection) from source.
+
+Step 1. Install [MMDetection](https://github.com/open-mmlab/mmdetection/blob/v2.28.2/docs/en/get_started.md/#Installation).
 
 ```bash
-mim install mmdet==3.3.0
-
-#git clone https://github.com/open-mmlab/mmdetection/tree/v3.3.0
-#cd mmdetection
-#pip install -v -e .
-# "-v" means verbose, or more output
-# "-e" means installing a project in editable mode,
-# thus any local modifications made to the code will take effect without reinstallation.
+mim install mmdet==2.28.2
 ```
 
 ## Verifying the Installation 
 You can verify that the mmdet package is installed by running the follows.
 
-If you install mmdetection from source, just run the following instructions:
-* download the [rtmdet_tiny_8xb32-300e_coco](https://github.com/open-mmlab/mmdetection/tree/main/configs/rtmdet) model.
-* then, run the following command
+Step 1. We need to download config and checkpoint files.
 ```bash
-python demo/image_demo.py demo/demo.jpg configs/rtmdet/rtmdet_tiny_8xb32-300e_coco.py --weights ./ckpt/rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cuda:0 --out-dir ./demo/result
+mim download mmdet --config yolov3_mobilenetv2_320_300e_coco --dest .
+```
+
+Step 2. Verify the inference demo.
+```bash
+python demo/image_demo.py demo/demo.jpg yolov3_mobilenetv2_320_300e_coco.py yolov3_mobilenetv2_320_300e_coco_20210719_215349-d18dff72.pth --device cpu --out-file ./demo/result.jpg
 ```

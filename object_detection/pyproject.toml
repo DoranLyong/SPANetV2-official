@@ -1,0 +1,37 @@
+[project]
+name = "spanetv2_det"
+version = "0.1.0"
+requires-python = "==3.10.*"
+description = "SPANetV2 Backbone for MMDetection"
+dependencies = [
+    #-- Core ML libraries 
+    "torch==2.1.0",
+    "torchvision==0.16.0",
+    "torchaudio==2.1.0",
+    "numpy>=1.24.0,<1.26.0",
+    "matplotlib",
+    "opencv-python==4.8.0.74", #for DictValue of cv2.dnn
+    "Pillow",
+    "ftfy",
+
+    #-- Jupyer and notebook support 
+    "jupyter",
+    "jupyterlab",
+    "ipykernel",
+    "ipython",
+    "ipywidgets",
+    "jupyterlab-widgets",
+    "widgetsnbextension",
+    "notebook",
+
+    #-- https://github.com/huggingface/pytorch-image-models
+    "timm==0.6.13",
+
+    #-- MMDetection dependencies 
+    "openmim",
+
+]
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
