@@ -1,0 +1,32 @@
+[project]
+name = "spanetv2_latency"
+version = "0.1.0"
+requires-python = "==3.12.*"
+description = "SPANetV2 Benchmark"
+dependencies = [
+    #-- Core ML libraries 
+    "torch==2.7.0",
+    "torchvision==0.22.0",
+    "torchaudio==2.7.0",
+    "numpy",
+    "matplotlib",
+    "opencv-python",
+    "Pillow",
+
+    #-- Jupyer and notebook support 
+    "jupyter",
+    "jupyterlab",
+    "ipykernel",
+    "ipython",
+    "ipywidgets",
+    "jupyterlab-widgets",
+    "widgetsnbextension",
+    "notebook",
+
+    #-- https://github.com/huggingface/pytorch-image-models
+    "timm==1.0.14"
+]
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128"

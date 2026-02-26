@@ -1,0 +1,51 @@
+name: spanetv2
+channels:
+  - conda-forge
+dependencies:
+  # Python 3.11 for RTX 5090 + CUDA 12.8 + PyTorch 2.7.0
+  - python=3.11
+  
+  # Build tools (needed for pytorch3d compilation)
+  - c-compiler
+  - cxx-compiler
+  - gcc
+  - gxx
+  
+  # Essential system libraries
+  - ca-certificates
+  - openssl
+  - libffi
+  - ncurses
+  - readline
+  - tk
+  - zlib
+  - bzip2
+  - xz
+  - libsqlite
+  
+  # Python package management
+  - pip
+  - setuptools
+  - wheel
+  - pyyaml
+  
+  # Graphics/GUI dependencies (for visualization)
+  - cairo
+  - fontconfig
+  - freetype
+  - harfbuzz
+  - libpng
+  - libjpeg-turbo
+  - qt-main
+
+  # Video encoding (for matplotlib animation)
+  - ffmpeg
+  
+  # X11 libraries (for display)
+  - xorg-libx11
+  - xorg-libxext
+  - xorg-libxrender
+  - libxcb
+  
+  # NOTE: CUDA and PyTorch will be installed via pip (see setup.md)
+  # This allows using system CUDA 12.8 and PyTorch 2.7.0+cu128
