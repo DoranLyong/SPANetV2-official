@@ -9,6 +9,8 @@
 - [x] Training and validation code 
 - [x] SPANet checkpoints with demo
 - [x] Visualization of features out of SPAM
+- [x] CAM demo 
+- [x] Fourier Analysis
 
 
 ## Requirements
