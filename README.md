@@ -6,8 +6,8 @@
 </p>
 
 ### 📜 History:
-- **TPAMI2026 Accepted** 🥳
-- ***arXiv2025***: Spectral-Adaptive Modulation Networks for Visual Perception
+- (2026.05.02) **TPAMI2026 Accepted** 🥳
+- (2025.03.31) ***arXiv2025***: Spectral-Adaptive Modulation Networks for Visual Perception
 - ***ICCV2023***: [SPANet: Frequency-balancing Token Mixer using Spectral Pooling Aggregation Modulation](https://doranlyong.github.io/projects/spanet/)
 
   
