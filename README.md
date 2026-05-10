@@ -87,10 +87,11 @@ Please see [semantic_segmentation](semantic_segmentation) for more details.
 If you find this repository useful, please give us stars and use the following BibTeX entry for citation.
 
 ```latex
-@article{yun2025spectral,
+@article{yun2026spectral,
   title={Spectral-Adaptive Modulation Networks for Visual Perception},
   author={Yun, Guhnoo and Yoo, Juhan and Kim, Kijung and Lee, Jeongho and Seo, Paul Hongsuck and Kim, Dong Hwan},
-  journal={arXiv preprint arXiv:2503.23947},
-  year={2025}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2026},
+  publisher={IEEE}
 }
 ```
