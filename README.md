@@ -4,7 +4,7 @@
 <a href="https://arxiv.org/abs/2503.23947" alt="arXiv">
     <img src="https://img.shields.io/badge/arXiv-2503.23947-b31b1b.svg?style=flat" /></a>
 <a href="https://www.computer.org/csdl/journal/tp/5555/01/11506226/2ggMsOn0gU0">
-   <img src="https://img.shields.io/badge/TPAMI-2025-00629B.svg?style=flat" /></a>    
+   <img src="https://img.shields.io/badge/TPAMI-2026-00629B.svg?style=flat" /></a>    
 <a href="https://doranlyong.github.io/projects/spanet/"> 
    <img src="https://img.shields.io/badge/project-page-blue"></a>
 </p>
