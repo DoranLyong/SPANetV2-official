@@ -4,13 +4,13 @@
 <a href="https://arxiv.org/abs/2503.23947" alt="arXiv">
     <img src="https://img.shields.io/badge/arXiv-2503.23947-b31b1b.svg?style=flat" /></a>
 <a href="https://www.computer.org/csdl/journal/tp/5555/01/11506226/2ggMsOn0gU0">
-   <img src="https://img.shields.io/badge/TPAMI-2026-00629B.svg?style=flat" /></a>    
+   <img src="https://img.shields.io/badge/IEEE_TPAMI-2026-00629B.svg?style=flat" /></a>    
 <a href="https://doranlyong.github.io/projects/spanet/"> 
    <img src="https://img.shields.io/badge/project-page-blue"></a>
 </p>
 
 ### 📜 History:
-- (2026.05.02) **Accepted in TPAMI2026** 🥳
+- (2026.05.02) **Accepted in IEEE TPAMI2026** 🥳
 - (2025.03.31) ***arXiv2025***: Spectral-Adaptive Modulation Networks for Visual Perception
 - ***ICCV2023***: [SPANet: Frequency-balancing Token Mixer using Spectral Pooling Aggregation Modulation](https://doranlyong.github.io/projects/spanet/)
 
