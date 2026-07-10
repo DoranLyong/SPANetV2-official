@@ -47,5 +47,10 @@ dependencies:
   - xorg-libxrender
   - libxcb
   
-  # NOTE: CUDA and PyTorch will be installed via pip (see setup.md)
-  # This allows using system CUDA 12.8 and PyTorch 2.7.0+cu128
+  # CUDA toolkit (matched to torch 2.8.0+cu128 — provides nvcc + headers
+  # for source builds like pytorch3d, so we don't depend on system /usr/local/cuda)
+  - nvidia::cuda-toolkit=12.8.*
+
+  # NOTE: PyTorch is installed via pip (see requirements.txt).
+  # The CUDA toolkit above provides nvcc/headers for compiling CUDA
+  # extensions inside the env.
