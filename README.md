@@ -20,7 +20,7 @@
 - [x] [Image Classification](./image_classification)
 - [x] [Object Detection](object_detection)
 - [x] [Semantic Segmentation](semantic_segmentation)
-- [ ] [Image Generation]()
+- [x] [Image Generation]()
 
 ## Main results on ImageNet-1K
 Please see [image_classification](image_classification) for more details.
