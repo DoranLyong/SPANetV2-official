@@ -1,0 +1,16 @@
+# Python / Jupyter cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# image_classification: train.py / train_384.py outputs
+# (checkpoints, summary.csv, args.yaml, queue logs, aborted runs)
+image_classification/output/
+
+# Model weights: GitHub rejects files > 100 MB, so share them via Releases / Hugging Face / Drive.
+# ckpt/README.md and ckpt/custom_ckpt.py stay tracked.
+*.pth
+*.pth.tar
+*.pt
+*.ckpt
+*.safetensors
