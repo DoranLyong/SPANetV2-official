@@ -28,13 +28,19 @@ Please see [image_classification](image_classification) for more details.
 | Model      | Pretrain    | Resolution | Top-1 | #Params (M) | MACs (G)|
 | ---------- | ----------- | ---------- | ----- | ------- | ----- |
 | SPANeV2-S18-pure     | ImageNet-1K | 224x224 | 83.4 | 29  | 4.2 |
+| SPANeV2-S18-pure     | ImageNet-1K | 384x384 | 84.8 | 29  | 12.3 |
 | SPANeV2-S18-hybrid   | ImageNet-1K | 224x224 | 83.9 | 27  | 4.2 |
+| SPANeV2-S18-hybrid   | ImageNet-1K | 384x384 | 85.3 | 27  | 13.6 |
 | SPANeV2-S36-pure     | ImageNet-1K | 224x224 | 84.4 | 44  | 8.1 |
+| SPANeV2-S36-pure     | ImageNet-1K | 384x384 | -.- | 44  | 23.9 |
 | SPANeV2-S36-hybrid   | ImageNet-1K | 224x224 | 84.7 | 41  | 8.1 |
+| SPANeV2-S36-hybrid   | ImageNet-1K | 384x384 | -.- | 41  | 26.6 |
 | SPANeV2-M36-pure     | ImageNet-1K | 224x224 | 84.9 | 61  | 13.7 |
 | SPANeV2-M36-hybrid   | ImageNet-1K | 224x224 | 85.3 | 58  | 13.6 |
 | SPANeV2-B36-pure     | ImageNet-1K | 224x224 | 85.0 | 100 | 24.3 |
 | SPANeV2-B36-hybrid   | ImageNet-1K | 224x224 | 85.6 | 100 | 23.9 |
+
+384x384 models are fine-tuned from the 224x224 ones for 30 epochs (pure: ConvFormer recipe, hybrid: CAFormer recipe of [MetaFormer](https://github.com/sail-sg/metaformer)); Top-1 is of the EMA model.
 
 
 With the scaled sigmoid for `SRF`
