@@ -21,6 +21,9 @@ METAFORMER_384 = {
     'CAFormer-S18':   (26, 13.4, 85.0),
     'ConvFormer-S36': (40, 22.4, 85.4),
     'CAFormer-S36':   (39, 26.0, 85.7),
+    'ConvFormer-M36': (57, 37.7, 85.6),
+    'ConvFormer-B36': (100, 66.5, 85.7),
+    'CAFormer-B36':   (99, 72.2, 86.4),
 }
 
 # SPANetV2 at 384: fvcore MACs, FFT not counted (FLOPs_count.ipynb "simple way"; FFT adds < 1%).
@@ -30,6 +33,9 @@ SPANETV2_384 = {
     'spanetv2_s18_hybrid': ('CAFormer-S18',   27.0, 13.62),
     'spanetv2_s36_pure':   ('ConvFormer-S36', 44.1, 23.93),
     'spanetv2_s36_hybrid': ('CAFormer-S36',   40.7, 26.59),
+    'spanetv2_m36_pure':   ('ConvFormer-M36', 62.9, 40.33),
+    'spanetv2_b36_pure':   ('ConvFormer-B36', 109.6, 71.26),
+    'spanetv2_b36_hybrid': ('CAFormer-B36',   101.8, 74.42),
 }
 EPOCHS = 30
 
