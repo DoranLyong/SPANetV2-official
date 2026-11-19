@@ -34,7 +34,7 @@ Please see [image_classification](image_classification) for more details.
 | SPANeV2-S36-pure     | ImageNet-1K | 224x224 | 84.4 | 44  | 8.1 |
 | SPANeV2-S36-pure     | ImageNet-1K | 384x384 | 85.5 | 44  | 23.9 |
 | SPANeV2-S36-hybrid   | ImageNet-1K | 224x224 | 84.7 | 41  | 8.1 |
-| SPANeV2-S36-hybrid   | ImageNet-1K | 384x384 | -.- | 41  | 26.6 |
+| SPANeV2-S36-hybrid   | ImageNet-1K | 384x384 | 86.0 | 41  | 26.6 |
 | SPANeV2-M36-pure     | ImageNet-1K | 224x224 | 84.9 | 61  | 13.7 |
 | SPANeV2-M36-hybrid   | ImageNet-1K | 224x224 | 85.3 | 58  | 13.6 |
 | SPANeV2-B36-pure     | ImageNet-1K | 224x224 | 85.0 | 100 | 24.3 |
