@@ -1,0 +1,86 @@
+/home/server/miniforge3/envs/spanetv2/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{
+  "date": "2026-11-19 15:15:27 KST",
+  "python": "3.11.15",
+  "torch": "2.8.0+cu128",
+  "fvcore": "0.1.5.post20221221",
+  "timm": "0.6.13",
+  "numpy": "2.4.3",
+  "device": "cpu",
+  "torch_threads": 16,
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "cpu": "AMD Ryzen Threadripper PRO 5955WX 16-Cores",
+  "python_executable": "/home/server/miniforge3/envs/spanetv2/bin/python",
+  "repos": {
+    "spanet": {
+      "root": "third_party/SPANet-official",
+      "file": "image_classification/spanet.py",
+      "commit": "886ad24d4d69495401e93e90d2b0a52c6cb718b7",
+      "remote": "https://github.com/DoranLyong/SPANet-official.git",
+      "file_status": "clean",
+      "repo_status": "?? image_classification/__pycache__/"
+    },
+    "spanetv2": {
+      "root": "..",
+      "file": "image_classification/models/spanetv2.py",
+      "commit": "1b2cfeecc7d846c0a455c0d2de39922b2684607b",
+      "remote": "https://github.com/DoranLyong/SPANetV2-official.git",
+      "file_status": "clean",
+      "repo_status": "?? flops_benchmark/"
+    },
+    "metaformer": {
+      "root": "third_party/metaformer",
+      "file": "metaformer_baselines.py",
+      "commit": "64c534ab8f65105fd21713b38e3393a449ca742d",
+      "remote": "https://github.com/sail-sg/metaformer.git",
+      "file_status": "clean",
+      "repo_status": "?? __pycache__/"
+    },
+    "dfformer": {
+      "root": "third_party/dfformer",
+      "file": "models/dfformer.py",
+      "commit": "2b757c511a1bf1e66a12d494f3b0c42daa5b3636",
+      "remote": "https://github.com/okojoalg/dfformer.git",
+      "file_status": "clean",
+      "repo_status": "clean"
+    },
+    "gfnet": {
+      "root": "third_party/GFNet",
+      "file": "gfnet.py",
+      "commit": "2de48b626ea805de82a7f389fed930af1ae0340d",
+      "remote": "https://github.com/raoyongming/GFNet.git",
+      "file_status": "M gfnet.py",
+      "repo_status": "M gfnet.py"
+    }
+  }
+}
+SPANet-S               params  28.660M | paper   4.6 | (ga) 4.627 | (na) 4.627 | a 0.041 b 0.002 c 0.020 | total 4.689 | FCM/2 4.606 | 1.7s
+SPANetV2-S18-pure      params  29.163M | paper   4.2 | (ga) 4.192 | (na) 4.217 | a 0.030 b 0.001 c 0.032 | total 4.256 | FCM/2 4.162 | 1.6s
+ConvFormer-S18         params  26.774M | paper   3.9 | (ga) 3.956 | (na)   -   | a 0.000 b 0.000 c 0.034 | total 3.991 | FCM/2 3.941 | 0.3s
+DFFormer-S18           params  30.324M | paper   3.8 | (ga) 3.800 | (na)   -   | a 0.061 b 0.002 c 0.047 | total 3.910 | FCM/2 3.800 | 0.6s
+SPANetV2-S18-hybrid    params  26.992M | paper   4.2 | (ga) 4.192 | (na) 4.206 | a 0.020 b 0.000 c 0.037 | total 4.250 | FCM/2 4.167 | 0.8s
+CAFormer-S18           params  26.342M | paper   4.1 | (ga) 4.122 | (na)   -   | a 0.000 b 0.000 c 0.038 | total 4.160 | FCM/2 4.107 | 0.3s
+CDFFormer-S18          params  30.194M | paper   3.9 | (ga) 3.885 | (na)   -   | a 0.020 b 0.001 c 0.047 | total 3.953 | FCM/2 3.885 | 0.4s
+SPANet-M               params  41.769M | paper   6.8 | (ga) 6.824 | (na) 6.824 | a 0.061 b 0.003 c 0.030 | total 6.918 | FCM/2 6.793 | 2.7s
+SPANetV2-S36-pure      params  44.099M | paper   8.1 | (ga) 8.145 | (na) 8.193 | a 0.058 b 0.002 c 0.061 | total 8.265 | FCM/2 8.085 | 3.3s
+ConvFormer-S36         params  40.012M | paper   7.6 | (ga) 7.670 | (na)   -   | a 0.000 b 0.000 c 0.065 | total 7.735 | FCM/2 7.640 | 0.6s
+DFFormer-S36           params  45.611M | paper   7.4 | (ga) 7.364 | (na)   -   | a 0.115 b 0.003 c 0.089 | total 7.572 | FCM/2 7.364 | 1.0s
+SPANetV2-S36-hybrid    params  40.669M | paper   8.1 | (ga) 8.179 | (na) 8.207 | a 0.039 b 0.001 c 0.070 | total 8.289 | FCM/2 8.131 | 2.0s
+CAFormer-S36           params  39.297M | paper   8.0 | (ga) 8.002 | (na)   -   | a 0.000 b 0.000 c 0.072 | total 8.073 | FCM/2 7.972 | 0.6s
+CDFFormer-S36          params  45.231M | paper   7.5 | (ga) 7.533 | (na)   -   | a 0.038 b 0.001 c 0.089 | total 7.662 | FCM/2 7.533 | 0.9s
+SPANet-B               params  75.938M | paper  12.0 | (ga) 11.983 | (na) 11.983 | a 0.086 b 0.004 c 0.042 | total 12.115 | FCM/2 11.940 | 2.7s
+SPANetV2-M36-pure      params  62.935M | paper  13.7 | (ga) 13.725 | (na) 13.795 | a 0.080 b 0.002 c 0.083 | total 13.890 | FCM/2 13.642 | 3.5s
+ConvFormer-M36         params  57.052M | paper  12.8 | (ga) 12.884 | (na)   -   | a 0.000 b 0.000 c 0.089 | total 12.973 | FCM/2 12.842 | 0.6s
+DFFormer-M36           params  65.316M | paper  12.5 | (ga) 12.463 | (na)   -   | a 0.161 b 0.005 c 0.123 | total 12.751 | FCM/2 12.463 | 1.2s
+SPANetV2-M36-hybrid    params  58.335M | paper  13.6 | (ga) 13.676 | (na) 13.722 | a 0.058 b 0.001 c 0.095 | total 13.830 | FCM/2 13.608 | 2.0s
+CAFormer-M36           params  56.205M | paper  13.2 | (ga) 13.282 | (na)   -   | a 0.000 b 0.000 c 0.097 | total 13.380 | FCM/2 13.241 | 0.8s
+CDFFormer-M36          params  64.433M | paper  12.7 | (ga) 12.716 | (na)   -   | a 0.045 b 0.002 c 0.123 | total 12.886 | FCM/2 12.716 | 0.9s
+SPANetV2-B36-pure      params 109.558M | paper  24.3 | (ga) 24.251 | (na) 24.345 | a 0.107 b 0.003 c 0.111 | total 24.472 | FCM/2 24.141 | 3.6s
+ConvFormer-B36         params  99.883M | paper  22.6 | (ga) 22.685 | (na)   -   | a 0.000 b 0.000 c 0.119 | total 22.804 | FCM/2 22.629 | 0.7s
+DFFormer-B36           params 114.989M | paper  22.1 | (ga) 22.128 | (na)   -   | a 0.215 b 0.006 c 0.164 | total 22.512 | FCM/2 22.128 | 1.2s
+SPANetV2-B36-hybrid    params 101.803M | paper  23.9 | (ga) 23.934 | (na) 23.995 | a 0.077 b 0.002 c 0.126 | total 24.139 | FCM/2 23.843 | 2.2s
+CAFormer-B36           params  98.754M | paper  23.2 | (ga) 23.216 | (na)   -   | a 0.000 b 0.000 c 0.130 | total 23.346 | FCM/2 23.160 | 0.7s
+CDFFormer-B36          params 113.369M | paper  22.5 | (ga) 22.465 | (na)   -   | a 0.061 b 0.002 c 0.163 | total 22.691 | FCM/2 22.465 | 1.0s
+GFNet-H-S              params  32.163M | paper   4.6 | (ga) 4.604 | (na)   -   | a 0.044 b 0.001 c 0.014 | total 4.663 | FCM/2 4.582 | 0.3s
+GFNet-H-B              params  53.744M | paper   8.6 | (ga) 8.547 | (na)   -   | a 0.065 b 0.002 c 0.021 | total 8.635 | FCM/2 8.512 | 0.4s

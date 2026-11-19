@@ -1,0 +1,13 @@
+diff --git a/gfnet.py b/gfnet.py
+index a205be0..a780d2c 100644
+--- a/gfnet.py
++++ b/gfnet.py
+@@ -4,7 +4,7 @@ from functools import partial
+ from collections import OrderedDict
+ from copy import Error, deepcopy
+ from re import S
+-from numpy.lib.arraypad import pad
++from numpy import pad  # import path fixed for numpy>=2 (was: from numpy.lib.arraypad import pad)
+ import numpy as np
+ import torch
+ import torch.nn as nn

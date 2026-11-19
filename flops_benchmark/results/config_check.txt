@@ -1,0 +1,186 @@
+== SPANet-S: 28.660 M params
+  constructor stdout (print(self.lambs) per SPAM): [tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+  stage 0: depth 4, dim 64, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 56, 56), (1, 56, 56), (1, 56, 56)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 1: depth 4, dim 128, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 28, 28), (1, 28, 28), (1, 28, 28)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 2: depth 12, dim 320, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 14, 14), (1, 14, 14), (1, 14, 14)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 3: depth 4, dim 512, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 7, 7), (1, 7, 7), (1, 7, 7)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+    downsample / stem                                1.927 M
+    block norms                                      0.027 M
+    token_mixer: other                               7.218 M
+    token_mixer: SPF filters (requires_grad=False)    0.055 M
+    mlp                                             18.908 M
+    res/layer scale                                  0.012 M
+    final norm + head                                0.514 M
+
+== SPANet-M: 41.769 M params
+  constructor stdout (print(self.lambs) per SPAM): [tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+  stage 0: depth 6, dim 64, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 56, 56), (1, 56, 56), (1, 56, 56)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 1: depth 6, dim 128, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 28, 28), (1, 28, 28), (1, 28, 28)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 2: depth 18, dim 320, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 14, 14), (1, 14, 14), (1, 14, 14)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 3: depth 6, dim 512, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 7, 7), (1, 7, 7), (1, 7, 7)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+    downsample / stem                                1.927 M
+    block norms                                      0.040 M
+    token_mixer: other                              10.826 M
+    token_mixer: SPF filters (requires_grad=False)    0.082 M
+    mlp                                             28.361 M
+    res/layer scale                                  0.018 M
+    final norm + head                                0.514 M
+
+== SPANet-B: 75.938 M params
+  constructor stdout (print(self.lambs) per SPAM): [tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+  stage 0: depth 6, dim 96, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 56, 56), (1, 56, 56), (1, 56, 56)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 1: depth 6, dim 192, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 28, 28), (1, 28, 28), (1, 28, 28)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 2: depth 18, dim 384, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 14, 14), (1, 14, 14), (1, 14, 14)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+  stage 3: depth 6, dim 768, conv kernels [(1, 7), (7, 1)], #SPF 3, lambs [0.7, 0.8, 0.9], filter shapes [(1, 7, 7), (1, 7, 7), (1, 7, 7)], distinct values in SPF[0] [0.3, 0.3333, 0.7]
+    downsample / stem                                3.499 M
+    block norms                                      0.053 M
+    token_mixer: other                              19.687 M
+    token_mixer: SPF filters (requires_grad=False)    0.082 M
+    mlp                                             51.823 M
+    res/layer scale                                  0.023 M
+    final norm + head                                0.771 M
+
+== SPANetV2-S18-pure: 29.163 M params
+  stage 0: depth 3, dim 64, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(16, 56, 29), (16, 56, 29), (16, 56, 29), (16, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 64->256->64 (StarReLU)
+  stage 1: depth 3, dim 128, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(32, 28, 15), (32, 28, 15), (32, 28, 15), (32, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 128->512->128 (StarReLU)
+  stage 2: depth 9, dim 320, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(80, 14, 8), (80, 14, 8), (80, 14, 8), (80, 14, 8)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 320->1280->320 (StarReLU)
+  stage 3: depth 3, dim 512, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(128, 7, 4), (128, 7, 4), (128, 7, 4), (128, 7, 4)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 512->2048->512 (StarReLU)
+  head: MlpHead 512->2048->1000
+    downsample / stem                                1.928 M
+    block norms                                      0.010 M
+    token_mixer: spectral filters (SRF params)       0.839 M
+    token_mixer: other                               9.117 M
+    mlp                                             14.156 M
+    res/layer scale                                  0.009 M
+    final norm + head                                3.105 M
+
+== SPANetV2-S18-hybrid: 26.992 M params
+  stage 0: depth 3, dim 64, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(16, 56, 29), (16, 56, 29), (16, 56, 29), (16, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 64->256->64 (StarReLU)
+  stage 1: depth 3, dim 128, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(32, 28, 15), (32, 28, 15), (32, 28, 15), (32, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 128->512->128 (StarReLU)
+  stage 2: depth 9, dim 320, token_mixer MixAttention, num_heads 10, head_dim 32, local_conv kernel (7, 7), mlp 320->1280->320 (StarReLU)
+  stage 3: depth 3, dim 512, token_mixer Attention, num_heads 16, head_dim 32, mlp 512->2048->512 (StarReLU)
+  head: MlpHead 512->2048->1000
+    downsample / stem                                1.928 M
+    block norms                                      0.010 M
+    token_mixer: spectral filters (SRF params)       0.473 M
+    token_mixer: other                               7.312 M
+    mlp                                             14.156 M
+    res/layer scale                                  0.009 M
+    final norm + head                                3.105 M
+
+== SPANetV2-S36-pure: 44.099 M params
+  stage 0: depth 3, dim 64, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(16, 56, 29), (16, 56, 29), (16, 56, 29), (16, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 64->256->64 (StarReLU)
+  stage 1: depth 12, dim 128, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(32, 28, 15), (32, 28, 15), (32, 28, 15), (32, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 128->512->128 (StarReLU)
+  stage 2: depth 18, dim 320, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(80, 14, 8), (80, 14, 8), (80, 14, 8), (80, 14, 8)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 320->1280->320 (StarReLU)
+  stage 3: depth 3, dim 512, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(128, 7, 4), (128, 7, 4), (128, 7, 4), (128, 7, 4)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 512->2048->512 (StarReLU)
+  head: MlpHead 512->2048->1000
+    downsample / stem                                1.928 M
+    block norms                                      0.018 M
+    token_mixer: spectral filters (SRF params)       1.645 M
+    token_mixer: other                              14.680 M
+    mlp                                             22.708 M
+    res/layer scale                                  0.015 M
+    final norm + head                                3.105 M
+
+== SPANetV2-S36-hybrid: 40.669 M params
+  stage 0: depth 3, dim 64, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(16, 56, 29), (16, 56, 29), (16, 56, 29), (16, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 64->256->64 (StarReLU)
+  stage 1: depth 12, dim 128, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(32, 28, 15), (32, 28, 15), (32, 28, 15), (32, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 128->512->128 (StarReLU)
+  stage 2: depth 18, dim 320, token_mixer MixAttention, num_heads 10, head_dim 32, local_conv kernel (7, 7), mlp 320->1280->320 (StarReLU)
+  stage 3: depth 3, dim 512, token_mixer Attention, num_heads 16, head_dim 32, mlp 512->2048->512 (StarReLU)
+  head: MlpHead 512->2048->1000
+    downsample / stem                                1.928 M
+    block norms                                      0.018 M
+    token_mixer: spectral filters (SRF params)       0.957 M
+    token_mixer: other                              11.939 M
+    mlp                                             22.708 M
+    res/layer scale                                  0.015 M
+    final norm + head                                3.105 M
+
+== SPANetV2-M36-pure: 62.935 M params
+  stage 0: depth 3, dim 96, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(24, 56, 29), (24, 56, 29), (24, 56, 29), (24, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 96->384->96 (StarReLU)
+  stage 1: depth 12, dim 192, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(48, 28, 15), (48, 28, 15), (48, 28, 15), (48, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 192->768->192 (StarReLU)
+  stage 2: depth 18, dim 384, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(96, 14, 8), (96, 14, 8), (96, 14, 8), (96, 14, 8)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 384->1536->384 (StarReLU)
+  stage 3: depth 3, dim 576, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(144, 7, 4), (144, 7, 4), (144, 7, 4), (144, 7, 4)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 576->2304->576 (StarReLU)
+  head: MlpHead 576->2304->1000
+    downsample / stem                                2.836 M
+    block norms                                      0.022 M
+    token_mixer: spectral filters (SRF params)       2.258 M
+    token_mixer: other                              21.204 M
+    mlp                                             32.956 M
+    res/layer scale                                  0.017 M
+    final norm + head                                3.640 M
+
+== SPANetV2-M36-hybrid: 58.335 M params
+  stage 0: depth 3, dim 96, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(24, 56, 29), (24, 56, 29), (24, 56, 29), (24, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 96->384->96 (StarReLU)
+  stage 1: depth 12, dim 192, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(48, 28, 15), (48, 28, 15), (48, 28, 15), (48, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 192->768->192 (StarReLU)
+  stage 2: depth 18, dim 384, token_mixer MixAttention, num_heads 12, head_dim 32, local_conv kernel (7, 7), mlp 384->1536->384 (StarReLU)
+  stage 3: depth 3, dim 576, token_mixer Attention, num_heads 18, head_dim 32, mlp 576->2304->576 (StarReLU)
+  head: MlpHead 576->2304->1000
+    downsample / stem                                2.836 M
+    block norms                                      0.022 M
+    token_mixer: spectral filters (SRF params)       1.435 M
+    token_mixer: other                              17.427 M
+    mlp                                             32.956 M
+    res/layer scale                                  0.017 M
+    final norm + head                                3.640 M
+
+== SPANetV2-B36-pure: 109.558 M params
+  stage 0: depth 3, dim 128, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(32, 56, 29), (32, 56, 29), (32, 56, 29), (32, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 128->512->128 (StarReLU)
+  stage 1: depth 12, dim 256, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(64, 28, 15), (64, 28, 15), (64, 28, 15), (64, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 256->1024->256 (StarReLU)
+  stage 2: depth 18, dim 512, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(128, 14, 8), (128, 14, 8), (128, 14, 8), (128, 14, 8)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 512->2048->512 (StarReLU)
+  stage 3: depth 3, dim 768, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(192, 7, 4), (192, 7, 4), (192, 7, 4), (192, 7, 4)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 768->3072->768 (StarReLU)
+  head: MlpHead 768->3072->1000
+    downsample / stem                                5.035 M
+    block norms                                      0.030 M
+    token_mixer: spectral filters (SRF params)       3.011 M
+    token_mixer: other                              37.427 M
+    mlp                                             58.589 M
+    res/layer scale                                  0.023 M
+    final norm + head                                5.443 M
+
+== SPANetV2-B36-hybrid: 101.803 M params
+  stage 0: depth 3, dim 128, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(32, 56, 29), (32, 56, 29), (32, 56, 29), (32, 56, 29)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 128->512->128 (StarReLU)
+  stage 1: depth 12, dim 256, token_mixer ExSPAM, num_heads 4, local_conv kernels [(3, 3), (5, 5), (7, 7), (9, 9)], filters (C/heads, H, W//2+1) [(64, 28, 15), (64, 28, 15), (64, 28, 15), (64, 28, 15)], proj ['Conv2d', 'GroupNorm', 'GELU', 'Conv2d'] expand 2, mlp 256->1024->256 (StarReLU)
+  stage 2: depth 18, dim 512, token_mixer MixAttention, num_heads 16, head_dim 32, local_conv kernel (7, 7), mlp 512->2048->512 (StarReLU)
+  stage 3: depth 3, dim 768, token_mixer Attention, num_heads 24, head_dim 32, mlp 768->3072->768 (StarReLU)
+  head: MlpHead 768->3072->1000
+    downsample / stem                                5.035 M
+    block norms                                      0.030 M
+    token_mixer: spectral filters (SRF params)       1.914 M
+    token_mixer: other                              30.768 M
+    mlp                                             58.589 M
+    res/layer scale                                  0.023 M
+    final norm + head                                5.443 M
+
+== ConvFormer-M36: 57.052 M params
+    downsample / stem                                2.836 M
+    block norms                                      0.022 M
+    token_mixer: other                              17.579 M
+    mlp                                             32.956 M
+    res/layer scale                                  0.017 M
+    final norm + head                                3.640 M
+
+== ConvFormer-B36: 99.883 M params
+    downsample / stem                                5.035 M
+    block norms                                      0.030 M
+    token_mixer: other                              30.762 M
+    mlp                                             58.589 M
+    res/layer scale                                  0.023 M
+    final norm + head                                5.443 M
+
+== CAFormer-M36: 56.205 M params
+    downsample / stem                                2.836 M
+    block norms                                      0.022 M
+    token_mixer: other                              16.732 M
+    mlp                                             32.956 M
+    res/layer scale                                  0.017 M
+    final norm + head                                3.640 M
+
+== CAFormer-B36: 98.754 M params
+    downsample / stem                                5.035 M
+    block norms                                      0.030 M
+    token_mixer: other                              29.633 M
+    mlp                                             58.589 M
+    res/layer scale                                  0.023 M
+    final norm + head                                5.443 M
+
