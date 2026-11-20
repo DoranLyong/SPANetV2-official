@@ -1,0 +1,24 @@
+diff --git a/object_detection/mmdet/models/backbones/spanet.py b/object_detection/mmdet/models/backbones/spanet.py
+index db08529..d7cc77e 100644
+--- a/object_detection/mmdet/models/backbones/spanet.py
++++ b/object_detection/mmdet/models/backbones/spanet.py
+@@ -28,13 +28,15 @@ from torch.nn.modules.utils import _pair as to_2tuple
+ 
+ 
+ from mmcv.cnn import build_norm_layer
+-from mmcv.runner import BaseModule, _load_checkpoint
++from mmengine.model import BaseModule
++from mmengine.runner.checkpoint import _load_checkpoint
+ from mmcv.cnn.bricks import DropPath
+-from mmcv.cnn.utils.weight_init import (constant_init, normal_init,
++from mmengine.model.weight_init import (constant_init, normal_init,
+                                         trunc_normal_init)
+ 
+-from mmdet.models.builder import BACKBONES
+-from mmdet.utils import get_root_logger
++from mmseg.models.builder import BACKBONES
++from mmengine.logging import MMLogger
++get_root_logger = MMLogger.get_current_instance
+ 
+ 
+ class PatchEmbed(BaseModule):

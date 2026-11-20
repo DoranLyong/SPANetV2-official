@@ -1,0 +1,46 @@
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+ConvFormer-S18       channels=512: params 53.382M ga 925.921 total 926.685
+upernet ConvFormer-S18 {"type": "MetaFormerFeat", "params": 23670728, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["SepConv", "SepConv", "SepConv", "SepConv"]}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+SPANetV2-S18-pure    channels=512: params 58.875M ga 930.855 total 932.496
+upernet SPANetV2-S18-pure {"type": "spanetv2_s18_pure", "params": 29163916, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "ExSPAM", "ExSPAM"], "unused_head_params": 3103720, "unused_norm_params": 1024}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+CAFormer-S18         channels=512: params 52.949M ga 1024.469 total 1028.273
+upernet CAFormer-S18 {"type": "MetaFormerFeat", "params": 23237936, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["SepConv", "SepConv", "Attention", "Attention"]}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+SPANetV2-S18-hybrid  channels=512: params 56.704M ga 1025.922 total 1030.307
+upernet SPANetV2-S18-hybrid {"type": "spanetv2_s18_hybrid", "params": 26992972, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "MixAttention", "Attention"], "unused_head_params": 3103720, "unused_norm_params": 1024}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+ConvFormer-S36       channels=512: params 66.620M ga 1003.523 total 1004.924
+upernet ConvFormer-S36 {"type": "MetaFormerFeat", "params": 36908432, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["SepConv", "SepConv", "SepConv", "SepConv"]}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+SPANetV2-S36-pure    channels=512: params 73.811M ga 1013.451 total 1016.526
+upernet SPANetV2-S36-pure {"type": "spanetv2_s36_pure", "params": 44099632, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "ExSPAM", "ExSPAM"], "unused_head_params": 3103720, "unused_norm_params": 1024}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+CAFormer-S36         channels=512: params 65.905M ga 1197.552 total 1204.942
+upernet CAFormer-S36 {"type": "MetaFormerFeat", "params": 36193382, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["SepConv", "SepConv", "Attention", "Attention"]}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+SPANetV2-S36-hybrid  channels=512: params 70.382M ga 1201.262 total 1209.764
+upernet SPANetV2-S36-hybrid {"type": "spanetv2_s36_hybrid", "params": 40670128, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "MixAttention", "Attention"], "unused_head_params": 3103720, "unused_norm_params": 1024}
+/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn SPANet-S {"type": "SPANet", "params": 28093120, "depths": [4, 4, 12, 4], "dims": [64, 128, 320, 512], "token_mixers": ["SPAttention", "SPAttention", "SPAttention", "SPAttention"], "patch_dims": [[128, 128], [64, 64], [32, 32], [16, 16]]}
+fpn DFFormer-S18 {"type": "SegDFFormerS18", "params": 27456876, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["DynamicFilter", "DynamicFilter", "DynamicFilter", "DynamicFilter"]}
+fpn SPANetV2-S18-pure {"type": "spanetv2_s18_pure", "params": 29163916, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "ExSPAM", "ExSPAM"], "unused_head_params": 3103720, "unused_norm_params": 1024}
+fpn CDFFormer-S18 {"type": "SegCDFFormerS18", "params": 27124704, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["SepConv", "SepConv", "DynamicFilter", "DynamicFilter"]}
+fpn SPANetV2-S18-hybrid {"type": "spanetv2_s18_hybrid", "params": 26992972, "depths": [3, 3, 9, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "MixAttention", "Attention"], "unused_head_params": 3103720, "unused_norm_params": 1024}
+fpn SPANet-M {"type": "SPANet", "params": 41174976, "depths": [6, 6, 18, 6], "dims": [64, 128, 320, 512], "token_mixers": ["SPAttention", "SPAttention", "SPAttention", "SPAttention"], "patch_dims": [[128, 128], [64, 64], [32, 32], [16, 16]]}
+fpn DFFormer-S36 {"type": "SegDFFormerS36", "params": 42896088, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["DynamicFilter", "DynamicFilter", "DynamicFilter", "DynamicFilter"]}
+fpn SPANetV2-S36-pure {"type": "spanetv2_s36_pure", "params": 44099632, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "ExSPAM", "ExSPAM"], "unused_head_params": 3103720, "unused_norm_params": 1024}
+fpn CDFFormer-S36 {"type": "SegCDFFormerS36", "params": 42192954, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["SepConv", "SepConv", "DynamicFilter", "DynamicFilter"]}
+fpn SPANetV2-S36-hybrid {"type": "spanetv2_s36_hybrid", "params": 40670128, "depths": [3, 12, 18, 3], "dims": [64, 128, 320, 512], "token_mixers": ["ExSPAM", "ExSPAM", "MixAttention", "Attention"], "unused_head_params": 3103720, "unused_norm_params": 1024}

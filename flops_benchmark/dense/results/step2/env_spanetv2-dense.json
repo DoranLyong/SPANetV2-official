@@ -1,0 +1,17 @@
+{
+ "python": "3.10.22",
+ "python_executable": "/home/server/miniforge3/envs/spanetv2-dense/bin/python",
+ "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+ "torch": "2.1.0+cu121",
+ "torchvision": "0.16.0+cu121",
+ "mmcv": "2.1.0",
+ "mmengine": "0.10.7",
+ "mmdet": "- (ModuleNotFoundError)",
+ "mmseg": "- (ModuleNotFoundError)",
+ "timm": "0.6.13",
+ "numpy": "1.25.2",
+ "fvcore": "0.1.5.post20221221",
+ "cuda_runtime": "12.1",
+ "cuda_available": true,
+ "gpu": "NVIDIA GeForce RTX 4090, 590.48.01"
+}

@@ -1,0 +1,1162 @@
+{
+ "upernet/ConvFormer-S18": {
+  "setting": "upernet",
+  "name": "ConvFormer-S18",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "configs/seg/upernet_convformer_s18_ade20k-160k.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 23670728,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "SepConv",
+    "SepConv"
+   ]
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512"
+   ],
+   "params": 53382238,
+   "ga": 925921232896,
+   "total": 926684678144,
+   "params_with_auxiliary_head": 54158580,
+   "a": 0,
+   "b": 0,
+   "c": 763445248,
+   "d": 0,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 82656886784,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "upernet/SPANetV2-S18-pure": {
+  "setting": "upernet",
+  "name": "SPANetV2-S18-pure",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "../../semantic_segmentation/local_configs/upernet/SPANetV2/upernet_spanet_s18_pure_ade20k-160k.py",
+  "backbone": {
+   "type": "spanetv2_s18_pure",
+   "params": 29163916,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512",
+    "model.backbone.init_cfg=None (no checkpoint is loaded)"
+   ],
+   "params": 58875426,
+   "ga": 930854520832,
+   "total": 932495728712,
+   "params_with_auxiliary_head": 59651768,
+   "a": 893386752,
+   "b": 16287744,
+   "c": 715245640,
+   "d": 16287744,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 87590174720,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "upernet/CAFormer-S18": {
+  "setting": "upernet",
+  "name": "CAFormer-S18",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "configs/seg/upernet_caformer_s18_ade20k-160k.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 23237936,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "Attention",
+    "Attention"
+   ]
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512"
+   ],
+   "params": 52949446,
+   "ga": 1024469026816,
+   "total": 1028272818188,
+   "params_with_auxiliary_head": 53725788,
+   "a": 0,
+   "b": 0,
+   "c": 3803791372,
+   "d": 0,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 181204680704,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "upernet/SPANetV2-S18-hybrid": {
+  "setting": "upernet",
+  "name": "SPANetV2-S18-hybrid",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "../../semantic_segmentation/local_configs/upernet/SPANetV2/upernet_spanet_s18_hybrid_ade20k-160k.py",
+  "backbone": {
+   "type": "spanetv2_s18_hybrid",
+   "params": 26992972,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "MixAttention",
+    "Attention"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512",
+    "model.backbone.init_cfg=None (no checkpoint is loaded)"
+   ],
+   "params": 56704482,
+   "ga": 1025921566720,
+   "total": 1030306678820,
+   "params_with_auxiliary_head": 57480824,
+   "a": 578813952,
+   "b": 9486336,
+   "c": 3787325476,
+   "d": 9486336,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 182657220608,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "upernet/ConvFormer-S36": {
+  "setting": "upernet",
+  "name": "ConvFormer-S36",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "configs/seg/upernet_convformer_s36_ade20k-160k.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 36908432,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "SepConv",
+    "SepConv"
+   ]
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512"
+   ],
+   "params": 66619942,
+   "ga": 1003523196928,
+   "total": 1004923652096,
+   "params_with_auxiliary_head": 67396284,
+   "a": 0,
+   "b": 0,
+   "c": 1400455168,
+   "d": 0,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 160258850816,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "upernet/SPANetV2-S36-pure": {
+  "setting": "upernet",
+  "name": "SPANetV2-S36-pure",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "../../semantic_segmentation/local_configs/upernet/SPANetV2/upernet_spanet_s36_pure_ade20k-160k.py",
+  "backbone": {
+   "type": "spanetv2_s36_pure",
+   "params": 44099632,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512",
+    "model.backbone.init_cfg=None (no checkpoint is loaded)"
+   ],
+   "params": 73811142,
+   "ga": 1013451114496,
+   "total": 1016526092432,
+   "params_with_auxiliary_head": 74587484,
+   "a": 1704984576,
+   "b": 31789056,
+   "c": 1306415248,
+   "d": 31789056,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 170186768384,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "upernet/CAFormer-S36": {
+  "setting": "upernet",
+  "name": "CAFormer-S36",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "configs/seg/upernet_caformer_s36_ade20k-160k.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 36193382,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "Attention",
+    "Attention"
+   ]
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512"
+   ],
+   "params": 65904892,
+   "ga": 1197551699968,
+   "total": 1204941621269,
+   "params_with_auxiliary_head": 66681234,
+   "a": 0,
+   "b": 0,
+   "c": 7389921301,
+   "d": 0,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 354287353856,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "upernet/SPANetV2-S36-hybrid": {
+  "setting": "upernet",
+  "name": "SPANetV2-S36-hybrid",
+  "input": [
+   1,
+   3,
+   512,
+   2048
+  ],
+  "config": "../../semantic_segmentation/local_configs/upernet/SPANetV2/upernet_spanet_s36_hybrid_ade20k-160k.py",
+  "backbone": {
+   "type": "spanetv2_s36_hybrid",
+   "params": 40670128,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "MixAttention",
+    "Attention"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "UPerHead",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "channels": 320,
+   "pool_scales": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  "auxiliary_head_in_config": "FCNHead(channels=256)",
+  "channels512": {
+   "overrides": [
+    "model.decode_head.channels=512",
+    "model.backbone.init_cfg=None (no checkpoint is loaded)"
+   ],
+   "params": 70381638,
+   "ga": 1201262086144,
+   "total": 1209764390993,
+   "params_with_auxiliary_head": 71157980,
+   "a": 1107296256,
+   "b": 18997248,
+   "c": 7357014097,
+   "d": 18997248,
+   "ga_by_module_top": {
+    "data_preprocessor": 0,
+    "backbone": 357997740032,
+    "decode_head": 842685532160
+   }
+  }
+ },
+ "fpn/SPANet-S": {
+  "setting": "fpn",
+  "name": "SPANet-S",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "configs/seg/fpn_spanet_s_ade20k-40k.py",
+  "backbone": {
+   "type": "SPANet",
+   "params": 28093120,
+   "depths": [
+    4,
+    4,
+    12,
+    4
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SPAttention",
+    "SPAttention",
+    "SPAttention",
+    "SPAttention"
+   ],
+   "patch_dims": [
+    [
+     128,
+     128
+    ],
+    [
+     64,
+     64
+    ],
+    [
+     32,
+     32
+    ],
+    [
+     16,
+     16
+    ]
+   ]
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/DFFormer-S18": {
+  "setting": "fpn",
+  "name": "DFFormer-S18",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../third_party/dfformer/segmentation/configs/fpn/dfformer_s18_fpn.py",
+  "backbone": {
+   "type": "SegDFFormerS18",
+   "params": 27456876,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "DynamicFilter",
+    "DynamicFilter",
+    "DynamicFilter",
+    "DynamicFilter"
+   ]
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/SPANetV2-S18-pure": {
+  "setting": "fpn",
+  "name": "SPANetV2-S18-pure",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../../semantic_segmentation/local_configs/fpn/SPANetV2/fpn_spanet_s18_pure_ade20k-40k.py",
+  "backbone": {
+   "type": "spanetv2_s18_pure",
+   "params": 29163916,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/CDFFormer-S18": {
+  "setting": "fpn",
+  "name": "CDFFormer-S18",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../third_party/dfformer/segmentation/configs/fpn/cdfformer_s18_fpn.py",
+  "backbone": {
+   "type": "SegCDFFormerS18",
+   "params": 27124704,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "DynamicFilter",
+    "DynamicFilter"
+   ]
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/SPANetV2-S18-hybrid": {
+  "setting": "fpn",
+  "name": "SPANetV2-S18-hybrid",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../../semantic_segmentation/local_configs/fpn/SPANetV2/fpn_spanet_s18_hybrid_ade20k-40k.py",
+  "backbone": {
+   "type": "spanetv2_s18_hybrid",
+   "params": 26992972,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "MixAttention",
+    "Attention"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/SPANet-M": {
+  "setting": "fpn",
+  "name": "SPANet-M",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "configs/seg/fpn_spanet_m_ade20k-40k.py",
+  "backbone": {
+   "type": "SPANet",
+   "params": 41174976,
+   "depths": [
+    6,
+    6,
+    18,
+    6
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SPAttention",
+    "SPAttention",
+    "SPAttention",
+    "SPAttention"
+   ],
+   "patch_dims": [
+    [
+     128,
+     128
+    ],
+    [
+     64,
+     64
+    ],
+    [
+     32,
+     32
+    ],
+    [
+     16,
+     16
+    ]
+   ]
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/DFFormer-S36": {
+  "setting": "fpn",
+  "name": "DFFormer-S36",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../third_party/dfformer/segmentation/configs/fpn/dfformer_s36_fpn.py",
+  "backbone": {
+   "type": "SegDFFormerS36",
+   "params": 42896088,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "DynamicFilter",
+    "DynamicFilter",
+    "DynamicFilter",
+    "DynamicFilter"
+   ]
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/SPANetV2-S36-pure": {
+  "setting": "fpn",
+  "name": "SPANetV2-S36-pure",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../../semantic_segmentation/local_configs/fpn/SPANetV2/fpn_spanet_s36_pure_ade20k-40k.py",
+  "backbone": {
+   "type": "spanetv2_s36_pure",
+   "params": 44099632,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/CDFFormer-S36": {
+  "setting": "fpn",
+  "name": "CDFFormer-S36",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../third_party/dfformer/segmentation/configs/fpn/cdfformer_s36_fpn.py",
+  "backbone": {
+   "type": "SegCDFFormerS36",
+   "params": 42192954,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "DynamicFilter",
+    "DynamicFilter"
+   ]
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ },
+ "fpn/SPANetV2-S36-hybrid": {
+  "setting": "fpn",
+  "name": "SPANetV2-S36-hybrid",
+  "input": [
+   1,
+   3,
+   512,
+   512
+  ],
+  "config": "../../semantic_segmentation/local_configs/fpn/SPANetV2/fpn_spanet_s36_hybrid_ade20k-40k.py",
+  "backbone": {
+   "type": "spanetv2_s36_hybrid",
+   "params": 40670128,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "MixAttention",
+    "Attention"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "decode_head": {
+   "type": "FPNHead",
+   "in_channels": [
+    256,
+    256,
+    256,
+    256
+   ],
+   "channels": 128,
+   "pool_scales": null
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 4
+  },
+  "auxiliary_head_in_config": null
+ }
+}

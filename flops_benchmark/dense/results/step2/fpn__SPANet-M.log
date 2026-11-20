@@ -1,0 +1,65 @@
+ARGV ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/seg/fpn_spanet_m_ade20k-40k.py", "--shape", "512", "512", "--cfg-options", "model.backbone.init_cfg=None"]
+/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+[tensor(0.7000), tensor(0.8000), tensor(0.9000)]
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::clone encountered 36 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::fft_fft2 encountered 108 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::fft_fftshift encountered 108 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::mul encountered 192 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::fft_ifftshift encountered 108 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::fft_ifft2 encountered 108 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::real encountered 108 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::add encountered 150 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::gelu encountered 36 time(s)
+11/20 19:08:49 - mmengine - WARNING - Unsupported operator aten::feature_dropout encountered 1 time(s)
+11/20 19:08:49 - mmengine - WARNING - The following submodules of the model were never called during the trace of the graph. They may be unused, or they were accessed by direct calls to .forward() or via other python methods. In the latter case they will have zeros for statistics, though their statistics will still contribute to their parent calling module.
+data_preprocessor, decode_head.loss_decode
+11/20 19:08:50 - mmengine - WARNING - Unsupported operator aten::group_norm encountered 76 time(s)
+11/20 19:08:50 - mmengine - WARNING - Unsupported operator aten::upsample_nearest2d encountered 3 time(s)
+11/20 19:08:50 - mmengine - WARNING - Unsupported operator aten::batch_norm encountered 7 time(s)
+11/20 19:08:50 - mmengine - WARNING - Unsupported operator aten::upsample_bilinear2d encountered 9 time(s)
+==============================
+Compute type: direct: randomly generate a picture
+Input shape: (512, 512)
+Flops: 57.172G
+Params: 45.442M
+==============================
+!!!Please be cautious if you use the results in papers. You may need to check if all ops are supported and verify that the flops computation is correct.
+RESULT_JSON {"task": "seg", "config": "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/seg/fpn_spanet_m_ade20k-40k.py", "argv": ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/seg/fpn_spanet_m_ade20k-40k.py", "--shape", "512", "512", "--cfg-options", "model.backbone.init_cfg=None"], "raw": [{"flops": 57171509248, "params": 45441622, "activations": 213057536}], "events": [["call"]]}

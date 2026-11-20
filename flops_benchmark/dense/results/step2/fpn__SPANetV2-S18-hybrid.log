@@ -1,0 +1,32 @@
+ARGV ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/semantic_segmentation/local_configs/fpn/SPANetV2/fpn_spanet_s18_hybrid_ade20k-40k.py", "--shape", "512", "512", "--cfg-options", "model.backbone.init_cfg=None"]
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::mean encountered 8 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::sub encountered 4 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::pow encountered 22 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::add encountered 97 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::sqrt encountered 4 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::div encountered 4 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::mul encountered 100 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::gelu encountered 12 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::upsample_bicubic2d encountered 24 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::sigmoid encountered 24 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::fft_rfft2 encountered 24 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::fft_irfft2 encountered 24 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::softmax encountered 12 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::feature_dropout encountered 1 time(s)
+11/20 19:08:44 - mmengine - WARNING - The following submodules of the model were never called during the trace of the graph. They may be unused, or they were accessed by direct calls to .forward() or via other python methods. In the latter case they will have zeros for statistics, though their statistics will still contribute to their parent calling module.
+backbone.head, backbone.head.act, backbone.head.act.relu, backbone.head.fc1, backbone.head.fc2, backbone.head.head_dropout, backbone.head.norm, backbone.norm, backbone.stages.0.1.drop_path1, backbone.stages.0.1.drop_path2, backbone.stages.0.2.drop_path1, backbone.stages.0.2.drop_path2, backbone.stages.1.0.drop_path1, backbone.stages.1.0.drop_path2, backbone.stages.1.1.drop_path1, backbone.stages.1.1.drop_path2, backbone.stages.1.2.drop_path1, backbone.stages.1.2.drop_path2, backbone.stages.2.0.drop_path1, backbone.stages.2.0.drop_path2, backbone.stages.2.1.drop_path1, backbone.stages.2.1.drop_path2, backbone.stages.2.2.drop_path1, backbone.stages.2.2.drop_path2, backbone.stages.2.3.drop_path1, backbone.stages.2.3.drop_path2, backbone.stages.2.4.drop_path1, backbone.stages.2.4.drop_path2, backbone.stages.2.5.drop_path1, backbone.stages.2.5.drop_path2, backbone.stages.2.6.drop_path1, backbone.stages.2.6.drop_path2, backbone.stages.2.7.drop_path1, backbone.stages.2.7.drop_path2, backbone.stages.2.8.drop_path1, backbone.stages.2.8.drop_path2, backbone.stages.3.0.drop_path1, backbone.stages.3.0.drop_path2, backbone.stages.3.1.drop_path1, backbone.stages.3.1.drop_path2, backbone.stages.3.2.drop_path1, backbone.stages.3.2.drop_path2, data_preprocessor, decode_head.loss_decode
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::layer_norm encountered 40 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::group_norm encountered 6 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::upsample_nearest2d encountered 3 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::batch_norm encountered 7 time(s)
+11/20 19:08:44 - mmengine - WARNING - Unsupported operator aten::upsample_bilinear2d encountered 9 time(s)
+==============================
+Compute type: direct: randomly generate a picture
+Input shape: (512, 512)
+Flops: 48.455G
+Params: 31.26M
+==============================
+!!!Please be cautious if you use the results in papers. You may need to check if all ops are supported and verify that the flops computation is correct.
+RESULT_JSON {"task": "seg", "config": "/home/server/Workspace/SPANetV2-official/semantic_segmentation/local_configs/fpn/SPANetV2/fpn_spanet_s18_hybrid_ade20k-40k.py", "argv": ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/semantic_segmentation/local_configs/fpn/SPANetV2/fpn_spanet_s18_hybrid_ade20k-40k.py", "--shape", "512", "512", "--cfg-options", "model.backbone.init_cfg=None"], "raw": [{"flops": 48454893568, "params": 31259618, "activations": 210108416}], "events": [["call"]]}

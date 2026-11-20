@@ -1,0 +1,75 @@
+ARGV ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/det/cascade-mask-rcnn_spanetv2_s36_hybrid_fpn-3x_coco.py", "--num-images", "3", "--cfg-options", "model.backbone.init_cfg=None", "val_dataloader.dataset.data_root=/tmp/claude-1000/-home-server-Workspace-SPANetV2-official/23d530d3-48a9-4265-8a33-eb119092f5d9/scratchpad/coco/", "val_dataloader.num_workers=0", "val_dataloader.persistent_workers=False", "val_dataloader.dataset.pipeline.1.scale=(800,1280)", "val_dataloader.dataset.pipeline.1.keep_ratio=False"]
+loading annotations into memory...
+Done (t=0.51s)
+creating index...
+index created!
+Traceback (most recent call last):
+  File "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/repo_get_flops.py", line 131, in <module>
+    main()
+  File "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/repo_get_flops.py", line 126, in main
+    runpy.run_path(script, run_name='__main__')
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "tools/analysis_tools/get_flops.py", line 146, in <module>
+    main()
+  File "tools/analysis_tools/get_flops.py", line 126, in main
+    result = inference(args, logger)
+  File "tools/analysis_tools/get_flops.py", line 104, in inference
+    outputs = get_model_complexity_info(
+  File "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/repo_get_flops.py", line 76, in wrapped
+    out = orig(*a, **k)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/mmengine/analysis/print_helper.py", line 748, in get_model_complexity_info
+    flops = flop_handler.total()
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/mmengine/analysis/jit_analysis.py", line 268, in total
+    stats = self._analyze()
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/mmengine/analysis/jit_analysis.py", line 570, in _analyze
+    graph = _get_scoped_trace_graph(self._model, self._inputs,
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/mmengine/analysis/jit_analysis.py", line 194, in _get_scoped_trace_graph
+    graph, _ = _get_trace_graph(module, inputs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/jit/_trace.py", line 1285, in _get_trace_graph
+    outs = ONNXTracedModule(
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1568, in _call_impl
+    result = forward_call(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/jit/_trace.py", line 133, in forward
+    graph, out = torch._C._create_graph_by_tracing(
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/jit/_trace.py", line 124, in wrapper
+    outs.append(self.inner(*trace_inputs))
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1568, in _call_impl
+    result = forward_call(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1508, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/server/Workspace/SPANetV2-official/object_detection/mmdet/models/detectors/base.py", line 96, in forward
+    return self._forward(inputs, data_samples)
+  File "/home/server/Workspace/SPANetV2-official/object_detection/mmdet/models/detectors/two_stage.py", line 141, in _forward
+    roi_outs = self.roi_head.forward(x, rpn_results_list,
+  File "/home/server/Workspace/SPANetV2-official/object_detection/mmdet/models/roi_heads/cascade_roi_head.py", line 557, in forward
+    mask_results = self._mask_forward(stage, x, rois)
+  File "/home/server/Workspace/SPANetV2-official/object_detection/mmdet/models/roi_heads/cascade_roi_head.py", line 207, in _mask_forward
+    mask_preds = mask_head(mask_feats)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1568, in _call_impl
+    result = forward_call(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1508, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/server/Workspace/SPANetV2-official/object_detection/mmdet/models/roi_heads/mask_heads/fcn_mask_head.py", line 146, in forward
+    x = self.upsample(x)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1568, in _call_impl
+    result = forward_call(*args, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1508, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/mmcv/cnn/bricks/wrappers.py", line 101, in forward
+    return super().forward(x)
+  File "/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 952, in forward
+    return F.conv_transpose2d(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 766.00 MiB. GPU 0 has a total capacty of 23.52 GiB of which 339.88 MiB is free. Including non-PyTorch memory, this process has 23.16 GiB memory in use. Of the allocated memory 22.17 GiB is allocated by PyTorch, and 541.55 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

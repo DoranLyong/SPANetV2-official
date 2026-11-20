@@ -1,0 +1,956 @@
+ARGV ["segmentation/tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/third_party/dfformer/segmentation/configs/fpn/dfformer_s18_fpn.py", "--shape", "512", "512"]
+/home/server/miniforge3/envs/dfformer-mm0/lib/python3.10/site-packages/mmseg/models/losses/cross_entropy_loss.py:235: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+EncoderDecoder(
+  31.409 M, 99.009% Params, 41.305 GFLOPs, 100.000% FLOPs, 
+  (backbone): SegDFFormerS18(
+    27.144 M, 85.565% Params, 19.842 GFLOPs, 48.038% FLOPs, 
+    (downsample_layers): ModuleList(
+      1.927 M, 6.075% Params, 1.213 GFLOPs, 2.937% FLOPs, 
+      (0): Downsampling(
+        0.009 M, 0.030% Params, 0.155 GFLOPs, 0.376% FLOPs, 
+        (pre_norm): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        (conv): Conv2d(0.009 M, 0.030% Params, 0.155 GFLOPs, 0.376% FLOPs, 3, 64, kernel_size=(7, 7), stride=(4, 4), padding=(2, 2))
+        (post_norm): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+      )
+      (1): Downsampling(
+        0.074 M, 0.233% Params, 0.303 GFLOPs, 0.732% FLOPs, 
+        (pre_norm): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        (conv): Conv2d(0.074 M, 0.233% Params, 0.303 GFLOPs, 0.732% FLOPs, 64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (post_norm): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+      )
+      (2): Downsampling(
+        0.369 M, 1.163% Params, 0.378 GFLOPs, 0.915% FLOPs, 
+        (pre_norm): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        (conv): Conv2d(0.369 M, 1.163% Params, 0.378 GFLOPs, 0.915% FLOPs, 128, 320, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (post_norm): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+      )
+      (3): Downsampling(
+        1.475 M, 4.650% Params, 0.378 GFLOPs, 0.914% FLOPs, 
+        (pre_norm): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        (conv): Conv2d(1.475 M, 4.650% Params, 0.378 GFLOPs, 0.914% FLOPs, 320, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (post_norm): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+      )
+    )
+    (stages): ModuleList(
+      25.215 M, 79.484% Params, 18.625 GFLOPs, 45.091% FLOPs, 
+      (0): Sequential(
+        0.175 M, 0.552% Params, 2.435 GFLOPs, 5.895% FLOPs, 
+        (0): MetaFormerBlock(
+          0.058 M, 0.184% Params, 0.812 GFLOPs, 1.965% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.026 M, 0.081% Params, 0.271 GFLOPs, 0.655% FLOPs, 
+            (pwconv1): Linear(0.008 M, 0.026% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=64, out_features=128, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.009 M, 0.029% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+              (fc1): Linear(0.001 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=64, out_features=16, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.008 M, 0.026% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=16, out_features=512, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.008 M, 0.026% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=128, out_features=64, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.033 M, 0.103% Params, 0.541 GFLOPs, 1.310% FLOPs, 
+            (fc1): Linear(0.016 M, 0.052% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=64, out_features=256, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.004 GFLOPs, 0.010% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.010% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.016 M, 0.052% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=256, out_features=64, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (1): MetaFormerBlock(
+          0.058 M, 0.184% Params, 0.812 GFLOPs, 1.965% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.026 M, 0.081% Params, 0.271 GFLOPs, 0.655% FLOPs, 
+            (pwconv1): Linear(0.008 M, 0.026% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=64, out_features=128, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.009 M, 0.029% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+              (fc1): Linear(0.001 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=64, out_features=16, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.008 M, 0.026% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=16, out_features=512, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.008 M, 0.026% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=128, out_features=64, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.033 M, 0.103% Params, 0.541 GFLOPs, 1.310% FLOPs, 
+            (fc1): Linear(0.016 M, 0.052% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=64, out_features=256, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.004 GFLOPs, 0.010% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.010% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.016 M, 0.052% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=256, out_features=64, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (2): MetaFormerBlock(
+          0.058 M, 0.184% Params, 0.812 GFLOPs, 1.965% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.026 M, 0.081% Params, 0.271 GFLOPs, 0.655% FLOPs, 
+            (pwconv1): Linear(0.008 M, 0.026% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=64, out_features=128, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.009 M, 0.029% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+              (fc1): Linear(0.001 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=64, out_features=16, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.008 M, 0.026% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=16, out_features=512, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.008 M, 0.026% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=128, out_features=64, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.033 M, 0.103% Params, 0.541 GFLOPs, 1.310% FLOPs, 
+            (fc1): Linear(0.016 M, 0.052% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=64, out_features=256, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.004 GFLOPs, 0.010% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.010% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.016 M, 0.052% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=256, out_features=64, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (1): Sequential(
+        0.7 M, 2.208% Params, 2.425 GFLOPs, 5.872% FLOPs, 
+        (0): MetaFormerBlock(
+          0.233 M, 0.736% Params, 0.808 GFLOPs, 1.957% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.102 M, 0.323% Params, 0.27 GFLOPs, 0.653% FLOPs, 
+            (pwconv1): Linear(0.033 M, 0.103% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=128, out_features=256, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.037 M, 0.116% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+              (fc1): Linear(0.004 M, 0.013% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=128, out_features=32, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.033 M, 0.103% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=32, out_features=1024, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.033 M, 0.103% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=256, out_features=128, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.131 M, 0.413% Params, 0.539 GFLOPs, 1.305% FLOPs, 
+            (fc1): Linear(0.066 M, 0.207% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=128, out_features=512, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.066 M, 0.207% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=512, out_features=128, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (1): MetaFormerBlock(
+          0.233 M, 0.736% Params, 0.808 GFLOPs, 1.957% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.102 M, 0.323% Params, 0.27 GFLOPs, 0.653% FLOPs, 
+            (pwconv1): Linear(0.033 M, 0.103% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=128, out_features=256, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.037 M, 0.116% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+              (fc1): Linear(0.004 M, 0.013% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=128, out_features=32, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.033 M, 0.103% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=32, out_features=1024, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.033 M, 0.103% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=256, out_features=128, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.131 M, 0.413% Params, 0.539 GFLOPs, 1.305% FLOPs, 
+            (fc1): Linear(0.066 M, 0.207% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=128, out_features=512, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.066 M, 0.207% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=512, out_features=128, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (2): MetaFormerBlock(
+          0.233 M, 0.736% Params, 0.808 GFLOPs, 1.957% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.102 M, 0.323% Params, 0.27 GFLOPs, 0.653% FLOPs, 
+            (pwconv1): Linear(0.033 M, 0.103% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=128, out_features=256, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.037 M, 0.116% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+              (fc1): Linear(0.004 M, 0.013% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=128, out_features=32, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.033 M, 0.103% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=32, out_features=1024, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.033 M, 0.103% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=256, out_features=128, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.131 M, 0.413% Params, 0.539 GFLOPs, 1.305% FLOPs, 
+            (fc1): Linear(0.066 M, 0.207% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=128, out_features=512, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.066 M, 0.207% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=512, out_features=128, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (2): Sequential(
+        13.133 M, 41.398% Params, 11.344 GFLOPs, 27.465% FLOPs, 
+        (0): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (1): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (2): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (3): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (4): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (5): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (6): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (7): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (8): MetaFormerBlock(
+          1.459 M, 4.600% Params, 1.26 GFLOPs, 3.052% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            0.64 M, 2.017% Params, 0.42 GFLOPs, 1.018% FLOPs, 
+            (pwconv1): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=320, out_features=640, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.002% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.23 M, 0.726% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.026 M, 0.081% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=320, out_features=80, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.205 M, 0.646% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=80, out_features=2560, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.205 M, 0.646% Params, 0.21 GFLOPs, 0.508% FLOPs, in_features=640, out_features=320, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            0.819 M, 2.582% Params, 0.84 GFLOPs, 2.034% FLOPs, 
+            (fc1): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=320, out_features=1280, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.003% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(0.41 M, 1.291% Params, 0.419 GFLOPs, 1.015% FLOPs, in_features=1280, out_features=320, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (3): Sequential(
+        11.207 M, 35.326% Params, 2.42 GFLOPs, 5.859% FLOPs, 
+        (0): MetaFormerBlock(
+          3.736 M, 11.775% Params, 0.807 GFLOPs, 1.953% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            1.638 M, 5.165% Params, 0.269 GFLOPs, 0.652% FLOPs, 
+            (pwconv1): Linear(0.524 M, 1.653% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=512, out_features=1024, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.001% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.59 M, 1.859% Params, 0.001 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.066 M, 0.207% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=512, out_features=128, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.524 M, 1.653% Params, 0.001 GFLOPs, 0.001% FLOPs, in_features=128, out_features=4096, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.524 M, 1.653% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=1024, out_features=512, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            2.097 M, 6.611% Params, 0.537 GFLOPs, 1.301% FLOPs, 
+            (fc1): Linear(1.049 M, 3.305% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=512, out_features=2048, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(1.049 M, 3.305% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=2048, out_features=512, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (1): MetaFormerBlock(
+          3.736 M, 11.775% Params, 0.807 GFLOPs, 1.953% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            1.638 M, 5.165% Params, 0.269 GFLOPs, 0.652% FLOPs, 
+            (pwconv1): Linear(0.524 M, 1.653% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=512, out_features=1024, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.001% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.59 M, 1.859% Params, 0.001 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.066 M, 0.207% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=512, out_features=128, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.524 M, 1.653% Params, 0.001 GFLOPs, 0.001% FLOPs, in_features=128, out_features=4096, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.524 M, 1.653% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=1024, out_features=512, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            2.097 M, 6.611% Params, 0.537 GFLOPs, 1.301% FLOPs, 
+            (fc1): Linear(1.049 M, 3.305% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=512, out_features=2048, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(1.049 M, 3.305% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=2048, out_features=512, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+        (2): MetaFormerBlock(
+          3.736 M, 11.775% Params, 0.807 GFLOPs, 1.953% FLOPs, 
+          (norm1): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (token_mixer): DynamicFilter(
+            1.638 M, 5.165% Params, 0.269 GFLOPs, 0.652% FLOPs, 
+            (pwconv1): Linear(0.524 M, 1.653% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=512, out_features=1024, bias=False)
+            (act1): StarReLU(
+              0.0 M, 0.000% Params, 0.0 GFLOPs, 0.001% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.001% FLOPs, )
+            )
+            (reweight): Mlp(
+              0.59 M, 1.859% Params, 0.001 GFLOPs, 0.001% FLOPs, 
+              (fc1): Linear(0.066 M, 0.207% Params, 0.0 GFLOPs, 0.000% FLOPs, in_features=512, out_features=128, bias=False)
+              (act): StarReLU(
+                0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 
+                (relu): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+              )
+              (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+              (fc2): Linear(0.524 M, 1.653% Params, 0.001 GFLOPs, 0.001% FLOPs, in_features=128, out_features=4096, bias=False)
+              (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            )
+            (act2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            (pwconv2): Linear(0.524 M, 1.653% Params, 0.134 GFLOPs, 0.325% FLOPs, in_features=1024, out_features=512, bias=False)
+          )
+          (drop_path1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale1): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale1): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (norm2): LayerNormGeneral(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (mlp): Mlp(
+            2.097 M, 6.611% Params, 0.537 GFLOPs, 1.301% FLOPs, 
+            (fc1): Linear(1.049 M, 3.305% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=512, out_features=2048, bias=False)
+            (act): StarReLU(
+              0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, 
+              (relu): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, )
+            )
+            (drop1): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+            (fc2): Linear(1.049 M, 3.305% Params, 0.268 GFLOPs, 0.650% FLOPs, in_features=2048, out_features=512, bias=False)
+            (drop2): Dropout(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.0, inplace=False)
+          )
+          (drop_path2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (layer_scale2): Identity(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          (res_scale2): Scale(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+    )
+    (norm0): LayerNorm(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, (64,), eps=1e-06, elementwise_affine=True)
+    (norm1): LayerNorm(0.0 M, 0.001% Params, 0.001 GFLOPs, 0.003% FLOPs, (128,), eps=1e-06, elementwise_affine=True)
+    (norm2): LayerNorm(0.001 M, 0.002% Params, 0.001 GFLOPs, 0.002% FLOPs, (320,), eps=1e-06, elementwise_affine=True)
+    (norm3): LayerNorm(0.001 M, 0.003% Params, 0.0 GFLOPs, 0.001% FLOPs, (512,), eps=1e-06, elementwise_affine=True)
+  )
+  (neck): FPN(
+    2.623 M, 8.270% Params, 13.366 GFLOPs, 32.359% FLOPs, 
+    (lateral_convs): ModuleList(
+      0.263 M, 0.830% Params, 0.526 GFLOPs, 1.273% FLOPs, 
+      (0): ConvModule(
+        0.017 M, 0.052% Params, 0.273 GFLOPs, 0.660% FLOPs, 
+        (conv): Conv2d(0.017 M, 0.052% Params, 0.273 GFLOPs, 0.660% FLOPs, 64, 256, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (1): ConvModule(
+        0.033 M, 0.104% Params, 0.135 GFLOPs, 0.327% FLOPs, 
+        (conv): Conv2d(0.033 M, 0.104% Params, 0.135 GFLOPs, 0.327% FLOPs, 128, 256, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (2): ConvModule(
+        0.082 M, 0.259% Params, 0.084 GFLOPs, 0.204% FLOPs, 
+        (conv): Conv2d(0.082 M, 0.259% Params, 0.084 GFLOPs, 0.204% FLOPs, 320, 256, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (3): ConvModule(
+        0.131 M, 0.414% Params, 0.034 GFLOPs, 0.081% FLOPs, 
+        (conv): Conv2d(0.131 M, 0.414% Params, 0.034 GFLOPs, 0.081% FLOPs, 512, 256, kernel_size=(1, 1), stride=(1, 1))
+      )
+    )
+    (fpn_convs): ModuleList(
+      2.36 M, 7.440% Params, 12.84 GFLOPs, 31.086% FLOPs, 
+      (0): ConvModule(
+        0.59 M, 1.860% Params, 9.668 GFLOPs, 23.406% FLOPs, 
+        (conv): Conv2d(0.59 M, 1.860% Params, 9.668 GFLOPs, 23.406% FLOPs, 256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (1): ConvModule(
+        0.59 M, 1.860% Params, 2.417 GFLOPs, 5.852% FLOPs, 
+        (conv): Conv2d(0.59 M, 1.860% Params, 2.417 GFLOPs, 5.852% FLOPs, 256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (2): ConvModule(
+        0.59 M, 1.860% Params, 0.604 GFLOPs, 1.463% FLOPs, 
+        (conv): Conv2d(0.59 M, 1.860% Params, 0.604 GFLOPs, 1.463% FLOPs, 256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (3): ConvModule(
+        0.59 M, 1.860% Params, 0.151 GFLOPs, 0.366% FLOPs, 
+        (conv): Conv2d(0.59 M, 1.860% Params, 0.151 GFLOPs, 0.366% FLOPs, 256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  init_cfg={'type': 'Xavier', 'layer': 'Conv2d', 'distribution': 'uniform'}
+  (decode_head): FPNHead(
+    1.641 M, 5.174% Params, 8.097 GFLOPs, 19.604% FLOPs, input_transform=multiple_select, ignore_index=255, align_corners=False
+    (loss_decode): CrossEntropyLoss(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, avg_non_ignore=False)
+    (conv_seg): Conv2d(0.019 M, 0.061% Params, 0.317 GFLOPs, 0.768% FLOPs, 128, 150, kernel_size=(1, 1), stride=(1, 1))
+    (dropout): Dropout2d(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, p=0.1, inplace=False)
+    (scale_heads): ModuleList(
+      1.622 M, 5.113% Params, 7.78 GFLOPs, 18.836% FLOPs, 
+      (0): Sequential(
+        0.295 M, 0.930% Params, 4.834 GFLOPs, 11.703% FLOPs, 
+        (0): ConvModule(
+          0.295 M, 0.930% Params, 4.834 GFLOPs, 11.703% FLOPs, 
+          (conv): Conv2d(0.295 M, 0.930% Params, 4.832 GFLOPs, 11.698% FLOPs, 256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): SyncBatchNorm(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activate): ReLU(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.005% FLOPs, inplace=True)
+        )
+      )
+      (1): Sequential(
+        0.295 M, 0.930% Params, 1.208 GFLOPs, 2.926% FLOPs, 
+        (0): ConvModule(
+          0.295 M, 0.930% Params, 1.208 GFLOPs, 2.926% FLOPs, 
+          (conv): Conv2d(0.295 M, 0.930% Params, 1.208 GFLOPs, 2.924% FLOPs, 256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): SyncBatchNorm(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activate): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, inplace=True)
+        )
+        (1): Upsample(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+      )
+      (2): Sequential(
+        0.442 M, 1.394% Params, 0.907 GFLOPs, 2.195% FLOPs, 
+        (0): ConvModule(
+          0.295 M, 0.930% Params, 0.302 GFLOPs, 0.731% FLOPs, 
+          (conv): Conv2d(0.295 M, 0.930% Params, 0.302 GFLOPs, 0.731% FLOPs, 256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): SyncBatchNorm(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activate): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, inplace=True)
+        )
+        (1): Upsample(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        (2): ConvModule(
+          0.147 M, 0.465% Params, 0.605 GFLOPs, 1.464% FLOPs, 
+          (conv): Conv2d(0.147 M, 0.465% Params, 0.604 GFLOPs, 1.462% FLOPs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): SyncBatchNorm(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activate): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, inplace=True)
+        )
+        (3): Upsample(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+      )
+      (3): Sequential(
+        0.59 M, 1.859% Params, 0.831 GFLOPs, 2.012% FLOPs, 
+        (0): ConvModule(
+          0.295 M, 0.930% Params, 0.076 GFLOPs, 0.183% FLOPs, 
+          (conv): Conv2d(0.295 M, 0.930% Params, 0.075 GFLOPs, 0.183% FLOPs, 256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): SyncBatchNorm(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activate): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, inplace=True)
+        )
+        (1): Upsample(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        (2): ConvModule(
+          0.147 M, 0.465% Params, 0.151 GFLOPs, 0.366% FLOPs, 
+          (conv): Conv2d(0.147 M, 0.465% Params, 0.151 GFLOPs, 0.366% FLOPs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): SyncBatchNorm(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activate): ReLU(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, inplace=True)
+        )
+        (3): Upsample(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        (4): ConvModule(
+          0.147 M, 0.465% Params, 0.605 GFLOPs, 1.464% FLOPs, 
+          (conv): Conv2d(0.147 M, 0.465% Params, 0.604 GFLOPs, 1.462% FLOPs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): SyncBatchNorm(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activate): ReLU(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, inplace=True)
+        )
+        (5): Upsample(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+      )
+    )
+  )
+  init_cfg={'type': 'Normal', 'std': 0.01, 'override': {'name': 'conv_seg'}}
+)/home/server/miniforge3/envs/dfformer-mm0/lib/python3.10/site-packages/mmcv/cnn/utils/flops_counter.py:537: UserWarning: variables __flops__ or __params__ are already defined for the moduleConv2d ptflops can affect your code!
+  warnings.warn('variables __flops__ or __params__ are already '
+/home/server/miniforge3/envs/dfformer-mm0/lib/python3.10/site-packages/mmcv/cnn/utils/flops_counter.py:537: UserWarning: variables __flops__ or __params__ are already defined for the moduleLinear ptflops can affect your code!
+  warnings.warn('variables __flops__ or __params__ are already '
+/home/server/miniforge3/envs/dfformer-mm0/lib/python3.10/site-packages/mmcv/cnn/utils/flops_counter.py:537: UserWarning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+  warnings.warn('variables __flops__ or __params__ are already '
+/home/server/miniforge3/envs/dfformer-mm0/lib/python3.10/site-packages/mmcv/cnn/utils/flops_counter.py:537: UserWarning: variables __flops__ or __params__ are already defined for the moduleLayerNorm ptflops can affect your code!
+  warnings.warn('variables __flops__ or __params__ are already '
+
+==============================
+Input shape: (3, 512, 512)
+Flops: 41.3 GFLOPs
+Params: 31.72 M
+==============================
+!!!Please be cautious if you use the results in papers. You may need to check if all ops are supported and verify that the flops computation is correct.
+RESULT_JSON {"task": "dfformer", "config": "/home/server/Workspace/SPANetV2-official/flops_benchmark/third_party/dfformer/segmentation/configs/fpn/dfformer_s18_fpn.py", "argv": ["segmentation/tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/third_party/dfformer/segmentation/configs/fpn/dfformer_s18_fpn.py", "--shape", "512", "512"], "raw": [{"flops": 41304966368, "params": 31723522, "strings": ["41.3 GFLOPs", "31.72 M"]}], "events": [["note", "torch.fft.rfft2 / irfft2 computed on the CPU (cuFFT of CUDA 11.6 fails on sm_89)"], ["call"]]}

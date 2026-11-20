@@ -1,0 +1,98 @@
+{
+ "date": "2026-11-20 19:21:06 KST",
+ "python": "3.10.22",
+ "torch": "2.1.0+cu121",
+ "mmengine": "0.10.7",
+ "mmcv": "2.1.0",
+ "fvcore": "0.1.5.post20221221",
+ "timm": "0.6.13",
+ "numpy": "1.25.2",
+ "device": "cpu",
+ "torch_threads": 16,
+ "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+ "cpu": "AMD Ryzen Threadripper PRO 5955WX 16-Cores",
+ "python_executable": "/home/server/miniforge3/envs/spanetv2-dense/bin/python",
+ "mmseg": "1.2.2 (../../semantic_segmentation/mmseg)",
+ "repos": {
+  "SPANetV2-official": {
+   "root": "../..",
+   "commit": "d1713e5c51e0172205536e8cfa08e8ebf28a0727",
+   "remote": "https://github.com/DoranLyong/SPANetV2-official.git",
+   "status": "clean"
+  },
+  "metaformer": {
+   "root": "../third_party/metaformer",
+   "commit": "64c534ab8f65105fd21713b38e3393a449ca742d",
+   "remote": "https://github.com/sail-sg/metaformer.git",
+   "status": "clean"
+  },
+  "dfformer": {
+   "root": "../third_party/dfformer",
+   "commit": "2b757c511a1bf1e66a12d494f3b0c42daa5b3636",
+   "remote": "https://github.com/okojoalg/dfformer.git",
+   "status": "clean"
+  },
+  "SPANet-official": {
+   "root": "../third_party/SPANet-official",
+   "commit": "886ad24d4d69495401e93e90d2b0a52c6cb718b7",
+   "remote": "https://github.com/DoranLyong/SPANet-official.git",
+   "status": "M object_detection/mmdet/models/backbones/spanet.py"
+  }
+ }
+}
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   ConvFormer-S18       params   36.158M | paper 925 | ga   414.914 a 0.000 b 0.000 c 0.747 d 0.000 | total   415.661 | backbone   83.376 | 3.8s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   SPANetV2-S18-pure    params   41.651M | paper 930 | ga   419.848 a 0.893 b 0.016 c 0.699 d 0.016 | total   421.472 | backbone   89.187 | 6.0s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   CAFormer-S18         params   35.725M | paper 1024 | ga   513.462 a 0.000 b 0.000 c 3.787 d 0.000 | total   517.249 | backbone  184.964 | 12.0s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   SPANetV2-S18-hybrid  params   39.480M | paper 925 | ga   514.915 a 0.579 b 0.009 c 3.771 d 0.009 | total   519.283 | backbone  186.998 | 12.8s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   ConvFormer-S36       params   49.396M | paper 1003 | ga   492.516 a 0.000 b 0.000 c 1.384 d 0.000 | total   493.900 | backbone  161.615 | 5.3s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   SPANetV2-S36-pure    params   56.587M | paper 1012 | ga   502.444 a 1.705 b 0.032 c 1.290 d 0.032 | total   505.503 | backbone  173.218 | 10.8s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   CAFormer-S36         params   48.681M | paper 1197 | ga   686.545 a 0.000 b 0.000 c 7.373 d 0.000 | total   693.918 | backbone  361.633 | 21.4s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+upernet   SPANetV2-S36-hybrid  params   53.157M | paper 1004 | ga   690.255 a 1.107 b 0.019 c 7.340 d 0.019 | total   698.741 | backbone  366.456 | 23.9s
+/home/server/miniforge3/envs/spanetv2-dense/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       SPANet-S             params   32.360M | paper 46 | ga    45.693 a 0.255 b 0.011 c 0.117 d 0.000 | total    46.076 | backbone   24.550 | 3.4s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       DFFormer-S18         params   31.724M | paper 41 | ga    41.345 a 0.382 b 0.008 c 0.257 d 0.000 | total    41.993 | backbone   20.467 | 2.5s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       SPANetV2-S18-pure    params   33.431M | paper 43 | ga    43.412 a 0.191 b 0.004 c 0.180 d 0.004 | total    43.791 | backbone   22.265 | 3.6s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       CDFFormer-S18        params   31.391M | paper 42 | ga    41.788 a 0.131 b 0.004 c 0.257 d 0.000 | total    42.179 | backbone   20.653 | 2.2s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       SPANetV2-S18-hybrid  params   31.260M | paper 48 | ga    48.455 a 0.126 b 0.002 c 0.363 d 0.002 | total    48.948 | backbone   27.422 | 2.3s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       SPANet-M             params   45.442M | paper 57 | ga    57.172 a 0.382 b 0.016 c 0.170 d 0.000 | total    57.740 | backbone   36.214 | 5.1s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       DFFormer-S36         params   47.163M | paper 60 | ga    59.952 a 0.727 b 0.016 c 0.478 d 0.000 | total    61.173 | backbone   39.647 | 4.8s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       SPANetV2-S36-pure    params   48.366M | paper 64 | ga    64.061 a 0.363 b 0.008 c 0.328 d 0.008 | total    64.768 | backbone   43.242 | 7.3s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       CDFFormer-S36        params   46.460M | paper 61 | ga    60.838 a 0.249 b 0.007 c 0.478 d 0.000 | total    61.571 | backbone   40.045 | 4.1s
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+fpn       SPANetV2-S36-hybrid  params   44.937M | paper 74 | ga    74.171 a 0.239 b 0.005 c 0.689 d 0.005 | total    75.108 | backbone   53.582 | 4.7s

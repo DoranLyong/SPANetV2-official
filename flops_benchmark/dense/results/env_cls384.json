@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-20 19:23:25 KST",
+ "python": "3.10.22",
+ "torch": "2.1.0+cu121",
+ "mmengine": "0.10.7",
+ "mmcv": "2.1.0",
+ "fvcore": "0.1.5.post20221221",
+ "timm": "0.6.13",
+ "numpy": "1.25.2",
+ "device": "cpu",
+ "torch_threads": 16,
+ "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+ "cpu": "AMD Ryzen Threadripper PRO 5955WX 16-Cores",
+ "python_executable": "/home/server/miniforge3/envs/spanetv2-dense/bin/python",
+ "repos": {
+  "SPANetV2-official": {
+   "root": "../..",
+   "commit": "d1713e5c51e0172205536e8cfa08e8ebf28a0727",
+   "remote": "https://github.com/DoranLyong/SPANetV2-official.git",
+   "status": "clean"
+  },
+  "metaformer": {
+   "root": "../third_party/metaformer",
+   "commit": "64c534ab8f65105fd21713b38e3393a449ca742d",
+   "remote": "https://github.com/sail-sg/metaformer.git",
+   "status": "clean"
+  },
+  "dfformer": {
+   "root": "../third_party/dfformer",
+   "commit": "2b757c511a1bf1e66a12d494f3b0c42daa5b3636",
+   "remote": "https://github.com/okojoalg/dfformer.git",
+   "status": "clean"
+  },
+  "SPANet-official": {
+   "root": "../third_party/SPANet-official",
+   "commit": "886ad24d4d69495401e93e90d2b0a52c6cb718b7",
+   "remote": "https://github.com/DoranLyong/SPANet-official.git",
+   "status": "M object_detection/mmdet/models/backbones/spanet.py"
+  }
+ }
+}

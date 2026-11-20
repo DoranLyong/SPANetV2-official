@@ -1,0 +1,850 @@
+{
+ "mask_rcnn/ConvFormer-S18": {
+  "setting": "mask_rcnn",
+  "name": "ConvFormer-S18",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/mask-rcnn_convformer_s18_3x.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 23670728,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "SepConv",
+    "SepConv"
+   ]
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "StandardRoIHead",
+   "num_stages": 1,
+   "bbox_heads": [
+    "Shared2FCBBoxHead(convs=0, fcs=2, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "mask_rcnn/SPANetV2-S18-pure": {
+  "setting": "mask_rcnn",
+  "name": "SPANetV2-S18-pure",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "../../object_detection/local_configs/SPANetV2/mask-rcnn_spanetv2_s18_pure_3x.py",
+  "backbone": {
+   "type": "spanetv2_s18_pure",
+   "params": 29163916,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "StandardRoIHead",
+   "num_stages": 1,
+   "bbox_heads": [
+    "Shared2FCBBoxHead(convs=0, fcs=2, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "mask_rcnn/CAFormer-S18": {
+  "setting": "mask_rcnn",
+  "name": "CAFormer-S18",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/mask-rcnn_caformer_s18_3x.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 23237936,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "Attention",
+    "Attention"
+   ]
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "StandardRoIHead",
+   "num_stages": 1,
+   "bbox_heads": [
+    "Shared2FCBBoxHead(convs=0, fcs=2, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "mask_rcnn/SPANetV2-S18-hybrid": {
+  "setting": "mask_rcnn",
+  "name": "SPANetV2-S18-hybrid",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "../../object_detection/local_configs/SPANetV2/mask-rcnn_spanetv2_s18_hybrid_3x.py",
+  "backbone": {
+   "type": "spanetv2_s18_hybrid",
+   "params": 26992972,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "MixAttention",
+    "Attention"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "StandardRoIHead",
+   "num_stages": 1,
+   "bbox_heads": [
+    "Shared2FCBBoxHead(convs=0, fcs=2, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/ConvFormer-S18": {
+  "setting": "cascade",
+  "name": "ConvFormer-S18",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/cascade-mask-rcnn_convformer_s18_fpn-3x_coco.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 23670728,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "SepConv",
+    "SepConv"
+   ]
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/SPANetV2-S18-pure": {
+  "setting": "cascade",
+  "name": "SPANetV2-S18-pure",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "../../object_detection/local_configs/SPANetV2/cascade-mask-rcnn_spanetv2_s18_pure_fpn-3x_coco.py",
+  "backbone": {
+   "type": "spanetv2_s18_pure",
+   "params": 29163916,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/CAFormer-S18": {
+  "setting": "cascade",
+  "name": "CAFormer-S18",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/cascade-mask-rcnn_caformer_s18_fpn-3x_coco.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 23237936,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "Attention",
+    "Attention"
+   ]
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/SPANetV2-S18-hybrid": {
+  "setting": "cascade",
+  "name": "SPANetV2-S18-hybrid",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "../../object_detection/local_configs/SPANetV2/cascade-mask-rcnn_spanetv2_s18_hybrid_fpn-3x_coco.py",
+  "backbone": {
+   "type": "spanetv2_s18_hybrid",
+   "params": 26992972,
+   "depths": [
+    3,
+    3,
+    9,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "MixAttention",
+    "Attention"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/ConvFormer-S36": {
+  "setting": "cascade",
+  "name": "ConvFormer-S36",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/cascade-mask-rcnn_convformer_s36_fpn-3x_coco.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 36908432,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "SepConv",
+    "SepConv"
+   ]
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/SPANetV2-S36-pure": {
+  "setting": "cascade",
+  "name": "SPANetV2-S36-pure",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/cascade-mask-rcnn_spanetv2_s36_pure_fpn-3x_coco.py",
+  "backbone": {
+   "type": "spanetv2_s36_pure",
+   "params": 44099632,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM",
+    "ExSPAM"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/CAFormer-S36": {
+  "setting": "cascade",
+  "name": "CAFormer-S36",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/cascade-mask-rcnn_caformer_s36_fpn-3x_coco.py",
+  "backbone": {
+   "type": "MetaFormerFeat",
+   "params": 36193382,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "SepConv",
+    "SepConv",
+    "Attention",
+    "Attention"
+   ]
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ },
+ "cascade/SPANetV2-S36-hybrid": {
+  "setting": "cascade",
+  "name": "SPANetV2-S36-hybrid",
+  "input": [
+   1,
+   3,
+   1280,
+   800
+  ],
+  "config": "configs/det/cascade-mask-rcnn_spanetv2_s36_hybrid_fpn-3x_coco.py",
+  "backbone": {
+   "type": "spanetv2_s36_hybrid",
+   "params": 40670128,
+   "depths": [
+    3,
+    12,
+    18,
+    3
+   ],
+   "dims": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "token_mixers": [
+    "ExSPAM",
+    "ExSPAM",
+    "MixAttention",
+    "Attention"
+   ],
+   "unused_head_params": 3103720,
+   "unused_norm_params": 1024
+  },
+  "neck": {
+   "type": "FPN",
+   "in_channels": [
+    64,
+    128,
+    320,
+    512
+   ],
+   "out_channels": 256,
+   "num_outs": 5
+  },
+  "rpn_head": {
+   "type": "RPNHead",
+   "feat_channels": 256
+  },
+  "roi_head": {
+   "type": "CascadeRoIHead",
+   "num_stages": 3,
+   "bbox_heads": [
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)",
+    "ConvFCBBoxHead(convs=4, fcs=1, fc_out=1024)"
+   ],
+   "mask_heads": [
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)",
+    "FCNMaskHead(convs=4, ch=256)"
+   ]
+  },
+  "test_cfg_rpn": {
+   "nms_pre": 1000,
+   "max_per_img": 1000
+  },
+  "test_cfg_rcnn_max_per_img": 100,
+  "rois_counted": {
+   "bbox": 1000,
+   "mask": 100
+  }
+ }
+}

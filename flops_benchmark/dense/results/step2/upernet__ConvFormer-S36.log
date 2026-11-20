@@ -1,0 +1,25 @@
+ARGV ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/seg/upernet_convformer_s36_ade20k-160k.py", "--shape", "512", "2048", "--cfg-options", "model.backbone.init_cfg=None"]
+/home/server/Workspace/SPANetV2-official/semantic_segmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::mean encountered 8 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::sub encountered 4 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::pow encountered 76 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::add encountered 151 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::sqrt encountered 4 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::div encountered 4 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::mul encountered 118 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::feature_dropout encountered 1 time(s)
+11/20 19:08:10 - mmengine - WARNING - The following submodules of the model were never called during the trace of the graph. They may be unused, or they were accessed by direct calls to .forward() or via other python methods. In the latter case they will have zeros for statistics, though their statistics will still contribute to their parent calling module.
+data_preprocessor, decode_head.loss_decode
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::layer_norm encountered 76 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::batch_norm encountered 12 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::adaptive_avg_pool2d encountered 4 time(s)
+11/20 19:08:10 - mmengine - WARNING - Unsupported operator aten::upsample_bilinear2d encountered 10 time(s)
+==============================
+Compute type: direct: randomly generate a picture
+Input shape: (512, 2048)
+Flops: 0.493T
+Params: 49.396M
+==============================
+!!!Please be cautious if you use the results in papers. You may need to check if all ops are supported and verify that the flops computation is correct.
+RESULT_JSON {"task": "seg", "config": "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/seg/upernet_convformer_s36_ade20k-160k.py", "argv": ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/seg/upernet_convformer_s36_ade20k-160k.py", "--shape", "512", "2048", "--cfg-options", "model.backbone.init_cfg=None"], "raw": [{"flops": 492516375808, "params": 49395622, "activations": 723467904}], "events": [["call"]]}

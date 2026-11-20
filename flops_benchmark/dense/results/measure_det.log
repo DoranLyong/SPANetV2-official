@@ -1,0 +1,54 @@
+{
+ "date": "2026-11-20 19:18:04 KST",
+ "python": "3.10.22",
+ "torch": "2.1.0+cu121",
+ "mmengine": "0.10.7",
+ "mmcv": "2.1.0",
+ "fvcore": "0.1.5.post20221221",
+ "timm": "0.6.13",
+ "numpy": "1.25.2",
+ "device": "cpu",
+ "torch_threads": 16,
+ "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+ "cpu": "AMD Ryzen Threadripper PRO 5955WX 16-Cores",
+ "python_executable": "/home/server/miniforge3/envs/spanetv2-dense/bin/python",
+ "mmdet": "3.3.0 (../../object_detection/mmdet)",
+ "repos": {
+  "SPANetV2-official": {
+   "root": "../..",
+   "commit": "d1713e5c51e0172205536e8cfa08e8ebf28a0727",
+   "remote": "https://github.com/DoranLyong/SPANetV2-official.git",
+   "status": "clean"
+  },
+  "metaformer": {
+   "root": "../third_party/metaformer",
+   "commit": "64c534ab8f65105fd21713b38e3393a449ca742d",
+   "remote": "https://github.com/sail-sg/metaformer.git",
+   "status": "clean"
+  },
+  "dfformer": {
+   "root": "../third_party/dfformer",
+   "commit": "2b757c511a1bf1e66a12d494f3b0c42daa5b3636",
+   "remote": "https://github.com/okojoalg/dfformer.git",
+   "status": "clean"
+  },
+  "SPANet-official": {
+   "root": "../third_party/SPANet-official",
+   "commit": "886ad24d4d69495401e93e90d2b0a52c6cb718b7",
+   "remote": "https://github.com/DoranLyong/SPANet-official.git",
+   "status": "M object_detection/mmdet/models/backbones/spanet.py"
+  }
+ }
+}
+mask_rcnn ConvFormer-S18       params   43.838M | paper 251 | ga   250.814 a 0.000 b 0.000 c 0.724 d 0.000 | total   251.538 | backbone   81.422 | 4.9s
+mask_rcnn SPANetV2-S18-pure    params   49.331M | paper 255 | ga   255.631 a 0.872 b 0.016 c 0.677 d 0.016 | total   257.213 | backbone   87.098 | 7.2s
+mask_rcnn CAFormer-S18         params   43.405M | paper 254 | ga   344.766 a 0.000 b 0.000 c 3.622 d 0.000 | total   348.388 | backbone  178.272 | 12.8s
+mask_rcnn SPANetV2-S18-hybrid  params   47.160M | paper 251 | ga   346.185 a 0.565 b 0.009 c 3.606 d 0.009 | total   350.374 | backbone  180.259 | 13.8s
+cascade   ConvFormer-S18       params   81.673M | paper 729 | ga   729.366 a 0.000 b 0.000 c 0.724 d 0.000 | total   730.090 | backbone   81.422 | 10.0s
+cascade   SPANetV2-S18-pure    params   87.167M | paper 734 | ga   734.183 a 0.872 b 0.016 c 0.677 d 0.016 | total   735.765 | backbone   87.098 | 12.7s
+cascade   CAFormer-S18         params   81.241M | paper 733 | ga   823.318 a 0.000 b 0.000 c 3.622 d 0.000 | total   826.940 | backbone  178.272 | 18.2s
+cascade   SPANetV2-S18-hybrid  params   84.996M | paper 729 | ga   824.737 a 0.565 b 0.009 c 3.606 d 0.009 | total   828.926 | backbone  180.259 | 19.4s
+cascade   ConvFormer-S36       params   94.911M | paper 805 | ga   805.149 a 0.000 b 0.000 c 1.346 d 0.000 | total   806.495 | backbone  157.827 | 11.8s
+cascade   SPANetV2-S36-pure    params  102.102M | paper 814 | ga   814.844 a 1.665 b 0.032 c 1.255 d 0.032 | total   817.827 | backbone  169.159 | 17.6s
+cascade   CAFormer-S36         params   94.196M | paper 811 | ga   990.132 a 0.000 b 0.000 c 7.055 d 0.000 | total   997.187 | backbone  348.520 | 23.5s
+cascade   SPANetV2-S36-hybrid  params   98.673M | paper 806 | ga   993.756 a 1.081 b 0.019 c 7.023 d 0.019 | total  1001.897 | backbone  353.230 | 26.5s

@@ -1,0 +1,36 @@
+ARGV ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/det/mask-rcnn_convformer_s18_3x.py", "--num-images", "3", "--cfg-options", "model.backbone.init_cfg=None", "val_dataloader.dataset.data_root=/tmp/claude-1000/-home-server-Workspace-SPANetV2-official/23d530d3-48a9-4265-8a33-eb119092f5d9/scratchpad/coco/", "val_dataloader.num_workers=0", "val_dataloader.persistent_workers=False", "val_dataloader.dataset.pipeline.1.scale=(800,1280)", "val_dataloader.dataset.pipeline.1.keep_ratio=False"]
+loading annotations into memory...
+Done (t=0.51s)
+creating index...
+index created!
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::mean encountered 8 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::sub encountered 12 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::pow encountered 40 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::add encountered 96 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::sqrt encountered 6 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::div encountered 6 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::mul encountered 87 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::max_pool2d encountered 1 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::repeat encountered 11 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::sigmoid encountered 5 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::sort encountered 4 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::exp encountered 1 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator prim::PythonOp.NMSop encountered 1 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::log2 encountered 2 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator prim::PythonOp.RoIAlignFunction encountered 4 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::sum encountered 4 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::add_ encountered 4 time(s)
+11/20 19:06:00 - mmengine - WARNING - The following submodules of the model were never called during the trace of the graph. They may be unused, or they were accessed by direct calls to .forward() or via other python methods. In the latter case they will have zeros for statistics, though their statistics will still contribute to their parent calling module.
+data_preprocessor, roi_head.bbox_head.loss_bbox, roi_head.bbox_head.loss_cls, roi_head.bbox_roi_extractor.roi_layers.3, roi_head.mask_head.loss_mask, roi_head.mask_roi_extractor.roi_layers.1, roi_head.mask_roi_extractor.roi_layers.2, roi_head.mask_roi_extractor.roi_layers.3, rpn_head.loss_bbox, rpn_head.loss_cls
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::layer_norm encountered 40 time(s)
+11/20 19:06:00 - mmengine - WARNING - Unsupported operator aten::upsample_nearest2d encountered 3 time(s)
+==============================
+Use size divisor set input shape from (428, 640) to (1280, 800)
+==============================
+Compute type: dataloader: load a picture from the dataset
+Input shape: (1280, 800)
+Flops: 0.251T
+Params: 43.838M
+==============================
+!!!Please be cautious if you use the results in papers. You may need to check if all ops are supported and verify that the flops computation is correct.
+RESULT_JSON {"task": "det", "config": "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/det/mask-rcnn_convformer_s18_3x.py", "argv": ["tools/analysis_tools/get_flops.py", "/home/server/Workspace/SPANetV2-official/flops_benchmark/dense/configs/det/mask-rcnn_convformer_s18_3x.py", "--num-images", "3", "--cfg-options", "model.backbone.init_cfg=None", "val_dataloader.dataset.data_root=/tmp/claude-1000/-home-server-Workspace-SPANetV2-official/23d530d3-48a9-4265-8a33-eb119092f5d9/scratchpad/coco/", "val_dataloader.num_workers=0", "val_dataloader.persistent_workers=False", "val_dataloader.dataset.pipeline.1.scale=(800,1280)", "val_dataloader.dataset.pipeline.1.keep_ratio=False"], "raw": [{"flops": 250813680640, "params": 43838136, "activations": 438303260}, {"flops": 250813680640, "params": 43838136, "activations": 438303260}, {"flops": 250813680640, "params": 43838136, "activations": 438303260}], "events": [["call"], ["rpn_head_input", [[1, 256, 320, 200], [1, 256, 160, 100], [1, 256, 80, 50], [1, 256, 40, 25], [1, 256, 20, 13]]], ["roi_extractor", "SingleRoIExtractor", 1000, [7, 7]], ["roi_extractor", "SingleRoIExtractor", 100, [14, 14]], ["rpn_head_input", [[1, 256, 320, 200], [1, 256, 160, 100], [1, 256, 80, 50], [1, 256, 40, 25], [1, 256, 20, 13]]], ["roi_extractor", "SingleRoIExtractor", 1000, [7, 7]], ["roi_extractor", "SingleRoIExtractor", 100, [14, 14]], ["call"], ["rpn_head_input", [[1, 256, 320, 200], [1, 256, 160, 100], [1, 256, 80, 50], [1, 256, 40, 25], [1, 256, 20, 13]]], ["roi_extractor", "SingleRoIExtractor", 1000, [7, 7]], ["roi_extractor", "SingleRoIExtractor", 100, [14, 14]], ["rpn_head_input", [[1, 256, 320, 200], [1, 256, 160, 100], [1, 256, 80, 50], [1, 256, 40, 25], [1, 256, 20, 13]]], ["roi_extractor", "SingleRoIExtractor", 1000, [7, 7]], ["roi_extractor", "SingleRoIExtractor", 100, [14, 14]], ["call"], ["rpn_head_input", [[1, 256, 320, 200], [1, 256, 160, 100], [1, 256, 80, 50], [1, 256, 40, 25], [1, 256, 20, 13]]], ["roi_extractor", "SingleRoIExtractor", 1000, [7, 7]], ["roi_extractor", "SingleRoIExtractor", 100, [14, 14]], ["rpn_head_input", [[1, 256, 320, 200], [1, 256, 160, 100], [1, 256, 80, 50], [1, 256, 40, 25], [1, 256, 20, 13]]], ["roi_extractor", "SingleRoIExtractor", 1000, [7, 7]], ["roi_extractor", "SingleRoIExtractor", 100, [14, 14]]]}

@@ -1,0 +1,17 @@
+{
+ "python": "3.10.22",
+ "python_executable": "/home/server/miniforge3/envs/dfformer-mm0/bin/python",
+ "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+ "torch": "1.12.1+cu116",
+ "torchvision": "0.13.1+cu116",
+ "mmcv": "1.6.2",
+ "mmengine": "- (ModuleNotFoundError)",
+ "mmdet": "- (ModuleNotFoundError)",
+ "mmseg": "0.29.1",
+ "timm": "0.5.4",
+ "numpy": "1.23.5",
+ "fvcore": "- (ModuleNotFoundError)",
+ "cuda_runtime": "11.6",
+ "cuda_available": true,
+ "gpu": "NVIDIA GeForce RTX 4090, 590.48.01"
+}
