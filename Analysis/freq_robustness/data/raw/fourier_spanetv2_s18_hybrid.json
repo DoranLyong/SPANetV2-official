@@ -1,0 +1,9 @@
+{
+ "model": "spanetv2_s18_hybrid",
+ "n": 5000,
+ "norm": 15.7,
+ "half": 31,
+ "amp": false,
+ "per_channel_sign": true,
+ "seconds": 8850.84449338913
+}

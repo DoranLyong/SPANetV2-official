@@ -1,0 +1,21 @@
+{
+ "rule": "thin-structure score = fraction of labelled pixels removed by a per-class 5x5 opening; top 60 of 2000 images, then 6 drawn with numpy default_rng(0)",
+ "images": [
+  "ADE_val_00000189",
+  "ADE_val_00001152",
+  "ADE_val_00001387",
+  "ADE_val_00001480",
+  "ADE_val_00001498",
+  "ADE_val_00001943"
+ ],
+ "scores": [
+  0.029553728810767177,
+  0.026948252612653108,
+  0.032079985278783044,
+  0.039359267734553775,
+  0.050506181329665584,
+  0.038644538089897595
+ ],
+ "top_threshold": 0.026147644162590227,
+ "median_score_all": 0.005304389331663446
+}

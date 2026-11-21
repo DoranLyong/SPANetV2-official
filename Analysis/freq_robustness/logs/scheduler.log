@@ -1,0 +1,4 @@
+[2026-11-22 05:01:21] GPU0 start band:spanetv2_s18_pure
+[2026-11-22 05:01:23] GPU1 start band:spanetv2_s18_hybrid
+[2026-11-22 05:01:25] GPU2 start band:convformer_s18
+[2026-11-22 05:01:27] GPU3 start band:caformer_s18

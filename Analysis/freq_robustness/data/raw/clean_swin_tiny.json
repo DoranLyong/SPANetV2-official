@@ -1,0 +1,32 @@
+{
+ "model": "swin_tiny",
+ "top1": 81.182,
+ "n": 50000,
+ "subset5k_top1": 80.62,
+ "fp16_top1": 81.16799999999999,
+ "fp16_fp32_pred_agreement": 0.9996,
+ "load_info": {
+  "weights_only": true,
+  "state_dict": "ckpt['model']",
+  "missing": [],
+  "unexpected": []
+ },
+ "preprocessing": {
+  "resize": 256,
+  "resize_interpolation": "bicubic (PIL)",
+  "center_crop": 224,
+  "crop_pct": 0.875,
+  "mean": [
+   0.485,
+   0.456,
+   0.406
+  ],
+  "std": [
+   0.229,
+   0.224,
+   0.225
+  ]
+ },
+ "seconds": 116.3303689956665,
+ "n_params": 28288354
+}

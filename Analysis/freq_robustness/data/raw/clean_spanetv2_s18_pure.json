@@ -1,0 +1,32 @@
+{
+ "model": "spanetv2_s18_pure",
+ "top1": 83.44,
+ "n": 50000,
+ "subset5k_top1": 82.58,
+ "fp16_top1": 83.43199999999999,
+ "fp16_fp32_pred_agreement": 0.99972,
+ "load_info": {
+  "weights_only": true,
+  "state_dict": "flat",
+  "missing": [],
+  "unexpected": []
+ },
+ "preprocessing": {
+  "resize": 224,
+  "resize_interpolation": "bicubic (PIL)",
+  "center_crop": 224,
+  "crop_pct": 1.0,
+  "mean": [
+   0.485,
+   0.456,
+   0.406
+  ],
+  "std": [
+   0.229,
+   0.224,
+   0.225
+  ]
+ },
+ "seconds": 100.32994937896729,
+ "n_params": 29162892
+}

@@ -1,0 +1,270 @@
+{
+ "spanetv2_s18_pure": {
+  "group": "cls",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ImageNet-1K/spanetv2_s18_pure_res-scale_Full-ExSPAM.pth",
+  "path": "weights/cls/spanetv2_s18_pure_res-scale_Full-ExSPAM/spanetv2_s18_pure_res-scale_Full-ExSPAM.pth",
+  "size": 116857189,
+  "source": "hard link of ../srf_task_analysis/ckpts/ImageNet-1K/spanetv2_s18_pure_res-scale_Full-ExSPAM/spanetv2_s18_pure_res-scale_Full-ExSPAM.pth",
+  "sha256": "7450b229eddf819fae7bb882a073db1371489173ad4110807e83c92693c83804"
+ },
+ "spanetv2_s18_hybrid": {
+  "group": "cls",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ImageNet-1K/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+  "path": "weights/cls/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+  "size": 108085611,
+  "source": "hard link of ../srf_task_analysis/ckpts/ImageNet-1K/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+  "sha256": "4e27616f75cc7e7323d9a8b1846bfffb9b001db93d071879a0c6729cb5f6e7d4"
+ },
+ "convformer_s18": {
+  "group": "cls",
+  "url": "https://huggingface.co/sail/dl/resolve/main/convformer/convformer_s18.pth",
+  "path": "weights/cls/convformer_s18/convformer_s18.pth",
+  "size": 107170397,
+  "sha256": "0daa1afe607d4611548baf64de666b32ab10dc5faa2c9559094156e9f75349f6"
+ },
+ "caformer_s18": {
+  "group": "cls",
+  "url": "https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth",
+  "path": "weights/cls/caformer_s18/caformer_s18.pth",
+  "size": 105428005,
+  "sha256": "6c396866b2457ae5e1c48933ff5e7a95b663e64d99c4b0a4dd32756d8db4d162"
+ },
+ "dfformer_s18": {
+  "group": "cls",
+  "url": "https://github.com/okojoalg/dfformer/releases/download/weights/dfformer_s18.pth",
+  "path": "weights/cls/dfformer_s18/dfformer_s18.pth",
+  "size": 121347017,
+  "sha256": "f6a4a2c06a5209e996e24070a008da0b513be0a8cbe81422d6d6547147a50876"
+ },
+ "cdfformer_s18": {
+  "group": "cls",
+  "url": "https://github.com/okojoalg/dfformer/releases/download/weights/cdfformer_s18.pth",
+  "path": "weights/cls/cdfformer_s18/cdfformer_s18.pth",
+  "size": 120819488,
+  "sha256": "841ce2f88c850d3ebc23f8b75b616ac14256c0b36545e3156f118b0cc022a0c3"
+ },
+ "convnext_tiny": {
+  "group": "cls",
+  "url": "https://dl.fbaipublicfiles.com/convnext/convnext_tiny_1k_224.pth",
+  "path": "weights/cls/convnext_tiny_1k_224/convnext_tiny_1k_224.pth",
+  "size": 114414741,
+  "sha256": "eb5c280f7df7672c17cf92cd20d2b0ef88262095754de2fa3b2b1e66bc6b00c7"
+ },
+ "convnext_tiny_ema": {
+  "group": "cls",
+  "url": "https://dl.fbaipublicfiles.com/convnext/convnext_tiny_1k_224_ema.pth",
+  "path": "weights/cls/convnext_tiny_1k_224_ema/convnext_tiny_1k_224_ema.pth",
+  "size": 114414741,
+  "sha256": "14f3164e3ea6ac32ab3f574f528ce817696c9176fad4221e0a77a905a7360595"
+ },
+ "swin_tiny": {
+  "group": "cls",
+  "url": "https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth",
+  "path": "weights/cls/swin_tiny_patch4_window7_224/swin_tiny_patch4_window7_224.pth",
+  "size": 114342173,
+  "sha256": "9f71c168d837d1b99dd1dc29e14990a7a9e8bdc5f673d46b04fe36fe15590ad3"
+ },
+ "deit_small": {
+  "group": "cls",
+  "url": "https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth",
+  "path": "weights/cls/deit_small_patch16_224-cd65a155/deit_small_patch16_224-cd65a155.pth",
+  "size": 88251143,
+  "sha256": "cd65a15597004d0ce19d7a9daef969903972db5b398e3a5febcd3c4df1d8f59f"
+ },
+ "upernet_spanetv2_s18_pure": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/upernet_spanetv2_s18_pure_ade20k_4872e-2.pth",
+  "path": "weights/seg/upernet_spanetv2_s18_pure_ade20k_4872e-2/upernet_spanetv2_s18_pure_ade20k_4872e-2.pth",
+  "size": 508884806,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/upernet_spanetv2_s18_pure_ade20k_4872e-2/upernet_spanetv2_s18_pure_ade20k_4872e-2.pth",
+  "sha256": "4ae3b5ddc2294470940f7792dc7db9e5093125786af47fcb91a451cc24485ff3"
+ },
+ "upernet_spanetv2_s18_hybrid": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth",
+  "path": "weights/seg/upernet_spanetv2_s18_hybrid_ade20k_4913e-2/upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth",
+  "size": 477294226,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/upernet_spanetv2_s18_hybrid_ade20k_4913e-2/upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth",
+  "sha256": "b3114904af334cb1ae111c495aded207f15a34c8e5cbf0c4805e812d57304109"
+ },
+ "upernet_spanetv2_s36_pure": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/upernet_spanetv2_s36_pure_ade20k_4976e-2.pth",
+  "path": "weights/seg/upernet_spanetv2_s36_pure_ade20k_4976e-2/upernet_spanetv2_s36_pure_ade20k_4976e-2.pth",
+  "size": 691502838,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/upernet_spanetv2_s36_pure_ade20k_4976e-2/upernet_spanetv2_s36_pure_ade20k_4976e-2.pth",
+  "sha256": "5add3fd5805e0b8c5e97aab58dd7340e1bf0f2d5d198df024dc60176adfd709a"
+ },
+ "upernet_spanetv2_s36_hybrid": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/upernet_spanetv2_s36_hybrid_ade20k_5163e-2.pth",
+  "path": "weights/seg/upernet_spanetv2_s36_hybrid_ade20k_5163e-2/upernet_spanetv2_s36_hybrid_ade20k_5163e-2.pth",
+  "size": 647306946,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/upernet_spanetv2_s36_hybrid_ade20k_5163e-2/upernet_spanetv2_s36_hybrid_ade20k_5163e-2.pth",
+  "sha256": "45870e831a259ae382fe955044047324e7d445f62f8f03fc7499b540b0f1e154"
+ },
+ "fpn_spanetv2_s18_pure": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/fpn_spanetv2_s18_pure_ade20k_467e-1.pth",
+  "path": "weights/seg/fpn_spanetv2_s18_pure_ade20k_467e-1/fpn_spanetv2_s18_pure_ade20k_467e-1.pth",
+  "size": 381589865,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/fpn_spanetv2_s18_pure_ade20k_467e-1/fpn_spanetv2_s18_pure_ade20k_467e-1.pth",
+  "sha256": "09d2fc8a1008401ec2aa89002605d47aaf4ec86ea38339ba888f98385e342233"
+ },
+ "fpn_spanetv2_s18_hybrid": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth",
+  "path": "weights/seg/fpn_spanetv2_s18_hybrid_ade20k_478e-1/fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth",
+  "size": 355305973,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/fpn_spanetv2_s18_hybrid_ade20k_478e-1/fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth",
+  "sha256": "f1e27ab6af34e7c88f04448c8139725c61dd528d9bbbaccd7d000e366d1011f5"
+ },
+ "fpn_spanetv2_s36_pure": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/fpn_spanetv2_s36_pure_ade20k_479e-1.pth",
+  "path": "weights/seg/fpn_spanetv2_s36_pure_ade20k_479e-1/fpn_spanetv2_s36_pure_ade20k_479e-1.pth",
+  "size": 561419097,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/fpn_spanetv2_s36_pure_ade20k_479e-1/fpn_spanetv2_s36_pure_ade20k_479e-1.pth",
+  "sha256": "953a903878f98ba118f45496a3e54564a4232232e7a984cd2a12d96d146b8a3f"
+ },
+ "fpn_spanetv2_s36_hybrid": {
+  "group": "seg",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/ADE20K/fpn_spanetv2_s36_hybrid_ade20k_486e-1.pth",
+  "path": "weights/seg/fpn_spanetv2_s36_hybrid_ade20k_486e-1/fpn_spanetv2_s36_hybrid_ade20k_486e-1.pth",
+  "size": 519797221,
+  "source": "hard link of ../srf_task_analysis/ckpts/ADE20K/fpn_spanetv2_s36_hybrid_ade20k_486e-1/fpn_spanetv2_s36_hybrid_ade20k_486e-1.pth",
+  "sha256": "20068bbcaa24e0f5101bcc818c7661f823e40d447cbe35e87ab39f858f375d83"
+ },
+ "upernet_convnext_tiny": {
+  "group": "seg",
+  "url": "https://dl.fbaipublicfiles.com/convnext/ade20k/upernet_convnext_tiny_1k_512x512.pth",
+  "path": "weights/seg/upernet_convnext_tiny_1k_512x512/upernet_convnext_tiny_1k_512x512.pth",
+  "size": 241124827,
+  "sha256": "d5445ded48e348ffb0dfd007e98c3b9c10e5e78a2b633877724ea961221cb50e"
+ },
+ "upernet_convnext_small": {
+  "group": "seg",
+  "url": "https://dl.fbaipublicfiles.com/convnext/ade20k/upernet_convnext_small_1k_512x512.pth",
+  "path": "weights/seg/upernet_convnext_small_1k_512x512/upernet_convnext_small_1k_512x512.pth",
+  "size": 327716749,
+  "sha256": "646f4c264cdff7f8b794a7e097a31a37dac962212543a84cc00ca311e23a9e90"
+ },
+ "upernet_swin_tiny": {
+  "group": "seg",
+  "url": "https://github.com/SwinTransformer/storage/releases/download/v1.0.1/upernet_swin_tiny_patch4_window7_512x512.pth",
+  "path": "weights/seg/upernet_swin_tiny_patch4_window7_512x512/upernet_swin_tiny_patch4_window7_512x512.pth",
+  "size": 240144566,
+  "sha256": "c26408bb5ddee935dcc709ad7815fa039f2db2b41134cd702da7da277d1a7d89"
+ },
+ "upernet_swin_small": {
+  "group": "seg",
+  "url": "https://github.com/SwinTransformer/storage/releases/download/v1.0.1/upernet_swin_small_patch4_window7_512x512.pth",
+  "path": "weights/seg/upernet_swin_small_patch4_window7_512x512/upernet_swin_small_patch4_window7_512x512.pth",
+  "size": 325703390,
+  "sha256": "a16564358519888a1b8b2f8ed0baaa6dc62b398ebf5241aa6ee5572171225f7a"
+ },
+ "fpn_poolformer_s24": {
+  "group": "seg",
+  "url": "https://download.openmmlab.com/mmsegmentation/v0.5/poolformer/fpn_poolformer_s24_8x4_512x512_40k_ade20k/fpn_poolformer_s24_8x4_512x512_40k_ade20k_20220503_222049-394a7cf7.pth",
+  "path": "weights/seg/fpn_poolformer_s24_8x4_512x512_40k_ade20k_20220503_222049-394a7cf7/fpn_poolformer_s24_8x4_512x512_40k_ade20k_20220503_222049-394a7cf7.pth",
+  "size": 100723407,
+  "sha256": "394a7cf70ef3288bed32f3d8c1bbd28d619fed3ed5808eeb8b59a5dc586a5c06"
+ },
+ "fpn_poolformer_s36": {
+  "group": "seg",
+  "url": "https://download.openmmlab.com/mmsegmentation/v0.5/poolformer/fpn_poolformer_s36_8x4_512x512_40k_ade20k/fpn_poolformer_s36_8x4_512x512_40k_ade20k_20220501_151122-b47e607d.pth",
+  "path": "weights/seg/fpn_poolformer_s36_8x4_512x512_40k_ade20k_20220501_151122-b47e607d/fpn_poolformer_s36_8x4_512x512_40k_ade20k_20220501_151122-b47e607d.pth",
+  "size": 138666959,
+  "sha256": "b47e607d776568f022ba12347de64b6c9a74473866589459b581df785aa90e01"
+ },
+ "mask_rcnn_spanetv2_s18_pure": {
+  "group": "det",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/COCO2017/mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth",
+  "path": "weights/det/mask-rcnn_spanetv2_s18_pure_3x_epoch_35/mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth",
+  "size": 672288049,
+  "source": "hard link of ../srf_task_analysis/ckpts/COCO2017/mask-rcnn_spanetv2_s18_pure_3x_epoch_35/mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth",
+  "sha256": "7a6905417ab7797e2f3036ebd1ffb9d1ba3359460663f8f7fd76024db4cde7c4"
+ },
+ "mask_rcnn_spanetv2_s18_hybrid": {
+  "group": "det",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/COCO2017/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth",
+  "path": "weights/det/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth",
+  "size": 743101565,
+  "source": "hard link of ../srf_task_analysis/ckpts/COCO2017/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth",
+  "sha256": "1e8d0cff6ea534f50b16f8033121ac5c6cb77887083bbc01d9608b88fc9bd878"
+ },
+ "cascade_spanetv2_s18_pure": {
+  "group": "det",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/COCO2017/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth",
+  "path": "weights/det/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth",
+  "size": 1201530229,
+  "source": "hard link of ../srf_task_analysis/ckpts/COCO2017/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth",
+  "sha256": "62a25bdfa0018e6b102e0f1ea986642ee05862ac1b9278302f5887fdbcfac341"
+ },
+ "cascade_spanetv2_s18_hybrid": {
+  "group": "det",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/COCO2017/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth",
+  "path": "weights/det/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth",
+  "size": 1342689857,
+  "source": "hard link of ../srf_task_analysis/ckpts/COCO2017/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth",
+  "sha256": "645968a5b00752cce6140d1f677b93110c91547905046e74da15390327b141d3"
+ },
+ "cascade_spanetv2_s36_pure": {
+  "group": "det",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/COCO2017/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth",
+  "path": "weights/det/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth",
+  "size": 1386166373,
+  "source": "hard link of ../srf_task_analysis/ckpts/COCO2017/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth",
+  "sha256": "d25239c20894e5e4132e5f8e7c2d0b55f01757a8a33508addf2eff303addf811"
+ },
+ "cascade_spanetv2_s36_hybrid": {
+  "group": "det",
+  "url": "https://github.com/DoranLyong/SPANetV2-official/releases/download/COCO2017/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth",
+  "path": "weights/det/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth",
+  "size": 1509369457,
+  "source": "hard link of ../srf_task_analysis/ckpts/COCO2017/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth",
+  "sha256": "e30613cf5dff93a49be761435f752344289fabbafad7b38ec7a04cb3bde8a2f9"
+ },
+ "mask_rcnn_convnext_tiny": {
+  "group": "det",
+  "url": "https://dl.fbaipublicfiles.com/convnext/coco/mask_rcnn_convnext_tiny_1k_3x.pth",
+  "path": "weights/det/mask_rcnn_convnext_tiny_1k_3x/mask_rcnn_convnext_tiny_1k_3x.pth",
+  "size": 192456627,
+  "sha256": "715a53dfcceca1ef1bfeda578dbcfe36a5d2fee2607fd8d91ff0af7b66829b2f"
+ },
+ "cascade_convnext_tiny": {
+  "group": "det",
+  "url": "https://dl.fbaipublicfiles.com/convnext/coco/cascade_mask_rcnn_convnext_tiny_1k_3x.pth",
+  "path": "weights/det/cascade_mask_rcnn_convnext_tiny_1k_3x/cascade_mask_rcnn_convnext_tiny_1k_3x.pth",
+  "size": 343858541,
+  "sha256": "fefe0f1ff66a66f3d3e9aae5ca631bc4d0e186c58282bd7e7b8d50ee3054b0a9"
+ },
+ "cascade_convnext_small": {
+  "group": "det",
+  "url": "https://dl.fbaipublicfiles.com/convnext/coco/cascade_mask_rcnn_convnext_small_1k_3x.pth",
+  "path": "weights/det/cascade_mask_rcnn_convnext_small_1k_3x/cascade_mask_rcnn_convnext_small_1k_3x.pth",
+  "size": 430450463,
+  "sha256": "71dc50c6eb606e7fbc14ce4b7f71d3c9c766bf94cd310c87d7760e6275305c16"
+ },
+ "mask_rcnn_swin_tiny": {
+  "group": "det",
+  "url": "https://github.com/SwinTransformer/storage/releases/download/v1.0.2/mask_rcnn_swin_tiny_patch4_window7.pth",
+  "path": "weights/det/mask_rcnn_swin_tiny_patch4_window7/mask_rcnn_swin_tiny_patch4_window7.pth",
+  "size": 191487694,
+  "sha256": "491b53986a58bf92bda8a90874ad81ec20672c770b7c1aec125824dff3558eed"
+ },
+ "cascade_swin_tiny": {
+  "group": "det",
+  "url": "https://github.com/SwinTransformer/storage/releases/download/v1.0.2/cascade_mask_rcnn_swin_tiny_patch4_window7.pth",
+  "path": "weights/det/cascade_mask_rcnn_swin_tiny_patch4_window7/cascade_mask_rcnn_swin_tiny_patch4_window7.pth",
+  "size": 342889544,
+  "sha256": "3980a87583c0e447393af81ed1ecbec682b4498855b9722a70e5a7e77ab8378d"
+ },
+ "cascade_swin_small": {
+  "group": "det",
+  "url": "https://github.com/SwinTransformer/storage/releases/download/v1.0.2/cascade_mask_rcnn_swin_small_patch4_window7.pth",
+  "path": "weights/det/cascade_mask_rcnn_swin_small_patch4_window7/cascade_mask_rcnn_swin_small_patch4_window7.pth",
+  "size": 428448368,
+  "sha256": "65d439a4c6f08487b5911035f6e6e667d90324ed35196ca54e2aa68878566e76"
+ }
+}

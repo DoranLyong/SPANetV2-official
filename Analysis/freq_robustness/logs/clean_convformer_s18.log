@@ -1,0 +1,1 @@
+{"model": "convformer_s18", "top1": 82.978, "n": 50000, "subset5k_top1": 82.67999999999999, "fp16_top1": 82.974, "fp16_fp32_pred_agreement": 0.9996, "preprocessing": {"resize": 224, "resize_interpolation": "bicubic (PIL)", "center_crop": 224, "crop_pct": 1.0, "mean": [0.485, 0.456, 0.406], "std": [0.229, 0.224, 0.225]}, "seconds": 81.7936794757843, "n_params": 26774448}

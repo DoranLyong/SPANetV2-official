@@ -1,0 +1,187 @@
+loading annotations into memory...
+Done (t=0.37s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 1150
+`boundary` added! (t=6.31s)
+index created!
+Loading and preparing results...
+DONE (t=0.94s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3719
+`boundary` added! (t=17.77s)
+index created!
+Loading and preparing results...
+DONE (t=0.86s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3719
+`boundary` added! (t=22.21s)
+index created!
+cascade_convnext_small boundary AP 30.03 mask AP 45.0
+Loading and preparing results...
+DONE (t=0.90s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3608
+`boundary` added! (t=26.25s)
+index created!
+Loading and preparing results...
+DONE (t=0.72s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3608
+`boundary` added! (t=28.27s)
+index created!
+cascade_convnext_tiny boundary AP 28.92 mask AP 43.65
+Loading and preparing results...
+DONE (t=0.58s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 2853
+`boundary` added! (t=24.20s)
+index created!
+Loading and preparing results...
+DONE (t=1.04s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 2853
+`boundary` added! (t=31.41s)
+index created!
+cascade_spanetv2_s18_hybrid boundary AP 30.64 mask AP 45.71
+Loading and preparing results...
+DONE (t=1.06s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3063
+`boundary` added! (t=29.95s)
+index created!
+Loading and preparing results...
+DONE (t=1.04s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3063
+`boundary` added! (t=30.05s)
+index created!
+cascade_spanetv2_s18_pure boundary AP 30.07 mask AP 44.65
+Loading and preparing results...
+DONE (t=1.08s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3201
+`boundary` added! (t=31.36s)
+index created!
+Loading and preparing results...
+DONE (t=0.97s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3201
+`boundary` added! (t=30.02s)
+index created!
+cascade_spanetv2_s36_hybrid boundary AP 31.01 mask AP 46.43
+Loading and preparing results...
+DONE (t=0.86s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3347
+`boundary` added! (t=28.07s)
+index created!
+Loading and preparing results...
+DONE (t=1.48s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3347
+`boundary` added! (t=31.50s)
+index created!
+cascade_spanetv2_s36_pure boundary AP 30.86 mask AP 45.88
+Loading and preparing results...
+DONE (t=1.55s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3293
+`boundary` added! (t=28.26s)
+index created!
+Loading and preparing results...
+DONE (t=0.89s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3293
+`boundary` added! (t=27.89s)
+index created!
+cascade_swin_small boundary AP 30.21 mask AP 44.99
+Loading and preparing results...
+DONE (t=1.10s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3848
+`boundary` added! (t=30.67s)
+index created!
+Loading and preparing results...
+DONE (t=1.35s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3848
+`boundary` added! (t=29.66s)
+index created!
+cascade_swin_tiny boundary AP 28.97 mask AP 43.72
+Loading and preparing results...
+DONE (t=0.97s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 4201
+`boundary` added! (t=35.77s)
+index created!
+Loading and preparing results...
+DONE (t=1.94s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 4201
+`boundary` added! (t=34.77s)
+index created!
+mask_rcnn_convnext_tiny boundary AP 26.74 mask AP 41.67
+Loading and preparing results...
+DONE (t=0.96s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3238
+`boundary` added! (t=26.51s)
+index created!
+Loading and preparing results...
+DONE (t=0.96s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3238
+`boundary` added! (t=25.77s)
+index created!
+mask_rcnn_spanetv2_s18_hybrid boundary AP 29.23 mask AP 44.33
+Loading and preparing results...
+DONE (t=1.45s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3515
+`boundary` added! (t=28.13s)
+index created!
+Loading and preparing results...
+DONE (t=0.74s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3515
+`boundary` added! (t=28.40s)
+index created!
+mask_rcnn_spanetv2_s18_pure boundary AP 28.27 mask AP 42.93
+Loading and preparing results...
+DONE (t=1.34s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 4470
+`boundary` added! (t=39.18s)
+index created!
+Loading and preparing results...
+DONE (t=0.97s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 4470
+`boundary` added! (t=37.21s)
+index created!
+mask_rcnn_swin_tiny boundary AP 26.84 mask AP 41.65

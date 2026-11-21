@@ -1,0 +1,13 @@
+If for semantic segmentation, please install mmsegmentation first
+If for detection, please install mmdetection first
+0/2000 1s
+200/2000 37s
+400/2000 69s
+600/2000 100s
+800/2000 131s
+1000/2000 160s
+1200/2000 186s
+1400/2000 210s
+1600/2000 234s
+1800/2000 258s
+{"model": "upernet_spanetv2_s36_pure", "name": "SPANetV2-S36-pure", "setting": "upernet", "pair": "S36", "n_images": 2000, "mIoU": 49.757882093202134, "aAcc": 83.15935707528118, "reference": null, "config_source": "checkpoint meta['cfg']", "test_cfg": {"crop_size": [512, 512], "mode": "slide", "stride": [341, 341]}, "load_info": {"weights_only": false, "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer", "missing": [], "unexpected": [], "state_dict": "ckpt['state_dict']", "meta": {"epoch": 0, "iter": 160000, "time": "20250310_204336"}}, "weight": "weights/seg/upernet_spanetv2_s36_pure_ade20k_4976e-2/upernet_spanetv2_s36_pure_ade20k_4976e-2.pth", "seconds": 282.1394109725952}

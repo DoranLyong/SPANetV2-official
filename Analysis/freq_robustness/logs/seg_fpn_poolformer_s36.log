@@ -1,0 +1,13 @@
+If for semantic segmentation, please install mmsegmentation first
+If for detection, please install mmdetection first
+0/2000 0s
+200/2000 8s
+400/2000 14s
+600/2000 20s
+800/2000 26s
+1000/2000 32s
+1200/2000 38s
+1400/2000 43s
+1600/2000 49s
+1800/2000 55s
+{"model": "fpn_poolformer_s36", "name": "PoolFormer-S36", "setting": "fpn", "pair": "S36", "n_images": 2000, "mIoU": 41.80424930648065, "aAcc": 79.73900043120312, "reference": {"mIoU_ss": 41.81, "mIoU_ss_without_resize_to_multiple": 41.61, "src": "mmseg model zoo configs/poolformer README (mIoU*: Resize + ResizeToMultiple)", "repo_readme": 42.0}, "config_source": "given in seg_eval.py (port of the official config)", "test_cfg": {"mode": "whole"}, "load_info": {"weights_only": true, "missing": [], "unexpected": [], "state_dict": "ckpt['state_dict']", "meta": {"mmseg_version": "0.24.0+3fbba15", "epoch": 2, "iter": 39999, "mmcv_version": "1.4.8", "time": "Sun May  1 21:16:18 2022"}}, "weight": "weights/seg/fpn_poolformer_s36_8x4_512x512_40k_ade20k_20220501_151122-b47e607d/fpn_poolformer_s36_8x4_512x512_40k_ade20k_20220501_151122-b47e607d.pth", "seconds": 60.674561500549316}

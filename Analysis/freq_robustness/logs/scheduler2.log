@@ -1,0 +1,19 @@
+[2026-11-22 05:11:32] GPU0 start band:dfformer_s18
+[2026-11-22 05:11:34] GPU1 start band:cdfformer_s18
+[2026-11-22 05:11:36] GPU2 start band:convnext_tiny
+[2026-11-22 05:21:12] GPU2 end   band:convnext_tiny exit=0 576s
+[2026-11-22 05:21:12] GPU2 start band:swin_tiny
+[2026-11-22 05:29:19] GPU1 end   band:cdfformer_s18 exit=0 1066s
+[2026-11-22 05:29:19] GPU1 start band:deit_small
+[2026-11-22 05:30:38] GPU2 end   band:swin_tiny exit=0 566s
+[2026-11-22 05:30:38] GPU2 start fourier:spanetv2_s18_pure
+[2026-11-22 05:31:39] GPU0 end   band:dfformer_s18 exit=0 1208s
+[2026-11-22 05:31:39] GPU0 start fourier:spanetv2_s18_hybrid
+[2026-11-22 05:35:29] GPU1 end   band:deit_small exit=0 370s
+[2026-11-22 05:35:29] GPU1 start fourier:convformer_s18
+[2026-11-22 07:32:12] GPU1 end   fourier:convformer_s18 exit=0 7003s
+[2026-11-22 07:32:12] GPU1 start fourier:caformer_s18
+[2026-11-22 07:56:17] GPU2 end   fourier:spanetv2_s18_pure exit=0 8739s
+[2026-11-22 07:56:17] GPU2 start fourier:cdfformer_s18
+[2026-11-22 07:59:15] GPU0 end   fourier:spanetv2_s18_hybrid exit=0 8856s
+[2026-11-22 07:59:15] GPU0 start fourier:convnext_tiny

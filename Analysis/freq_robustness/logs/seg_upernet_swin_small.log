@@ -1,0 +1,13 @@
+If for semantic segmentation, please install mmsegmentation first
+If for detection, please install mmdetection first
+0/2000 0s
+200/2000 11s
+400/2000 21s
+600/2000 31s
+800/2000 41s
+1000/2000 50s
+1200/2000 60s
+1400/2000 70s
+1600/2000 79s
+1800/2000 89s
+{"model": "upernet_swin_small", "name": "Swin-S", "setting": "upernet", "pair": "S36", "n_images": 2000, "mIoU": 47.63518106369046, "aAcc": 82.45401237771193, "reference": {"mIoU_ss": 47.64, "mIoU_ms": 49.47, "src": "Swin-Transformer-Semantic-Segmentation README"}, "config_source": "given in seg_eval.py (port of the official config)", "test_cfg": {"mode": "whole"}, "load_info": {"weights_only": true, "missing": [], "unexpected": [], "state_dict": "ckpt['state_dict']", "meta": {}}, "weight": "weights/seg/upernet_swin_small_patch4_window7_512x512/upernet_swin_small_patch4_window7_512x512.pth", "seconds": 98.98233723640442}

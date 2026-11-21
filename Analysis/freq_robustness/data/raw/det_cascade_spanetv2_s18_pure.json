@@ -1,0 +1,89 @@
+{
+ "model": "cascade_spanetv2_s18_pure",
+ "name": "SPANetV2-S18-pure",
+ "framework": "cascade",
+ "pair": "S18",
+ "n_images": 5000,
+ "metrics": {
+  "bbox_mAP": 0.516,
+  "bbox_mAP_50": 0.703,
+  "bbox_mAP_75": 0.559,
+  "bbox_mAP_s": 0.346,
+  "bbox_mAP_m": 0.559,
+  "bbox_mAP_l": 0.664,
+  "segm_mAP": 0.447,
+  "segm_mAP_50": 0.68,
+  "segm_mAP_75": 0.481,
+  "segm_mAP_s": 0.247,
+  "segm_mAP_m": 0.485,
+  "segm_mAP_l": 0.629
+ },
+ "reference": {
+  "box_AP": 51.6,
+  "mask_AP": 44.7,
+  "src": "SPANetV2-official README"
+ },
+ "config_source": "checkpoint meta['cfg']",
+ "load_info": {
+  "weights_only": false,
+  "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer",
+  "missing": [],
+  "unexpected": [],
+  "meta": {
+   "epoch": 35,
+   "iter": 513065,
+   "time": "20250301_041736"
+  }
+ },
+ "weight": "weights/det/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth",
+ "seconds": 667.841935634613,
+ "test_cfg": {
+  "rcnn": {
+   "mask_thr_binary": 0.5,
+   "max_per_img": 100,
+   "nms": {
+    "iou_threshold": 0.5,
+    "type": "nms"
+   },
+   "score_thr": 0.05
+  },
+  "rpn": {
+   "max_per_img": 1000,
+   "min_bbox_size": 0,
+   "nms": {
+    "iou_threshold": 0.7,
+    "type": "nms"
+   },
+   "nms_pre": 1000
+  }
+ },
+ "test_pipeline": [
+  {
+   "backend_args": null,
+   "type": "LoadImageFromFile"
+  },
+  {
+   "keep_ratio": true,
+   "scale": [
+    1333,
+    800
+   ],
+   "type": "Resize"
+  },
+  {
+   "type": "LoadAnnotations",
+   "with_bbox": true,
+   "with_mask": true
+  },
+  {
+   "meta_keys": [
+    "img_id",
+    "img_path",
+    "ori_shape",
+    "img_shape",
+    "scale_factor"
+   ],
+   "type": "PackDetInputs"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+[2026-11-22 04:58:08] GPU2 start clean:dfformer_s18
+[2026-11-22 05:00:09] GPU2 end   clean:dfformer_s18 exit=0
+[2026-11-22 05:00:09] GPU2 start clean:cdfformer_s18
+[2026-11-22 05:02:27] GPU2 end   clean:cdfformer_s18 exit=0

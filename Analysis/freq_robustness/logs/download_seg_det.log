@@ -1,0 +1,13 @@
+done upernet_convnext_tiny
+done upernet_convnext_small
+done upernet_swin_tiny
+done upernet_swin_small
+done fpn_poolformer_s24
+done fpn_poolformer_s36
+done mask_rcnn_convnext_tiny
+done cascade_convnext_tiny
+done cascade_convnext_small
+done mask_rcnn_swin_tiny
+done cascade_swin_tiny
+done cascade_swin_small
+missing: none

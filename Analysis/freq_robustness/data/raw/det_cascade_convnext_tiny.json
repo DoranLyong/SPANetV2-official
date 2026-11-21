@@ -1,0 +1,84 @@
+{
+ "model": "cascade_convnext_tiny",
+ "name": "ConvNeXt-T",
+ "framework": "cascade",
+ "pair": "S18",
+ "n_images": 5000,
+ "metrics": {
+  "bbox_mAP": 0.504,
+  "bbox_mAP_50": 0.691,
+  "bbox_mAP_75": 0.548,
+  "bbox_mAP_s": 0.337,
+  "bbox_mAP_m": 0.544,
+  "bbox_mAP_l": 0.651,
+  "segm_mAP": 0.436,
+  "segm_mAP_50": 0.665,
+  "segm_mAP_75": 0.473,
+  "segm_mAP_s": 0.242,
+  "segm_mAP_m": 0.471,
+  "segm_mAP_l": 0.621
+ },
+ "reference": {
+  "box_AP": 50.4,
+  "mask_AP": 43.7,
+  "src": "facebookresearch/ConvNeXt object_detection README"
+ },
+ "config_source": "checkpoint meta['cfg'] of cascade_spanetv2_s18_pure with the official backbone (see det_eval.py)",
+ "load_info": {
+  "weights_only": true,
+  "missing": [],
+  "unexpected": [],
+  "meta": {}
+ },
+ "weight": "weights/det/cascade_mask_rcnn_convnext_tiny_1k_3x/cascade_mask_rcnn_convnext_tiny_1k_3x.pth",
+ "seconds": 443.9911711215973,
+ "test_cfg": {
+  "rcnn": {
+   "mask_thr_binary": 0.5,
+   "max_per_img": 100,
+   "nms": {
+    "iou_threshold": 0.5,
+    "type": "nms"
+   },
+   "score_thr": 0.05
+  },
+  "rpn": {
+   "max_per_img": 1000,
+   "min_bbox_size": 0,
+   "nms": {
+    "iou_threshold": 0.7,
+    "type": "nms"
+   },
+   "nms_pre": 1000
+  }
+ },
+ "test_pipeline": [
+  {
+   "backend_args": null,
+   "type": "LoadImageFromFile"
+  },
+  {
+   "keep_ratio": true,
+   "scale": [
+    1333,
+    800
+   ],
+   "type": "Resize"
+  },
+  {
+   "type": "LoadAnnotations",
+   "with_bbox": true,
+   "with_mask": true
+  },
+  {
+   "meta_keys": [
+    "img_id",
+    "img_path",
+    "ori_shape",
+    "img_shape",
+    "scale_factor"
+   ],
+   "type": "PackDetInputs"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "model": "cascade_swin_small",
+ "name": "Swin-S",
+ "framework": "cascade",
+ "pair": "S36",
+ "n_images": 5000,
+ "metrics": {
+  "bbox_mAP": 0.52,
+  "bbox_mAP_50": 0.707,
+  "bbox_mAP_75": 0.563,
+  "bbox_mAP_s": 0.352,
+  "bbox_mAP_m": 0.558,
+  "bbox_mAP_l": 0.676,
+  "segm_mAP": 0.45,
+  "segm_mAP_50": 0.682,
+  "segm_mAP_75": 0.487,
+  "segm_mAP_s": 0.251,
+  "segm_mAP_m": 0.483,
+  "segm_mAP_l": 0.635
+ },
+ "reference": {
+  "box_AP": 51.9,
+  "mask_AP": 45.0,
+  "src": "Swin-Transformer-Object-Detection README"
+ },
+ "config_source": "checkpoint meta['cfg'] of cascade_spanetv2_s18_pure with the official backbone (see det_eval.py)",
+ "load_info": {
+  "weights_only": true,
+  "missing": [],
+  "unexpected": [],
+  "meta": {}
+ },
+ "weight": "weights/det/cascade_mask_rcnn_swin_small_patch4_window7/cascade_mask_rcnn_swin_small_patch4_window7.pth",
+ "seconds": 469.97538113594055,
+ "test_cfg": {
+  "rcnn": {
+   "mask_thr_binary": 0.5,
+   "max_per_img": 100,
+   "nms": {
+    "iou_threshold": 0.5,
+    "type": "nms"
+   },
+   "score_thr": 0.05
+  },
+  "rpn": {
+   "max_per_img": 1000,
+   "min_bbox_size": 0,
+   "nms": {
+    "iou_threshold": 0.7,
+    "type": "nms"
+   },
+   "nms_pre": 1000
+  }
+ },
+ "test_pipeline": [
+  {
+   "backend_args": null,
+   "type": "LoadImageFromFile"
+  },
+  {
+   "keep_ratio": true,
+   "scale": [
+    1333,
+    800
+   ],
+   "type": "Resize"
+  },
+  {
+   "type": "LoadAnnotations",
+   "with_bbox": true,
+   "with_mask": true
+  },
+  {
+   "meta_keys": [
+    "img_id",
+    "img_path",
+    "ori_shape",
+    "img_shape",
+    "scale_factor"
+   ],
+   "type": "PackDetInputs"
+  }
+ ]
+}

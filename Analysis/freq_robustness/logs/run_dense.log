@@ -1,0 +1,53 @@
+[2026-11-22 05:11:51] seg upernet_spanetv2_s18_pure
+  exit=0
+[2026-11-22 05:15:14] seg upernet_spanetv2_s18_hybrid
+  exit=0
+[2026-11-22 05:17:59] seg upernet_spanetv2_s36_pure
+  exit=0
+[2026-11-22 05:22:51] seg upernet_spanetv2_s36_hybrid
+  exit=0
+[2026-11-22 05:25:49] seg fpn_spanetv2_s18_pure
+  exit=0
+[2026-11-22 05:28:42] seg fpn_spanetv2_s18_hybrid
+  exit=0
+[2026-11-22 05:30:13] seg fpn_spanetv2_s36_pure
+  exit=0
+[2026-11-22 05:34:06] seg fpn_spanetv2_s36_hybrid
+  exit=0
+[2026-11-22 05:36:43] seg upernet_convnext_tiny
+  exit=0
+[2026-11-22 05:38:00] seg upernet_convnext_small
+  exit=0
+[2026-11-22 05:39:41] seg upernet_swin_tiny
+  exit=0
+[2026-11-22 05:40:48] seg upernet_swin_small
+  exit=0
+[2026-11-22 05:42:34] seg fpn_poolformer_s24
+  exit=0
+[2026-11-22 05:43:26] seg fpn_poolformer_s36
+  exit=0
+[2026-11-22 05:44:32] det mask_rcnn_spanetv2_s18_pure
+  exit=0
+[2026-11-22 05:51:37] det mask_rcnn_spanetv2_s18_hybrid
+  exit=0
+[2026-11-22 06:02:09] det cascade_spanetv2_s18_pure
+  exit=0
+[2026-11-22 06:13:25] det cascade_spanetv2_s18_hybrid
+  exit=0
+[2026-11-22 06:24:18] det cascade_spanetv2_s36_pure
+  exit=0
+[2026-11-22 06:41:45] det cascade_spanetv2_s36_hybrid
+  exit=0
+[2026-11-22 06:59:05] det mask_rcnn_convnext_tiny
+  exit=0
+[2026-11-22 07:04:14] det cascade_convnext_tiny
+  exit=0
+[2026-11-22 07:11:46] det cascade_convnext_small
+  exit=0
+[2026-11-22 07:20:58] det mask_rcnn_swin_tiny
+  exit=0
+[2026-11-22 07:27:13] det cascade_swin_tiny
+  exit=0
+[2026-11-22 07:37:06] det cascade_swin_small
+  exit=0
+[2026-11-22 07:45:02] DENSE DONE

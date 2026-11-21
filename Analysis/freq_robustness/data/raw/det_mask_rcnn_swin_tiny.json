@@ -1,0 +1,84 @@
+{
+ "model": "mask_rcnn_swin_tiny",
+ "name": "Swin-T",
+ "framework": "mask_rcnn",
+ "pair": "S18",
+ "n_images": 5000,
+ "metrics": {
+  "bbox_mAP": 0.46,
+  "bbox_mAP_50": 0.681,
+  "bbox_mAP_75": 0.503,
+  "bbox_mAP_s": 0.312,
+  "bbox_mAP_m": 0.492,
+  "bbox_mAP_l": 0.601,
+  "segm_mAP": 0.417,
+  "segm_mAP_50": 0.651,
+  "segm_mAP_75": 0.449,
+  "segm_mAP_s": 0.23,
+  "segm_mAP_m": 0.449,
+  "segm_mAP_l": 0.604
+ },
+ "reference": {
+  "box_AP": 46.0,
+  "mask_AP": 41.6,
+  "src": "Swin-Transformer-Object-Detection README"
+ },
+ "config_source": "checkpoint meta['cfg'] of mask_rcnn_spanetv2_s18_pure with the official backbone (see det_eval.py)",
+ "load_info": {
+  "weights_only": true,
+  "missing": [],
+  "unexpected": [],
+  "meta": {}
+ },
+ "weight": "weights/det/mask_rcnn_swin_tiny_patch4_window7/mask_rcnn_swin_tiny_patch4_window7.pth",
+ "seconds": 367.78103733062744,
+ "test_cfg": {
+  "rcnn": {
+   "mask_thr_binary": 0.5,
+   "max_per_img": 100,
+   "nms": {
+    "iou_threshold": 0.5,
+    "type": "nms"
+   },
+   "score_thr": 0.05
+  },
+  "rpn": {
+   "max_per_img": 1000,
+   "min_bbox_size": 0,
+   "nms": {
+    "iou_threshold": 0.7,
+    "type": "nms"
+   },
+   "nms_pre": 1000
+  }
+ },
+ "test_pipeline": [
+  {
+   "backend_args": null,
+   "type": "LoadImageFromFile"
+  },
+  {
+   "keep_ratio": true,
+   "scale": [
+    1333,
+    800
+   ],
+   "type": "Resize"
+  },
+  {
+   "type": "LoadAnnotations",
+   "with_bbox": true,
+   "with_mask": true
+  },
+  {
+   "meta_keys": [
+    "img_id",
+    "img_path",
+    "ori_shape",
+    "img_shape",
+    "scale_factor"
+   ],
+   "type": "PackDetInputs"
+  }
+ ]
+}

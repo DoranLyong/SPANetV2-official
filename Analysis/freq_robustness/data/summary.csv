@@ -1,0 +1,376 @@
+model,experiment,setting,value
+SPANetV2-S18-pure,0_clean,top1 val50k fp32,83.44
+SPANetV2-S18-pure,0_clean,top1 subset5k fp32,82.58
+SPANetV2-S18-pure,0_clean,top1 val50k fp16-autocast,83.432
+SPANetV2-S18-hybrid,0_clean,top1 val50k fp32,83.942
+SPANetV2-S18-hybrid,0_clean,top1 subset5k fp32,83.28
+SPANetV2-S18-hybrid,0_clean,top1 val50k fp16-autocast,83.95
+ConvFormer-S18,0_clean,top1 val50k fp32,82.978
+ConvFormer-S18,0_clean,top1 subset5k fp32,82.68
+ConvFormer-S18,0_clean,top1 val50k fp16-autocast,82.974
+CAFormer-S18,0_clean,top1 val50k fp32,83.664
+CAFormer-S18,0_clean,top1 subset5k fp32,83.1
+CAFormer-S18,0_clean,top1 val50k fp16-autocast,83.674
+DFFormer-S18,0_clean,top1 val50k fp32,83.162
+DFFormer-S18,0_clean,top1 subset5k fp32,82.26
+DFFormer-S18,0_clean,top1 val50k fp16-autocast,83.16
+CDFFormer-S18,0_clean,top1 val50k fp32,83.106
+CDFFormer-S18,0_clean,top1 subset5k fp32,82.56
+CDFFormer-S18,0_clean,top1 val50k fp16-autocast,83.106
+ConvNeXt-T,0_clean,top1 val50k fp32,81.81
+ConvNeXt-T,0_clean,top1 subset5k fp32,80.96
+ConvNeXt-T,0_clean,top1 val50k fp16-autocast,81.794
+Swin-T,0_clean,top1 val50k fp32,81.182
+Swin-T,0_clean,top1 subset5k fp32,80.62
+Swin-T,0_clean,top1 val50k fp16-autocast,81.168
+DeiT-S,0_clean,top1 val50k fp32,79.832
+DeiT-S,0_clean,top1 subset5k fp32,79.64
+DeiT-S,0_clean,top1 val50k fp16-autocast,79.816
+ConvNeXt-T (EMA file),0_clean,top1 val50k fp32,82.052
+ConvNeXt-T (EMA file),0_clean,top1 subset5k fp32,81.14
+ConvNeXt-T (EMA file),0_clean,top1 val50k fp16-autocast,82.05
+SPANetV2-S18-pure,A_band_filter,lowpass S=20 | top1,17.144
+SPANetV2-S18-pure,A_band_filter,lowpass S=40 | top1,47.504
+SPANetV2-S18-pure,A_band_filter,lowpass S=60 | top1,60.26
+SPANetV2-S18-pure,A_band_filter,lowpass S=80 | top1,66.99
+SPANetV2-S18-pure,A_band_filter,lowpass S=100 | top1,72.986
+SPANetV2-S18-pure,A_band_filter,lowpass S=120 | top1,76.744
+SPANetV2-S18-pure,A_band_filter,lowpass S=140 | top1,79.144
+SPANetV2-S18-pure,A_band_filter,lowpass S=160 | top1,80.82
+SPANetV2-S18-pure,A_band_filter,lowpass S=180 | top1,82.16
+SPANetV2-S18-pure,A_band_filter,lowpass S=200 | top1,82.88
+SPANetV2-S18-pure,A_band_filter,lowpass S=220 | top1,83.414
+SPANetV2-S18-pure,A_band_filter,highpass S=170 | top1,4.336
+SPANetV2-S18-pure,A_band_filter,highpass S=180 | top1,5.108
+SPANetV2-S18-pure,A_band_filter,highpass S=190 | top1,8.786
+SPANetV2-S18-pure,A_band_filter,highpass S=200 | top1,17.62
+SPANetV2-S18-pure,A_band_filter,highpass S=210 | top1,36.064
+SPANetV2-S18-pure,A_band_filter,highpass S=220 | top1,59.538
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=20 | top1,20.162
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=40 | top1,50.886
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=60 | top1,61.956
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=80 | top1,67.702
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=100 | top1,73.038
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=120 | top1,76.904
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=140 | top1,79.572
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=160 | top1,81.476
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=180 | top1,82.72
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=200 | top1,83.438
+SPANetV2-S18-hybrid,A_band_filter,lowpass S=220 | top1,83.906
+SPANetV2-S18-hybrid,A_band_filter,highpass S=170 | top1,5.518
+SPANetV2-S18-hybrid,A_band_filter,highpass S=180 | top1,7.902
+SPANetV2-S18-hybrid,A_band_filter,highpass S=190 | top1,14.63
+SPANetV2-S18-hybrid,A_band_filter,highpass S=200 | top1,28.362
+SPANetV2-S18-hybrid,A_band_filter,highpass S=210 | top1,53.714
+SPANetV2-S18-hybrid,A_band_filter,highpass S=220 | top1,74.136
+ConvFormer-S18,A_band_filter,lowpass S=20 | top1,16.18
+ConvFormer-S18,A_band_filter,lowpass S=40 | top1,45.262
+ConvFormer-S18,A_band_filter,lowpass S=60 | top1,58.964
+ConvFormer-S18,A_band_filter,lowpass S=80 | top1,67.732
+ConvFormer-S18,A_band_filter,lowpass S=100 | top1,73.868
+ConvFormer-S18,A_band_filter,lowpass S=120 | top1,77.026
+ConvFormer-S18,A_band_filter,lowpass S=140 | top1,78.866
+ConvFormer-S18,A_band_filter,lowpass S=160 | top1,80.516
+ConvFormer-S18,A_band_filter,lowpass S=180 | top1,81.806
+ConvFormer-S18,A_band_filter,lowpass S=200 | top1,82.394
+ConvFormer-S18,A_band_filter,lowpass S=220 | top1,82.838
+ConvFormer-S18,A_band_filter,highpass S=170 | top1,5.454
+ConvFormer-S18,A_band_filter,highpass S=180 | top1,6.212
+ConvFormer-S18,A_band_filter,highpass S=190 | top1,11.43
+ConvFormer-S18,A_band_filter,highpass S=200 | top1,25.356
+ConvFormer-S18,A_band_filter,highpass S=210 | top1,44.966
+ConvFormer-S18,A_band_filter,highpass S=220 | top1,63.78
+CAFormer-S18,A_band_filter,lowpass S=20 | top1,19.68
+CAFormer-S18,A_band_filter,lowpass S=40 | top1,51.274
+CAFormer-S18,A_band_filter,lowpass S=60 | top1,63.446
+CAFormer-S18,A_band_filter,lowpass S=80 | top1,68.856
+CAFormer-S18,A_band_filter,lowpass S=100 | top1,73.854
+CAFormer-S18,A_band_filter,lowpass S=120 | top1,77.14
+CAFormer-S18,A_band_filter,lowpass S=140 | top1,79.37
+CAFormer-S18,A_band_filter,lowpass S=160 | top1,81.108
+CAFormer-S18,A_band_filter,lowpass S=180 | top1,82.376
+CAFormer-S18,A_band_filter,lowpass S=200 | top1,83.25
+CAFormer-S18,A_band_filter,lowpass S=220 | top1,83.604
+CAFormer-S18,A_band_filter,highpass S=170 | top1,4.88
+CAFormer-S18,A_band_filter,highpass S=180 | top1,6.7
+CAFormer-S18,A_band_filter,highpass S=190 | top1,11.35
+CAFormer-S18,A_band_filter,highpass S=200 | top1,25.246
+CAFormer-S18,A_band_filter,highpass S=210 | top1,50.618
+CAFormer-S18,A_band_filter,highpass S=220 | top1,72.51
+DFFormer-S18,A_band_filter,lowpass S=20 | top1,18.634
+DFFormer-S18,A_band_filter,lowpass S=40 | top1,48.75
+DFFormer-S18,A_band_filter,lowpass S=60 | top1,61.928
+DFFormer-S18,A_band_filter,lowpass S=80 | top1,68.908
+DFFormer-S18,A_band_filter,lowpass S=100 | top1,74.086
+DFFormer-S18,A_band_filter,lowpass S=120 | top1,77.036
+DFFormer-S18,A_band_filter,lowpass S=140 | top1,79.116
+DFFormer-S18,A_band_filter,lowpass S=160 | top1,80.608
+DFFormer-S18,A_band_filter,lowpass S=180 | top1,81.728
+DFFormer-S18,A_band_filter,lowpass S=200 | top1,82.574
+DFFormer-S18,A_band_filter,lowpass S=220 | top1,83.076
+DFFormer-S18,A_band_filter,highpass S=170 | top1,7.502
+DFFormer-S18,A_band_filter,highpass S=180 | top1,8.756
+DFFormer-S18,A_band_filter,highpass S=190 | top1,14.134
+DFFormer-S18,A_band_filter,highpass S=200 | top1,29.65
+DFFormer-S18,A_band_filter,highpass S=210 | top1,53.35
+DFFormer-S18,A_band_filter,highpass S=220 | top1,67.538
+CDFFormer-S18,A_band_filter,lowpass S=20 | top1,17.78
+CDFFormer-S18,A_band_filter,lowpass S=40 | top1,49.12
+CDFFormer-S18,A_band_filter,lowpass S=60 | top1,62.016
+CDFFormer-S18,A_band_filter,lowpass S=80 | top1,69.034
+CDFFormer-S18,A_band_filter,lowpass S=100 | top1,74.22
+CDFFormer-S18,A_band_filter,lowpass S=120 | top1,77.102
+CDFFormer-S18,A_band_filter,lowpass S=140 | top1,79.006
+CDFFormer-S18,A_band_filter,lowpass S=160 | top1,80.64
+CDFFormer-S18,A_band_filter,lowpass S=180 | top1,81.766
+CDFFormer-S18,A_band_filter,lowpass S=200 | top1,82.546
+CDFFormer-S18,A_band_filter,lowpass S=220 | top1,83.042
+CDFFormer-S18,A_band_filter,highpass S=170 | top1,8.236
+CDFFormer-S18,A_band_filter,highpass S=180 | top1,8.824
+CDFFormer-S18,A_band_filter,highpass S=190 | top1,12.852
+CDFFormer-S18,A_band_filter,highpass S=200 | top1,24.424
+CDFFormer-S18,A_band_filter,highpass S=210 | top1,45.142
+CDFFormer-S18,A_band_filter,highpass S=220 | top1,65.032
+ConvNeXt-T,A_band_filter,lowpass S=20 | top1,17.546
+ConvNeXt-T,A_band_filter,lowpass S=40 | top1,46.588
+ConvNeXt-T,A_band_filter,lowpass S=60 | top1,58.876
+ConvNeXt-T,A_band_filter,lowpass S=80 | top1,65.292
+ConvNeXt-T,A_band_filter,lowpass S=100 | top1,70.91
+ConvNeXt-T,A_band_filter,lowpass S=120 | top1,74.57
+ConvNeXt-T,A_band_filter,lowpass S=140 | top1,76.914
+ConvNeXt-T,A_band_filter,lowpass S=160 | top1,78.758
+ConvNeXt-T,A_band_filter,lowpass S=180 | top1,80.286
+ConvNeXt-T,A_band_filter,lowpass S=200 | top1,81.136
+ConvNeXt-T,A_band_filter,lowpass S=220 | top1,81.708
+ConvNeXt-T,A_band_filter,highpass S=170 | top1,7.994
+ConvNeXt-T,A_band_filter,highpass S=180 | top1,10.55
+ConvNeXt-T,A_band_filter,highpass S=190 | top1,17.068
+ConvNeXt-T,A_band_filter,highpass S=200 | top1,31.074
+ConvNeXt-T,A_band_filter,highpass S=210 | top1,53.274
+ConvNeXt-T,A_band_filter,highpass S=220 | top1,70.324
+Swin-T,A_band_filter,lowpass S=20 | top1,14.754
+Swin-T,A_band_filter,lowpass S=40 | top1,42.36
+Swin-T,A_band_filter,lowpass S=60 | top1,55.232
+Swin-T,A_band_filter,lowpass S=80 | top1,63.538
+Swin-T,A_band_filter,lowpass S=100 | top1,70.676
+Swin-T,A_band_filter,lowpass S=120 | top1,74.106
+Swin-T,A_band_filter,lowpass S=140 | top1,76.46
+Swin-T,A_band_filter,lowpass S=160 | top1,78.344
+Swin-T,A_band_filter,lowpass S=180 | top1,79.59
+Swin-T,A_band_filter,lowpass S=200 | top1,80.352
+Swin-T,A_band_filter,lowpass S=220 | top1,81.046
+Swin-T,A_band_filter,highpass S=170 | top1,5.014
+Swin-T,A_band_filter,highpass S=180 | top1,6.416
+Swin-T,A_band_filter,highpass S=190 | top1,9.776
+Swin-T,A_band_filter,highpass S=200 | top1,17.866
+Swin-T,A_band_filter,highpass S=210 | top1,37.16
+Swin-T,A_band_filter,highpass S=220 | top1,61.838
+DeiT-S,A_band_filter,lowpass S=20 | top1,20.376
+DeiT-S,A_band_filter,lowpass S=40 | top1,45.488
+DeiT-S,A_band_filter,lowpass S=60 | top1,56.102
+DeiT-S,A_band_filter,lowpass S=80 | top1,63.942
+DeiT-S,A_band_filter,lowpass S=100 | top1,71.23
+DeiT-S,A_band_filter,lowpass S=120 | top1,74.884
+DeiT-S,A_band_filter,lowpass S=140 | top1,77.108
+DeiT-S,A_band_filter,lowpass S=160 | top1,78.736
+DeiT-S,A_band_filter,lowpass S=180 | top1,79.416
+DeiT-S,A_band_filter,lowpass S=200 | top1,79.472
+DeiT-S,A_band_filter,lowpass S=220 | top1,79.718
+DeiT-S,A_band_filter,highpass S=170 | top1,2.792
+DeiT-S,A_band_filter,highpass S=180 | top1,3.538
+DeiT-S,A_band_filter,highpass S=190 | top1,5.774
+DeiT-S,A_band_filter,highpass S=200 | top1,11.44
+DeiT-S,A_band_filter,highpass S=210 | top1,34.18
+DeiT-S,A_band_filter,highpass S=220 | top1,62.266
+SPANetV2-S18-pure,B_fourier,low band rho<=0.25 (63x63 window) | mean error %,25.6697
+SPANetV2-S18-pure,B_fourier,whole 63x63 window | mean error %,26.6747
+SPANetV2-S18-pure,B_fourier,ring rho=0.0000 (dense) | mean error %,17.52
+SPANetV2-S18-pure,B_fourier,ring rho=0.0089 (dense) | mean error %,18.575
+SPANetV2-S18-pure,B_fourier,ring rho=0.0179 (dense) | mean error %,19.53
+SPANetV2-S18-pure,B_fourier,ring rho=0.0268 (dense) | mean error %,20.04
+SPANetV2-S18-pure,B_fourier,ring rho=0.0357 (dense) | mean error %,20.64
+SPANetV2-S18-pure,B_fourier,ring rho=0.0446 (dense) | mean error %,21.0857
+SPANetV2-S18-pure,B_fourier,ring rho=0.0536 (dense) | mean error %,21.542
+SPANetV2-S18-pure,B_fourier,ring rho=0.0625 (dense) | mean error %,22.008
+SPANetV2-S18-pure,B_fourier,ring rho=0.0714 (dense) | mean error %,22.4133
+SPANetV2-S18-pure,B_fourier,ring rho=0.0804 (dense) | mean error %,22.9647
+SPANetV2-S18-pure,B_fourier,ring rho=0.0893 (dense) | mean error %,23.4907
+SPANetV2-S18-pure,B_fourier,ring rho=0.0982 (dense) | mean error %,23.9544
+SPANetV2-S18-pure,B_fourier,ring rho=0.1071 (dense) | mean error %,24.1582
+SPANetV2-S18-pure,B_fourier,ring rho=0.1161 (dense) | mean error %,24.7455
+SPANetV2-S18-pure,B_fourier,ring rho=0.1250 (dense) | mean error %,24.9573
+SPANetV2-S18-pure,B_fourier,ring rho=0.1339 (dense) | mean error %,25.2038
+SPANetV2-S18-pure,B_fourier,ring rho=0.1429 (dense) | mean error %,25.6661
+SPANetV2-S18-pure,B_fourier,ring rho=0.1518 (dense) | mean error %,25.9282
+SPANetV2-S18-pure,B_fourier,ring rho=0.1607 (dense) | mean error %,26.2379
+SPANetV2-S18-pure,B_fourier,ring rho=0.1696 (dense) | mean error %,26.3655
+SPANetV2-S18-pure,B_fourier,ring rho=0.1786 (dense) | mean error %,26.4561
+SPANetV2-S18-pure,B_fourier,ring rho=0.1875 (dense) | mean error %,26.7197
+SPANetV2-S18-pure,B_fourier,ring rho=0.1964 (dense) | mean error %,26.7026
+SPANetV2-S18-pure,B_fourier,ring rho=0.2054 (dense) | mean error %,26.9208
+SPANetV2-S18-pure,B_fourier,ring rho=0.2143 (dense) | mean error %,26.9139
+SPANetV2-S18-pure,B_fourier,ring rho=0.2232 (dense) | mean error %,26.941
+SPANetV2-S18-pure,B_fourier,ring rho=0.2321 (dense) | mean error %,27.0512
+SPANetV2-S18-pure,B_fourier,ring rho=0.2411 (dense) | mean error %,26.9868
+SPANetV2-S18-pure,B_fourier,ring rho=0.2500 (dense) | mean error %,27.2102
+SPANetV2-S18-pure,B_fourier,ring rho=0.2589 (dense) | mean error %,27.1721
+SPANetV2-S18-pure,B_fourier,ring rho=0.2679 (dense) | mean error %,27.3624
+SPANetV2-S18-pure,B_fourier,ring rho=0.2768 (dense) | mean error %,27.3979
+SPANetV2-S18-hybrid,B_fourier,low band rho<=0.25 (63x63 window) | mean error %,23.1032
+SPANetV2-S18-hybrid,B_fourier,whole 63x63 window | mean error %,23.8315
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0000 (dense) | mean error %,17
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0089 (dense) | mean error %,17.615
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0179 (dense) | mean error %,18.33
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0268 (dense) | mean error %,18.5025
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0357 (dense) | mean error %,18.89
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0446 (dense) | mean error %,19.5771
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0536 (dense) | mean error %,20.014
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0625 (dense) | mean error %,20.528
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0714 (dense) | mean error %,21.11
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0804 (dense) | mean error %,21.4835
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0893 (dense) | mean error %,21.8779
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.0982 (dense) | mean error %,22.3372
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1071 (dense) | mean error %,22.6229
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1161 (dense) | mean error %,22.8491
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1250 (dense) | mean error %,22.9341
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1339 (dense) | mean error %,23.0857
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1429 (dense) | mean error %,23.2432
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1518 (dense) | mean error %,23.2993
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1607 (dense) | mean error %,23.4057
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1696 (dense) | mean error %,23.4379
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1786 (dense) | mean error %,23.5139
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1875 (dense) | mean error %,23.6853
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.1964 (dense) | mean error %,23.6189
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2054 (dense) | mean error %,23.7539
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2143 (dense) | mean error %,23.8283
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2232 (dense) | mean error %,23.9019
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2321 (dense) | mean error %,24.0427
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2411 (dense) | mean error %,24.0123
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2500 (dense) | mean error %,24.2017
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2589 (dense) | mean error %,24.2026
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2679 (dense) | mean error %,24.4226
+SPANetV2-S18-hybrid,B_fourier,ring rho=0.2768 (dense) | mean error %,24.3821
+ConvFormer-S18,B_fourier,low band rho<=0.25 (63x63 window) | mean error %,29.7865
+ConvFormer-S18,B_fourier,whole 63x63 window | mean error %,31.0816
+ConvFormer-S18,B_fourier,ring rho=0.0000 (dense) | mean error %,17.68
+ConvFormer-S18,B_fourier,ring rho=0.0089 (dense) | mean error %,19.04
+ConvFormer-S18,B_fourier,ring rho=0.0179 (dense) | mean error %,19.74
+ConvFormer-S18,B_fourier,ring rho=0.0268 (dense) | mean error %,20.4525
+ConvFormer-S18,B_fourier,ring rho=0.0357 (dense) | mean error %,21.6825
+ConvFormer-S18,B_fourier,ring rho=0.0446 (dense) | mean error %,22.5
+ConvFormer-S18,B_fourier,ring rho=0.0536 (dense) | mean error %,23.522
+ConvFormer-S18,B_fourier,ring rho=0.0625 (dense) | mean error %,24.262
+ConvFormer-S18,B_fourier,ring rho=0.0714 (dense) | mean error %,25.2917
+ConvFormer-S18,B_fourier,ring rho=0.0804 (dense) | mean error %,26.4006
+ConvFormer-S18,B_fourier,ring rho=0.0893 (dense) | mean error %,27.1843
+ConvFormer-S18,B_fourier,ring rho=0.0982 (dense) | mean error %,28.2011
+ConvFormer-S18,B_fourier,ring rho=0.1071 (dense) | mean error %,28.6018
+ConvFormer-S18,B_fourier,ring rho=0.1161 (dense) | mean error %,29.3009
+ConvFormer-S18,B_fourier,ring rho=0.1250 (dense) | mean error %,29.6373
+ConvFormer-S18,B_fourier,ring rho=0.1339 (dense) | mean error %,29.5276
+ConvFormer-S18,B_fourier,ring rho=0.1429 (dense) | mean error %,29.9357
+ConvFormer-S18,B_fourier,ring rho=0.1518 (dense) | mean error %,29.8907
+ConvFormer-S18,B_fourier,ring rho=0.1607 (dense) | mean error %,30.1971
+ConvFormer-S18,B_fourier,ring rho=0.1696 (dense) | mean error %,30.2824
+ConvFormer-S18,B_fourier,ring rho=0.1786 (dense) | mean error %,30.3136
+ConvFormer-S18,B_fourier,ring rho=0.1875 (dense) | mean error %,30.9794
+ConvFormer-S18,B_fourier,ring rho=0.1964 (dense) | mean error %,30.8831
+ConvFormer-S18,B_fourier,ring rho=0.2054 (dense) | mean error %,31.3125
+ConvFormer-S18,B_fourier,ring rho=0.2143 (dense) | mean error %,31.4047
+ConvFormer-S18,B_fourier,ring rho=0.2232 (dense) | mean error %,31.5562
+ConvFormer-S18,B_fourier,ring rho=0.2321 (dense) | mean error %,31.839
+ConvFormer-S18,B_fourier,ring rho=0.2411 (dense) | mean error %,31.8653
+ConvFormer-S18,B_fourier,ring rho=0.2500 (dense) | mean error %,32.2493
+ConvFormer-S18,B_fourier,ring rho=0.2589 (dense) | mean error %,32.026
+ConvFormer-S18,B_fourier,ring rho=0.2679 (dense) | mean error %,32.3484
+ConvFormer-S18,B_fourier,ring rho=0.2768 (dense) | mean error %,32.0875
+PoolFormer-S24,D_fpn,"mIoU (single scale, this run)",40.3545
+PoolFormer-S24,D_fpn,mIoU (recomputed from saved predictions),40.3545
+PoolFormer-S24,D_fpn,"Boundary IoU (d=2% diag, per-class mean)",27.6081
+PoolFormer-S36,D_fpn,"mIoU (single scale, this run)",41.8042
+PoolFormer-S36,D_fpn,mIoU (recomputed from saved predictions),41.8042
+PoolFormer-S36,D_fpn,"Boundary IoU (d=2% diag, per-class mean)",28.9362
+SPANetV2-S18-hybrid,D_fpn,"mIoU (single scale, this run)",47.8261
+SPANetV2-S18-hybrid,D_fpn,mIoU (recomputed from saved predictions),47.8261
+SPANetV2-S18-hybrid,D_fpn,"Boundary IoU (d=2% diag, per-class mean)",34.635
+SPANetV2-S18-pure,D_fpn,"mIoU (single scale, this run)",46.682
+SPANetV2-S18-pure,D_fpn,mIoU (recomputed from saved predictions),46.682
+SPANetV2-S18-pure,D_fpn,"Boundary IoU (d=2% diag, per-class mean)",33.2731
+SPANetV2-S36-hybrid,D_fpn,"mIoU (single scale, this run)",48.5711
+SPANetV2-S36-hybrid,D_fpn,mIoU (recomputed from saved predictions),48.5711
+SPANetV2-S36-hybrid,D_fpn,"Boundary IoU (d=2% diag, per-class mean)",34.636
+SPANetV2-S36-pure,D_fpn,"mIoU (single scale, this run)",47.8971
+SPANetV2-S36-pure,D_fpn,mIoU (recomputed from saved predictions),47.8971
+SPANetV2-S36-pure,D_fpn,"Boundary IoU (d=2% diag, per-class mean)",34.7736
+ConvNeXt-S,D_upernet,"mIoU (single scale, this run)",48.7434
+ConvNeXt-S,D_upernet,mIoU (recomputed from saved predictions),48.7434
+ConvNeXt-S,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",35.8528
+ConvNeXt-T,D_upernet,"mIoU (single scale, this run)",45.9853
+ConvNeXt-T,D_upernet,mIoU (recomputed from saved predictions),45.9853
+ConvNeXt-T,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",33.354
+SPANetV2-S18-hybrid,D_upernet,"mIoU (single scale, this run)",49.1253
+SPANetV2-S18-hybrid,D_upernet,mIoU (recomputed from saved predictions),49.1253
+SPANetV2-S18-hybrid,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",36.2168
+SPANetV2-S18-pure,D_upernet,"mIoU (single scale, this run)",48.7247
+SPANetV2-S18-pure,D_upernet,mIoU (recomputed from saved predictions),48.7247
+SPANetV2-S18-pure,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",35.5887
+SPANetV2-S36-hybrid,D_upernet,"mIoU (single scale, this run)",51.631
+SPANetV2-S36-hybrid,D_upernet,mIoU (recomputed from saved predictions),51.631
+SPANetV2-S36-hybrid,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",38.2861
+SPANetV2-S36-pure,D_upernet,"mIoU (single scale, this run)",49.7579
+SPANetV2-S36-pure,D_upernet,mIoU (recomputed from saved predictions),49.7579
+SPANetV2-S36-pure,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",37.2559
+Swin-S,D_upernet,"mIoU (single scale, this run)",47.6352
+Swin-S,D_upernet,mIoU (recomputed from saved predictions),47.6352
+Swin-S,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",35.1762
+Swin-T,D_upernet,"mIoU (single scale, this run)",44.5066
+Swin-T,D_upernet,mIoU (recomputed from saved predictions),44.5066
+Swin-T,D_upernet,"Boundary IoU (d=2% diag, per-class mean)",31.7953
+ConvNeXt-S,D3_cascade,box AP (mmdet CocoMetric),51.9
+ConvNeXt-S,D3_cascade,mask AP (mmdet CocoMetric),45
+ConvNeXt-S,D3_cascade,mask AP (boundary-iou-api segm),45.0027
+ConvNeXt-S,D3_cascade,Boundary AP (d=0.02),30.0279
+ConvNeXt-T,D3_cascade,box AP (mmdet CocoMetric),50.4
+ConvNeXt-T,D3_cascade,mask AP (mmdet CocoMetric),43.6
+ConvNeXt-T,D3_cascade,mask AP (boundary-iou-api segm),43.6498
+ConvNeXt-T,D3_cascade,Boundary AP (d=0.02),28.9211
+SPANetV2-S18-hybrid,D3_cascade,box AP (mmdet CocoMetric),52.8
+SPANetV2-S18-hybrid,D3_cascade,mask AP (mmdet CocoMetric),45.7
+SPANetV2-S18-hybrid,D3_cascade,mask AP (boundary-iou-api segm),45.7094
+SPANetV2-S18-hybrid,D3_cascade,Boundary AP (d=0.02),30.6373
+SPANetV2-S18-pure,D3_cascade,box AP (mmdet CocoMetric),51.6
+SPANetV2-S18-pure,D3_cascade,mask AP (mmdet CocoMetric),44.7
+SPANetV2-S18-pure,D3_cascade,mask AP (boundary-iou-api segm),44.6513
+SPANetV2-S18-pure,D3_cascade,Boundary AP (d=0.02),30.0686
+SPANetV2-S36-hybrid,D3_cascade,box AP (mmdet CocoMetric),53.8
+SPANetV2-S36-hybrid,D3_cascade,mask AP (mmdet CocoMetric),46.4
+SPANetV2-S36-hybrid,D3_cascade,mask AP (boundary-iou-api segm),46.4334
+SPANetV2-S36-hybrid,D3_cascade,Boundary AP (d=0.02),31.0144
+SPANetV2-S36-pure,D3_cascade,box AP (mmdet CocoMetric),53.1
+SPANetV2-S36-pure,D3_cascade,mask AP (mmdet CocoMetric),45.9
+SPANetV2-S36-pure,D3_cascade,mask AP (boundary-iou-api segm),45.8804
+SPANetV2-S36-pure,D3_cascade,Boundary AP (d=0.02),30.8637
+Swin-S,D3_cascade,box AP (mmdet CocoMetric),52
+Swin-S,D3_cascade,mask AP (mmdet CocoMetric),45
+Swin-S,D3_cascade,mask AP (boundary-iou-api segm),44.9887
+Swin-S,D3_cascade,Boundary AP (d=0.02),30.2099
+Swin-T,D3_cascade,box AP (mmdet CocoMetric),50.4
+Swin-T,D3_cascade,mask AP (mmdet CocoMetric),43.7
+Swin-T,D3_cascade,mask AP (boundary-iou-api segm),43.7213
+Swin-T,D3_cascade,Boundary AP (d=0.02),28.9685
+ConvNeXt-T,D3_mask_rcnn,box AP (mmdet CocoMetric),46.2
+ConvNeXt-T,D3_mask_rcnn,mask AP (mmdet CocoMetric),41.7
+ConvNeXt-T,D3_mask_rcnn,mask AP (boundary-iou-api segm),41.6704
+ConvNeXt-T,D3_mask_rcnn,Boundary AP (d=0.02),26.7421
+SPANetV2-S18-hybrid,D3_mask_rcnn,box AP (mmdet CocoMetric),49.6
+SPANetV2-S18-hybrid,D3_mask_rcnn,mask AP (mmdet CocoMetric),44.3
+SPANetV2-S18-hybrid,D3_mask_rcnn,mask AP (boundary-iou-api segm),44.3311
+SPANetV2-S18-hybrid,D3_mask_rcnn,Boundary AP (d=0.02),29.2339
+SPANetV2-S18-pure,D3_mask_rcnn,box AP (mmdet CocoMetric),48
+SPANetV2-S18-pure,D3_mask_rcnn,mask AP (mmdet CocoMetric),42.9
+SPANetV2-S18-pure,D3_mask_rcnn,mask AP (boundary-iou-api segm),42.935
+SPANetV2-S18-pure,D3_mask_rcnn,Boundary AP (d=0.02),28.2739
+Swin-T,D3_mask_rcnn,box AP (mmdet CocoMetric),46
+Swin-T,D3_mask_rcnn,mask AP (mmdet CocoMetric),41.7
+Swin-T,D3_mask_rcnn,mask AP (boundary-iou-api segm),41.6534
+Swin-T,D3_mask_rcnn,Boundary AP (d=0.02),26.8363

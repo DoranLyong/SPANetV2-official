@@ -1,0 +1,1 @@
+{"model": "deit_small", "top1": 79.83200000000001, "n": 50000, "subset5k_top1": 79.64, "fp16_top1": 79.816, "fp16_fp32_pred_agreement": 0.9995, "preprocessing": {"resize": 256, "resize_interpolation": "bicubic (PIL)", "center_crop": 224, "crop_pct": 0.875, "mean": [0.485, 0.456, 0.406], "std": [0.229, 0.224, 0.225]}, "seconds": 81.63159728050232, "n_params": 22050664}

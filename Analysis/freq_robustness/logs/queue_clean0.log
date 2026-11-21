@@ -1,0 +1,4 @@
+[2026-11-22 04:58:08] GPU0 start clean:spanetv2_s18_pure
+[2026-11-22 04:59:54] GPU0 end   clean:spanetv2_s18_pure exit=0
+[2026-11-22 04:59:54] GPU0 start clean:convformer_s18
+[2026-11-22 05:01:20] GPU0 end   clean:convformer_s18 exit=0

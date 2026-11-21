@@ -1,0 +1,13 @@
+If for semantic segmentation, please install mmsegmentation first
+If for detection, please install mmdetection first
+0/2000 0s
+200/2000 10s
+400/2000 19s
+600/2000 29s
+800/2000 38s
+1000/2000 47s
+1200/2000 57s
+1400/2000 66s
+1600/2000 76s
+1800/2000 85s
+{"model": "upernet_convnext_small", "name": "ConvNeXt-S", "setting": "upernet", "pair": "S36", "n_images": 2000, "mIoU": 48.74341915709629, "aAcc": 82.56779494308175, "reference": {"mIoU_ss": 48.7, "mIoU_ms": 49.6, "src": "facebookresearch/ConvNeXt semantic_segmentation README"}, "config_source": "given in seg_eval.py (port of the official config)", "test_cfg": {"mode": "slide", "crop_size": [512, 512], "stride": [341, 341]}, "load_info": {"weights_only": true, "missing": [], "unexpected": [], "state_dict": "ckpt['state_dict']", "meta": {"mmseg_version": "0.11.0+dc4d390", "iter": 160000, "epoch": 127, "mmcv_version": "1.3.0", "time": "Mon Dec 13 00:11:16 2021"}}, "weight": "weights/seg/upernet_convnext_small_1k_512x512/upernet_convnext_small_1k_512x512.pth", "seconds": 94.22151708602905}

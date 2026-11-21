@@ -1,0 +1,26 @@
+loading annotations into memory...
+Done (t=0.62s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 1150
+`boundary` added! (t=9.75s)
+index created!
+Loading and preparing results...
+DONE (t=1.44s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3515
+`boundary` added! (t=24.05s)
+index created!
+Loading and preparing results...
+DONE (t=1.05s)
+creating index...
+Adding `boundary` to annotation.
+Number of cores: 32, annotations per core: 3515
+`boundary` added! (t=30.91s)
+index created!
+mask_rcnn_spanetv2_s18_pure boundary AP 28.27 mask AP 42.93
+
+real	2m14.940s
+user	10m12.744s
+sys	0m59.345s

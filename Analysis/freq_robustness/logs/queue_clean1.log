@@ -1,0 +1,4 @@
+[2026-11-22 04:58:08] GPU1 start clean:spanetv2_s18_hybrid
+[2026-11-22 04:59:50] GPU1 end   clean:spanetv2_s18_hybrid exit=0
+[2026-11-22 04:59:50] GPU1 start clean:caformer_s18
+[2026-11-22 05:01:18] GPU1 end   clean:caformer_s18 exit=0

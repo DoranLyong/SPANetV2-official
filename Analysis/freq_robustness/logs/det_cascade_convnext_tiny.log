@@ -1,0 +1,65 @@
+loading annotations into memory...
+Done (t=0.71s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.48s)
+creating index...
+index created!
+0/5000 0s
+500/5000 39s
+1000/5000 79s
+1500/5000 118s
+2000/5000 157s
+2500/5000 198s
+3000/5000 239s
+3500/5000 281s
+4000/5000 320s
+4500/5000 361s
+11/22 07:11:06 - mmengine - INFO - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.61s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=16.27s).
+Accumulating evaluation results...
+DONE (t=2.23s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.691
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.548
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.337
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.544
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.651
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.629
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.629
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.629
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.462
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.665
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.775
+11/22 07:11:26 - mmengine - INFO - bbox_mAP_copypaste: 0.504 0.691 0.548 0.337 0.544 0.651
+11/22 07:11:26 - mmengine - INFO - Evaluating segm...
+Loading and preparing results...
+DONE (t=0.53s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=13.23s).
+Accumulating evaluation results...
+DONE (t=2.16s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.665
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.473
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.242
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.471
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.621
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.550
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.550
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.550
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.374
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.587
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.705
+11/22 07:11:44 - mmengine - INFO - segm_mAP_copypaste: 0.436 0.665 0.473 0.242 0.471 0.621
+{"model": "cascade_convnext_tiny", "name": "ConvNeXt-T", "framework": "cascade", "pair": "S18", "n_images": 5000, "metrics": {"bbox_mAP": 0.504, "bbox_mAP_50": 0.691, "bbox_mAP_75": 0.548, "bbox_mAP_s": 0.337, "bbox_mAP_m": 0.544, "bbox_mAP_l": 0.651, "segm_mAP": 0.436, "segm_mAP_50": 0.665, "segm_mAP_75": 0.473, "segm_mAP_s": 0.242, "segm_mAP_m": 0.471, "segm_mAP_l": 0.621}, "reference": {"box_AP": 50.4, "mask_AP": 43.7, "src": "facebookresearch/ConvNeXt object_detection README"}, "config_source": "checkpoint meta['cfg'] of cascade_spanetv2_s18_pure with the official backbone (see det_eval.py)", "load_info": {"weights_only": true, "missing": [], "unexpected": [], "meta": {}}, "weight": "weights/det/cascade_mask_rcnn_convnext_tiny_1k_3x/cascade_mask_rcnn_convnext_tiny_1k_3x.pth", "seconds": 443.9911711215973, "test_cfg": {"rcnn": {"mask_thr_binary": 0.5, "max_per_img": 100, "nms": {"iou_threshold": 0.5, "type": "nms"}, "score_thr": 0.05}, "rpn": {"max_per_img": 1000, "min_bbox_size": 0, "nms": {"iou_threshold": 0.7, "type": "nms"}, "nms_pre": 1000}}}

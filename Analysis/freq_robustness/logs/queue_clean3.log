@@ -1,0 +1,8 @@
+[2026-11-22 05:03:56] GPU3 start clean:convnext_tiny
+[2026-11-22 05:05:50] GPU3 end   clean:convnext_tiny exit=0
+[2026-11-22 05:05:50] GPU3 start clean:convnext_tiny_ema
+[2026-11-22 05:07:48] GPU3 end   clean:convnext_tiny_ema exit=0
+[2026-11-22 05:07:48] GPU3 start clean:swin_tiny
+[2026-11-22 05:09:50] GPU3 end   clean:swin_tiny exit=0
+[2026-11-22 05:09:50] GPU3 start clean:deit_small
+[2026-11-22 05:11:17] GPU3 end   clean:deit_small exit=0

@@ -1,0 +1,5 @@
+# downloaded weights, cloned repos, preprocessed image caches (regenerate with the scripts)
+weights/
+third_party/
+cache/
+logs/*.running

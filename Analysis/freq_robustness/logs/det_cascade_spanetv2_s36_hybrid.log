@@ -1,0 +1,65 @@
+loading annotations into memory...
+Done (t=0.50s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.36s)
+creating index...
+index created!
+0/5000 0s
+500/5000 89s
+1000/5000 185s
+1500/5000 285s
+2000/5000 388s
+2500/5000 490s
+3000/5000 595s
+3500/5000 697s
+4000/5000 797s
+4500/5000 895s
+11/22 06:58:29 - mmengine - INFO - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.52s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=14.69s).
+Accumulating evaluation results...
+DONE (t=1.96s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.538
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.729
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.584
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.368
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.576
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.696
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.654
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.654
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.654
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.485
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.693
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.800
+11/22 06:58:47 - mmengine - INFO - bbox_mAP_copypaste: 0.538 0.729 0.584 0.368 0.576 0.696
+11/22 06:58:47 - mmengine - INFO - Evaluating segm...
+Loading and preparing results...
+DONE (t=0.47s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=12.79s).
+Accumulating evaluation results...
+DONE (t=1.94s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.464
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.700
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.270
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.497
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.652
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.572
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.572
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.572
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.401
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.613
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.727
+11/22 06:59:03 - mmengine - INFO - segm_mAP_copypaste: 0.464 0.700 0.502 0.270 0.497 0.652
+{"model": "cascade_spanetv2_s36_hybrid", "name": "SPANetV2-S36-hybrid", "framework": "cascade", "pair": "S36", "n_images": 5000, "metrics": {"bbox_mAP": 0.538, "bbox_mAP_50": 0.729, "bbox_mAP_75": 0.584, "bbox_mAP_s": 0.368, "bbox_mAP_m": 0.576, "bbox_mAP_l": 0.696, "segm_mAP": 0.464, "segm_mAP_50": 0.7, "segm_mAP_75": 0.502, "segm_mAP_s": 0.27, "segm_mAP_m": 0.497, "segm_mAP_l": 0.652}, "reference": {"box_AP": 53.8, "mask_AP": 46.4, "src": "SPANetV2-official README"}, "config_source": "checkpoint meta['cfg']", "load_info": {"weights_only": false, "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer", "missing": [], "unexpected": [], "meta": {"epoch": 35, "iter": 2169421, "time": "20251124_102129"}}, "weight": "weights/det/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth", "seconds": 1032.2872188091278, "test_cfg": {"rcnn": {"mask_thr_binary": 0.5, "max_per_img": 100, "nms": {"iou_threshold": 0.5, "type": "nms"}, "score_thr": 0.05}, "rpn": {"max_per_img": 1000, "min_bbox_size": 0, "nms": {"iou_threshold": 0.7, "type": "nms"}, "nms_pre": 1000}}}
