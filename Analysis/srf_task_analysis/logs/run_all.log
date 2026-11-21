@@ -1,0 +1,24 @@
+[S18pure] loaded IN1K: spanetv2_s18_pure_res-scale_Full-ExSPAM.pth (72 filter keys, weights_only=True)
+[S18pure] loaded COCO/MaskRCNN: mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth (72 filter keys, weights_only=False)
+[S18pure] loaded COCO/Cascade: cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth (72 filter keys, weights_only=False)
+[S18pure] loaded ADE20K/FPN: fpn_spanetv2_s18_pure_ade20k_467e-1.pth (72 filter keys, weights_only=False)
+[S18pure] loaded ADE20K/UperNet: upernet_spanetv2_s18_pure_ade20k_4872e-2.pth (72 filter keys, weights_only=False)
+[S18pure] done -> data/per_model/S18pure
+[S36pure] loaded IN1K: spanetv2_s36_pure_res-scale_Full-ExSPAM.pth (144 filter keys, weights_only=True)
+[S36pure] loaded COCO/Cascade: cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth (144 filter keys, weights_only=False)
+[S36pure] loaded ADE20K/FPN: fpn_spanetv2_s36_pure_ade20k_479e-1.pth (144 filter keys, weights_only=False)
+[S36pure] loaded ADE20K/UperNet: upernet_spanetv2_s36_pure_ade20k_4976e-2.pth (144 filter keys, weights_only=False)
+[S36pure] done -> data/per_model/S36pure
+[S18hybrid] loaded IN1K: spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth (24 filter keys, weights_only=True)
+[S18hybrid] loaded COCO/MaskRCNN: mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth (24 filter keys, weights_only=False)
+[S18hybrid] loaded COCO/Cascade: cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth (24 filter keys, weights_only=False)
+[S18hybrid] loaded ADE20K/FPN: fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth (24 filter keys, weights_only=False)
+[S18hybrid] loaded ADE20K/UperNet: upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth (24 filter keys, weights_only=False)
+[S18hybrid] done -> data/per_model/S18hybrid
+[S36hybrid] loaded IN1K: spanetv2_s36_hybrid_k7_res-scale_Full-ExSPAM.pth (60 filter keys, weights_only=True)
+[S36hybrid] loaded COCO/Cascade: cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth (60 filter keys, weights_only=False)
+[S36hybrid] loaded ADE20K/FPN: fpn_spanetv2_s36_hybrid_ade20k_486e-1.pth (60 filter keys, weights_only=False)
+[S36hybrid] loaded ADE20K/UperNet: upernet_spanetv2_s36_hybrid_ade20k_5163e-2.pth (60 filter keys, weights_only=False)
+[S36hybrid] done -> data/per_model/S36hybrid
+merged ['S18hybrid', 'S18pure', 'S36hybrid', 'S36pure']
+report.md written 105495 chars

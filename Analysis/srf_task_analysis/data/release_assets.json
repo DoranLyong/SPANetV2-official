@@ -1,0 +1,98 @@
+{
+ "ADE20K/fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth": {
+  "size": 355305973,
+  "digest": null
+ },
+ "ADE20K/fpn_spanetv2_s18_pure_ade20k_467e-1.pth": {
+  "size": 381589865,
+  "digest": null
+ },
+ "ADE20K/fpn_spanetv2_s36_hybrid_ade20k_486e-1.pth": {
+  "size": 519797221,
+  "digest": null
+ },
+ "ADE20K/fpn_spanetv2_s36_pure_ade20k_479e-1.pth": {
+  "size": 561419097,
+  "digest": null
+ },
+ "ADE20K/upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth": {
+  "size": 477294226,
+  "digest": null
+ },
+ "ADE20K/upernet_spanetv2_s18_pure_ade20k_4872e-2.pth": {
+  "size": 508884806,
+  "digest": null
+ },
+ "ADE20K/upernet_spanetv2_s36_hybrid_ade20k_5163e-2.pth": {
+  "size": 647306946,
+  "digest": null
+ },
+ "ADE20K/upernet_spanetv2_s36_pure_ade20k_4976e-2.pth": {
+  "size": 691502838,
+  "digest": null
+ },
+ "COCO2017/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth": {
+  "size": 1342689857,
+  "digest": null
+ },
+ "COCO2017/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth": {
+  "size": 1201530229,
+  "digest": null
+ },
+ "COCO2017/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth": {
+  "size": 1509369457,
+  "digest": "sha256:e30613cf5dff93a49be761435f752344289fabbafad7b38ec7a04cb3bde8a2f9"
+ },
+ "COCO2017/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth": {
+  "size": 1386166373,
+  "digest": "sha256:d25239c20894e5e4132e5f8e7c2d0b55f01757a8a33508addf2eff303addf811"
+ },
+ "COCO2017/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth": {
+  "size": 743101565,
+  "digest": null
+ },
+ "COCO2017/mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth": {
+  "size": 672288049,
+  "digest": null
+ },
+ "ImageNet-1K/spanetv2_b36_hybrid_k7_res-scale_Full-ExSPAM.pth": {
+  "size": 407456547,
+  "digest": null
+ },
+ "ImageNet-1K/spanetv2_b36_pure_res-scale_Full-ExSPAM.pth": {
+  "size": 438601917,
+  "digest": null
+ },
+ "ImageNet-1K/spanetv2_m36_pure_res-scale_Full-ExSPAM.pth": {
+  "size": 252142013,
+  "digest": null
+ },
+ "ImageNet-1K/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth": {
+  "size": 108085611,
+  "digest": null
+ },
+ "ImageNet-1K/spanetv2_s18_pure_modified_sigmoid.pth": {
+  "size": 116844081,
+  "digest": "sha256:244b5516593db76eeaf044f66ccd6cfa376f9f8ee9314402858045e2cd281f11"
+ },
+ "ImageNet-1K/spanetv2_s18_pure_res-scale_Full-ExSPAM.pth": {
+  "size": 116857189,
+  "digest": null
+ },
+ "ImageNet-1K/spanetv2_s36_hybrid_k7_res-scale_Full-ExSPAM.pth": {
+  "size": 162922467,
+  "digest": null
+ },
+ "ImageNet-1K/spanetv2_s36_hybrid_modified_sigmoid.pth": {
+  "size": 162932721,
+  "digest": "sha256:49dada79e149c0612d7aac5aeac941fcdc6e6e32ab770110edf3bec49e99419c"
+ },
+ "ImageNet-1K/spanetv2_s36_pure_modified_sigmoid.pth": {
+  "size": 176770568,
+  "digest": "sha256:d56739c3ae7b68f5adb2ee990368b1eb75a8b78568700d94580bbf67318635b1"
+ },
+ "ImageNet-1K/spanetv2_s36_pure_res-scale_Full-ExSPAM.pth": {
+  "size": 176796349,
+  "digest": null
+ }
+}

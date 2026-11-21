@@ -1,0 +1,32 @@
+02:41:19 have ImageNet-1K/spanetv2_s18_pure_res-scale_Full-ExSPAM.pth
+02:41:19 have COCO2017/mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth
+02:41:19 get  COCO2017/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth 396,785,013 bytes left in 8 ranges
+02:41:19 have ADE20K/fpn_spanetv2_s18_pure_ade20k_467e-1.pth
+02:41:19 have ADE20K/upernet_spanetv2_s18_pure_ade20k_4872e-2.pth
+02:41:19 have ImageNet-1K/spanetv2_s36_pure_res-scale_Full-ExSPAM.pth
+02:41:19 get  COCO2017/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth 594,573,413 bytes left in 8 ranges
+02:41:19 have ADE20K/fpn_spanetv2_s36_pure_ade20k_479e-1.pth
+02:41:19 get  ADE20K/upernet_spanetv2_s36_pure_ade20k_4976e-2.pth 250,576,630 bytes left in 8 ranges
+02:41:19 have ImageNet-1K/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth
+02:41:19 get  COCO2017/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth 454,452,349 bytes left in 8 ranges
+02:41:19 get  COCO2017/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth 1,140,707,905 bytes left in 8 ranges
+02:41:19 get  ADE20K/fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth 283,585,013 bytes left in 8 ranges
+02:41:19 get  ADE20K/upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth 477,294,226 bytes left in 8 ranges
+02:41:19 get  ImageNet-1K/spanetv2_s36_hybrid_k7_res-scale_Full-ExSPAM.pth 162,922,467 bytes left in 8 ranges
+02:41:19 get  COCO2017/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth 1,509,369,457 bytes left in 8 ranges
+02:41:19 get  ADE20K/fpn_spanetv2_s36_hybrid_ade20k_486e-1.pth 519,797,221 bytes left in 8 ranges
+02:41:19 get  ADE20K/upernet_spanetv2_s36_hybrid_ade20k_5163e-2.pth 647,306,946 bytes left in 8 ranges
+02:46:32 done COCO2017/cascade-mask-rcnn_spanetv2_s18_pure_3x_epoch_35.pth
+02:49:30 sha256 ok COCO2017/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth
+02:49:30 done COCO2017/cascade-mask-rcnn_spanetv2_s36_pure_3x_epoch_36.pth
+02:49:30 done ADE20K/upernet_spanetv2_s36_pure_ade20k_4976e-2.pth
+02:52:46 done COCO2017/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth
+03:05:52 done COCO2017/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth
+03:05:53 done ADE20K/fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth
+03:05:53 done ADE20K/upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth
+03:05:53 done ImageNet-1K/spanetv2_s36_hybrid_k7_res-scale_Full-ExSPAM.pth
+03:07:24 sha256 ok COCO2017/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth
+03:07:24 done COCO2017/cascade-mask-rcnn_spanetv2_s36_hybrid_3x_epoch_35.pth
+03:07:24 done ADE20K/fpn_spanetv2_s36_hybrid_ade20k_486e-1.pth
+03:08:06 done ADE20K/upernet_spanetv2_s36_hybrid_ade20k_5163e-2.pth
+03:08:06 DONE

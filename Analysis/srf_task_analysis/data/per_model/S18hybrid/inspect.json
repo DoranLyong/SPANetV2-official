@@ -1,0 +1,1986 @@
+{
+ "model": "S18hybrid",
+ "labels": [
+  "IN1K",
+  "COCO/MaskRCNN",
+  "COCO/Cascade",
+  "ADE20K/FPN",
+  "ADE20K/UperNet"
+ ],
+ "stages": [
+  1,
+  2
+ ],
+ "heads": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "grid": {
+  "1": {
+   "H": 56,
+   "W": 56,
+   "Wr": 29,
+   "n_ring": 41,
+   "band_cells_full_grid": {
+    "DC": 1.0,
+    "low": 148.0,
+    "mid": 464.0,
+    "high": 2523.0
+   }
+  },
+  "2": {
+   "H": 28,
+   "W": 28,
+   "Wr": 15,
+   "n_ring": 21,
+   "band_cells_full_grid": {
+    "DC": 1.0,
+    "low": 36.0,
+    "mid": 112.0,
+    "high": 635.0
+   }
+  }
+ },
+ "checkpoints": {
+  "IN1K": {
+   "label": "IN1K",
+   "path": "ckpts/ImageNet-1K/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+   "file": "spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+   "size_bytes": 108085611,
+   "sha256": "4e27616f75cc7e7323d9a8b1846bfffb9b001db93d071879a0c6729cb5f6e7d4",
+   "weights_only": true,
+   "top_level_keys": "flat state_dict (299 tensors)",
+   "state_dict_used": "ckpt (flat state_dict)",
+   "filter_key_prefix": "",
+   "n_filter_keys": 24,
+   "filter_key_example": "stages.0.0.token_mixer.filter_1",
+   "has_state_dict_ema": false,
+   "filter_shapes_by_stage": {
+    "1": [
+     [
+      16,
+      56,
+      29
+     ]
+    ],
+    "2": [
+     [
+      32,
+      28,
+      15
+     ]
+    ]
+   },
+   "blocks_by_stage": {
+    "1": 3,
+    "2": 3
+   },
+   "kernel_shapes_by_head": {
+    "1": [
+     16,
+     3,
+     3
+    ],
+    "2": [
+     16,
+     5,
+     5
+    ],
+    "3": [
+     16,
+     7,
+     7
+    ],
+    "4": [
+     16,
+     9,
+     9
+    ]
+   },
+   "local_copy": {
+    "path": "image_classification/ckpt/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+    "sha256_equal": true
+   },
+   "load_seconds": 0.3,
+   "same_filter_keys_and_shapes_as_IN1K": true
+  },
+  "COCO/MaskRCNN": {
+   "label": "COCO/MaskRCNN",
+   "path": "ckpts/COCO2017/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth",
+   "file": "mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth",
+   "size_bytes": 743101565,
+   "sha256": "1e8d0cff6ea534f50b16f8033121ac5c6cb77887083bbc01d9608b88fc9bd878",
+   "weights_only": false,
+   "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer",
+   "top_level_keys": [
+    "meta",
+    "state_dict",
+    "message_hub",
+    "optimizer",
+    "param_schedulers"
+   ],
+   "state_dict_used": "ckpt['state_dict']",
+   "filter_key_prefix": "backbone.",
+   "n_filter_keys": 24,
+   "filter_key_example": "backbone.stages.0.0.token_mixer.filter_1",
+   "has_state_dict_ema": false,
+   "filter_shapes_by_stage": {
+    "1": [
+     [
+      16,
+      56,
+      29
+     ]
+    ],
+    "2": [
+     [
+      32,
+      28,
+      15
+     ]
+    ]
+   },
+   "blocks_by_stage": {
+    "1": 3,
+    "2": 3
+   },
+   "kernel_shapes_by_head": {
+    "1": [
+     16,
+     3,
+     3
+    ],
+    "2": [
+     16,
+     5,
+     5
+    ],
+    "3": [
+     16,
+     7,
+     7
+    ],
+    "4": [
+     16,
+     9,
+     9
+    ]
+   },
+   "meta": {
+    "epoch": 36,
+    "iter": 1055412,
+    "mmengine_version": "0.10.6",
+    "time": "20250223_085458",
+    "seed": 1046123647,
+    "experiment_name": "mask-rcnn_spanetv2_s18_hybrid_3x_20250221_121847"
+   },
+   "cfg": {
+    "backbone_type": "spanetv2_s18_hybrid",
+    "init_cfg": {
+     "checkpoint": "ckpt/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+     "type": "Pretrained"
+    },
+    "drop_path_rate": 0.15,
+    "optim_wrapper_type": "AmpOptimWrapper",
+    "constructor": "SPANetV2LearningRateDecayOptimizerConstructor",
+    "paramwise_cfg": {
+     "decay_rate": 0.95,
+     "decay_type": "layer_wise",
+     "num_layers": 6
+    },
+    "optimizer": {
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "lr": 0.0001,
+     "type": "AdamW",
+     "weight_decay": 0.05
+    },
+    "accumulative_counts": 4,
+    "clip_grad": null,
+    "param_scheduler": [
+     {
+      "begin": 0,
+      "by_epoch": false,
+      "end": 1000,
+      "start_factor": 0.001,
+      "type": "LinearLR"
+     },
+     {
+      "begin": 0,
+      "by_epoch": true,
+      "end": 36,
+      "gamma": 0.1,
+      "milestones": [
+       27,
+       33
+      ],
+      "type": "MultiStepLR"
+     }
+    ],
+    "train_cfg": {
+     "max_epochs": 36,
+     "type": "EpochBasedTrainLoop",
+     "val_interval": 1
+    },
+    "train_batch_size": 1,
+    "auto_scale_lr": {
+     "base_batch_size": 16,
+     "enable": false
+    },
+    "load_from": null,
+    "resume": false
+   },
+   "optimizer": {
+    "mapping": "param_groups[*]['param_names']",
+    "n_groups": 16,
+    "filters": {
+     "backbone.stages.1.0.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 8.731263392292021e-07,
+      "exp_avg_sq_mean": 2.876761051595622e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 6.406655188584409e-07,
+      "exp_avg_sq_mean": 8.699555659186231e-11
+     },
+     "backbone.stages.1.0.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 6.80830225974205e-07,
+      "exp_avg_sq_mean": 7.092454956669769e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 5.857611995452316e-07,
+      "exp_avg_sq_mean": 6.769628191349852e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 1.206059778269264e-06,
+      "exp_avg_sq_mean": 1.4761553090991697e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 8.096116062006331e-07,
+      "exp_avg_sq_mean": 1.0244642634216206e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 8.044997912293184e-07,
+      "exp_avg_sq_mean": 3.699283379621221e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 6.20881849044963e-07,
+      "exp_avg_sq_mean": 2.4462415426640405e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 1.0662588465493172e-06,
+      "exp_avg_sq_mean": 1.5022680321941095e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 9.499586326455756e-07,
+      "exp_avg_sq_mean": 1.4407509907332638e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 8.472349577459681e-07,
+      "exp_avg_sq_mean": 4.4390172093677904e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.7737809374999998,
+      "lr_at_save": 7.737809374999991e-07,
+      "initial_lr": 7.737809374999998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 6.93248694005888e-07,
+      "exp_avg_sq_mean": 1.6859719176309795e-10
+     },
+     "backbone.stages.0.0.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 5.57529631350917e-07,
+      "exp_avg_sq_mean": 1.2359233081404852e-10
+     },
+     "backbone.stages.0.0.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 3.721111738741456e-07,
+      "exp_avg_sq_mean": 4.417345308982412e-11
+     },
+     "backbone.stages.0.0.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 3.117604592262069e-07,
+      "exp_avg_sq_mean": 3.60464817716899e-11
+     },
+     "backbone.stages.0.0.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 2.23827925083242e-07,
+      "exp_avg_sq_mean": 5.0629216097330954e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 6.469352911153692e-07,
+      "exp_avg_sq_mean": 4.901506631127539e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 5.61182218916656e-07,
+      "exp_avg_sq_mean": 4.7535243102858615e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 5.92469518778671e-07,
+      "exp_avg_sq_mean": 3.731340930679394e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 5.286462965159444e-07,
+      "exp_avg_sq_mean": 6.835403076888014e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 7.883348303039384e-07,
+      "exp_avg_sq_mean": 5.493194787931088e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 6.058766075511812e-07,
+      "exp_avg_sq_mean": 4.579013557215461e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 4.5530873649113346e-07,
+      "exp_avg_sq_mean": 4.8724749929229816e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.7350918906249998,
+      "lr_at_save": 7.350918906249985e-07,
+      "initial_lr": 7.350918906249998e-05,
+      "weight_decay": 0.05,
+      "step": 263746,
+      "exp_avg_abs_mean": 4.82814243696339e-07,
+      "exp_avg_sq_mean": 5.521468005031949e-11
+     }
+    },
+    "filters_not_in_optimizer": [],
+    "adam_steps": [
+     263746
+    ],
+    "optimizer_defaults": {
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "eps": 1e-08,
+     "amsgrad": false
+    }
+   },
+   "param_schedulers_state": [
+    {
+     "start_factor": 0.001,
+     "end_factor": 1.0,
+     "begin": 0,
+     "end": 1000,
+     "by_epoch": false,
+     "base_values": [
+      6.983372960937497e-05,
+      6.983372960937497e-05,
+      7.737809374999998e-05,
+      7.737809374999998e-05,
+      8.1450625e-05,
+      8.1450625e-05,
+      9.5e-05,
+      9.5e-05,
+      7.350918906249998e-05,
+      7.350918906249998e-05,
+      8.573749999999999e-05,
+      8.573749999999999e-05,
+      9.025e-05,
+      9.025e-05,
+      0.0001,
+      0.0001,
+      0.0001
+     ],
+     "last_step": 999,
+     "_last_value": [
+      6.983372960937504e-07,
+      6.983372960937504e-07,
+      7.737809374999991e-07,
+      7.737809374999991e-07,
+      8.145062499999991e-07,
+      8.145062499999991e-07,
+      9.499999999999994e-07,
+      9.499999999999994e-07,
+      7.350918906249985e-07,
+      7.350918906249985e-07,
+      8.573749999999981e-07,
+      8.573749999999981e-07,
+      9.024999999999999e-07,
+      9.024999999999999e-07,
+      9.99999999999997e-07,
+      9.99999999999997e-07,
+      9.99999999999997e-07
+     ]
+    },
+    {
+     "milestones": {
+      "27": 1,
+      "33": 1
+     },
+     "gamma": 0.1,
+     "begin": 0,
+     "end": 36,
+     "by_epoch": true,
+     "base_values": [
+      6.983372960937497e-05,
+      6.983372960937497e-05,
+      7.737809374999998e-05,
+      7.737809374999998e-05,
+      8.1450625e-05,
+      8.1450625e-05,
+      9.5e-05,
+      9.5e-05,
+      7.350918906249998e-05,
+      7.350918906249998e-05,
+      8.573749999999999e-05,
+      8.573749999999999e-05,
+      9.025e-05,
+      9.025e-05,
+      0.0001,
+      0.0001,
+      0.0001
+     ],
+     "last_step": 35,
+     "_last_value": [
+      6.983372960937504e-07,
+      6.983372960937504e-07,
+      7.737809374999991e-07,
+      7.737809374999991e-07,
+      8.145062499999991e-07,
+      8.145062499999991e-07,
+      9.499999999999994e-07,
+      9.499999999999994e-07,
+      7.350918906249985e-07,
+      7.350918906249985e-07,
+      8.573749999999981e-07,
+      8.573749999999981e-07,
+      9.024999999999999e-07,
+      9.024999999999999e-07,
+      9.99999999999997e-07,
+      9.99999999999997e-07,
+      9.99999999999997e-07
+     ]
+    }
+   ],
+   "load_seconds": 1.5,
+   "same_filter_keys_and_shapes_as_IN1K": true,
+   "wd_only_schedule": {
+    "total_iters": 1055412,
+    "iters_per_epoch": 29317,
+    "accumulative_counts": 4,
+    "n_opt_steps_simulated": 263853,
+    "base_lr": 0.0001,
+    "sum_base_lr": 20.238197999999937,
+    "lr_first": 4.000000000000001e-07,
+    "lr_last": 9.99999999999997e-07,
+    "lr_after_last_scheduler_step": 9.99999999999997e-07,
+    "adam_step_in_ckpt": [
+     263746
+    ]
+   }
+  },
+  "COCO/Cascade": {
+   "label": "COCO/Cascade",
+   "path": "ckpts/COCO2017/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35/cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth",
+   "file": "cascade-mask-rcnn_spanetv2_s18_hybrid_3x_epoch_35.pth",
+   "size_bytes": 1342689857,
+   "sha256": "645968a5b00752cce6140d1f677b93110c91547905046e74da15390327b141d3",
+   "weights_only": false,
+   "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer",
+   "top_level_keys": [
+    "meta",
+    "state_dict",
+    "message_hub",
+    "optimizer",
+    "param_schedulers"
+   ],
+   "state_dict_used": "ckpt['state_dict']",
+   "filter_key_prefix": "backbone.",
+   "n_filter_keys": 24,
+   "filter_key_example": "backbone.stages.0.0.token_mixer.filter_1",
+   "has_state_dict_ema": false,
+   "filter_shapes_by_stage": {
+    "1": [
+     [
+      16,
+      56,
+      29
+     ]
+    ],
+    "2": [
+     [
+      32,
+      28,
+      15
+     ]
+    ]
+   },
+   "blocks_by_stage": {
+    "1": 3,
+    "2": 3
+   },
+   "kernel_shapes_by_head": {
+    "1": [
+     16,
+     3,
+     3
+    ],
+    "2": [
+     16,
+     5,
+     5
+    ],
+    "3": [
+     16,
+     7,
+     7
+    ],
+    "4": [
+     16,
+     9,
+     9
+    ]
+   },
+   "meta": {
+    "epoch": 35,
+    "iter": 1026095,
+    "mmengine_version": "0.10.6",
+    "time": "20250305_023600",
+    "seed": 552952149,
+    "experiment_name": "cascade-mask-rcnn_spanetv2_s18_hybrid_fpn-3x_coco_20250302_064703"
+   },
+   "cfg": {
+    "backbone_type": "spanetv2_s18_hybrid",
+    "init_cfg": {
+     "checkpoint": "ckpt/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+     "type": "Pretrained"
+    },
+    "drop_path_rate": 0.15,
+    "optim_wrapper_type": "AmpOptimWrapper",
+    "constructor": "SPANetV2LearningRateDecayOptimizerConstructor",
+    "paramwise_cfg": {
+     "decay_rate": 0.7,
+     "decay_type": "layer_wise",
+     "num_layers": 6
+    },
+    "optimizer": {
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "lr": 0.0002,
+     "type": "AdamW",
+     "weight_decay": 0.05
+    },
+    "accumulative_counts": 4,
+    "clip_grad": null,
+    "param_scheduler": [
+     {
+      "begin": 0,
+      "by_epoch": false,
+      "end": 1000,
+      "start_factor": 0.001,
+      "type": "LinearLR"
+     },
+     {
+      "begin": 0,
+      "by_epoch": true,
+      "end": 36,
+      "gamma": 0.1,
+      "milestones": [
+       27,
+       33
+      ],
+      "type": "MultiStepLR"
+     }
+    ],
+    "train_cfg": {
+     "max_epochs": 36,
+     "type": "EpochBasedTrainLoop",
+     "val_interval": 1
+    },
+    "train_batch_size": 1,
+    "auto_scale_lr": {
+     "base_batch_size": 16,
+     "enable": false
+    },
+    "load_from": null,
+    "resume": false
+   },
+   "optimizer": {
+    "mapping": "param_groups[*]['param_names']",
+    "n_groups": 16,
+    "filters": {
+     "backbone.stages.1.0.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.4872600786475232e-06,
+      "exp_avg_sq_mean": 5.483841714060134e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.075886984835961e-06,
+      "exp_avg_sq_mean": 2.096920692640225e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.11322322027263e-06,
+      "exp_avg_sq_mean": 1.0672337458217385e-09
+     },
+     "backbone.stages.1.0.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 8.834570053295465e-07,
+      "exp_avg_sq_mean": 1.0798546501433748e-09
+     },
+     "backbone.stages.1.1.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.951253352672211e-06,
+      "exp_avg_sq_mean": 4.253123131459091e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.2999897762711043e-06,
+      "exp_avg_sq_mean": 2.898480344626364e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.3051396763330558e-06,
+      "exp_avg_sq_mean": 5.865182228781407e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.00605575426016e-06,
+      "exp_avg_sq_mean": 3.2653682535688233e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.7766006976671633e-06,
+      "exp_avg_sq_mean": 3.93226368133881e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.6151569752764772e-06,
+      "exp_avg_sq_mean": 3.313189722575771e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.5787164784342167e-06,
+      "exp_avg_sq_mean": 7.465387197314044e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.16806999999999994,
+      "lr_at_save": 3.3613999999999787e-07,
+      "initial_lr": 3.361399999999999e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.1416390179874725e-06,
+      "exp_avg_sq_mean": 2.903421114641702e-10
+     },
+     "backbone.stages.0.0.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 8.099460728772101e-07,
+      "exp_avg_sq_mean": 3.4568597984119265e-10
+     },
+     "backbone.stages.0.0.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 5.824808795296121e-07,
+      "exp_avg_sq_mean": 7.399830748155978e-11
+     },
+     "backbone.stages.0.0.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 4.4831173795500945e-07,
+      "exp_avg_sq_mean": 5.1997042088691714e-11
+     },
+     "backbone.stages.0.0.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 3.468624640845519e-07,
+      "exp_avg_sq_mean": 1.1149792200626507e-10
+     },
+     "backbone.stages.0.1.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 8.733775871405669e-07,
+      "exp_avg_sq_mean": 9.795769750908789e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 8.269669251603773e-07,
+      "exp_avg_sq_mean": 1.5463816338545655e-10
+     },
+     "backbone.stages.0.1.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 8.429890954175789e-07,
+      "exp_avg_sq_mean": 7.282308089884282e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 7.768111913719622e-07,
+      "exp_avg_sq_mean": 1.466754079304522e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.2940231499669608e-06,
+      "exp_avg_sq_mean": 1.3336365345395507e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 1.0210875416305498e-06,
+      "exp_avg_sq_mean": 1.1710284131272175e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 7.092521059348655e-07,
+      "exp_avg_sq_mean": 1.1875993244370164e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.11764899999999996,
+      "lr_at_save": 2.3529799999999997e-07,
+      "initial_lr": 2.3529799999999993e-05,
+      "weight_decay": 0.05,
+      "step": 256418,
+      "exp_avg_abs_mean": 7.776287702654372e-07,
+      "exp_avg_sq_mean": 1.3753753691503334e-10
+     }
+    },
+    "filters_not_in_optimizer": [],
+    "adam_steps": [
+     256418
+    ],
+    "optimizer_defaults": {
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "eps": 1e-08,
+     "amsgrad": false
+    }
+   },
+   "param_schedulers_state": [
+    {
+     "start_factor": 0.001,
+     "end_factor": 1.0,
+     "begin": 0,
+     "end": 1000,
+     "by_epoch": false,
+     "base_values": [
+      1.6470859999999992e-05,
+      1.6470859999999992e-05,
+      3.361399999999999e-05,
+      3.361399999999999e-05,
+      4.801999999999999e-05,
+      4.801999999999999e-05,
+      0.00014,
+      0.00014,
+      2.3529799999999993e-05,
+      2.3529799999999993e-05,
+      6.859999999999999e-05,
+      6.859999999999999e-05,
+      9.8e-05,
+      9.8e-05,
+      0.0002,
+      0.0002,
+      0.0002
+     ],
+     "last_step": 999,
+     "_last_value": [
+      1.647085999999988e-07,
+      1.647085999999988e-07,
+      3.3613999999999787e-07,
+      3.3613999999999787e-07,
+      4.80199999999999e-07,
+      4.80199999999999e-07,
+      1.3999999999999989e-06,
+      1.3999999999999989e-06,
+      2.3529799999999997e-07,
+      2.3529799999999997e-07,
+      6.859999999999958e-07,
+      6.859999999999958e-07,
+      9.799999999999997e-07,
+      9.799999999999997e-07,
+      1.999999999999994e-06,
+      1.999999999999994e-06,
+      1.999999999999994e-06
+     ]
+    },
+    {
+     "milestones": {
+      "27": 1,
+      "33": 1
+     },
+     "gamma": 0.1,
+     "begin": 0,
+     "end": 36,
+     "by_epoch": true,
+     "base_values": [
+      1.6470859999999992e-05,
+      1.6470859999999992e-05,
+      3.361399999999999e-05,
+      3.361399999999999e-05,
+      4.801999999999999e-05,
+      4.801999999999999e-05,
+      0.00014,
+      0.00014,
+      2.3529799999999993e-05,
+      2.3529799999999993e-05,
+      6.859999999999999e-05,
+      6.859999999999999e-05,
+      9.8e-05,
+      9.8e-05,
+      0.0002,
+      0.0002,
+      0.0002
+     ],
+     "last_step": 35,
+     "_last_value": [
+      1.647085999999988e-07,
+      1.647085999999988e-07,
+      3.3613999999999787e-07,
+      3.3613999999999787e-07,
+      4.80199999999999e-07,
+      4.80199999999999e-07,
+      1.3999999999999989e-06,
+      1.3999999999999989e-06,
+      2.3529799999999997e-07,
+      2.3529799999999997e-07,
+      6.859999999999958e-07,
+      6.859999999999958e-07,
+      9.799999999999997e-07,
+      9.799999999999997e-07,
+      1.999999999999994e-06,
+      1.999999999999994e-06,
+      1.999999999999994e-06
+     ]
+    }
+   ],
+   "load_seconds": 2.2,
+   "same_filter_keys_and_shapes_as_IN1K": true,
+   "wd_only_schedule": {
+    "total_iters": 1026095,
+    "iters_per_epoch": 29317,
+    "accumulative_counts": 4,
+    "n_opt_steps_simulated": 256523,
+    "base_lr": 0.0002,
+    "sum_base_lr": 40.46173599999987,
+    "lr_first": 8.000000000000002e-07,
+    "lr_last": 1.999999999999994e-06,
+    "lr_after_last_scheduler_step": 1.999999999999994e-06,
+    "adam_step_in_ckpt": [
+     256418
+    ]
+   }
+  },
+  "ADE20K/FPN": {
+   "label": "ADE20K/FPN",
+   "path": "ckpts/ADE20K/fpn_spanetv2_s18_hybrid_ade20k_478e-1/fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth",
+   "file": "fpn_spanetv2_s18_hybrid_ade20k_478e-1.pth",
+   "size_bytes": 355305973,
+   "sha256": "f1e27ab6af34e7c88f04448c8139725c61dd528d9bbbaccd7d000e366d1011f5",
+   "weights_only": false,
+   "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer",
+   "top_level_keys": [
+    "meta",
+    "state_dict",
+    "message_hub",
+    "optimizer",
+    "param_schedulers"
+   ],
+   "state_dict_used": "ckpt['state_dict']",
+   "filter_key_prefix": "backbone.",
+   "n_filter_keys": 24,
+   "filter_key_example": "backbone.stages.0.0.token_mixer.filter_1",
+   "has_state_dict_ema": false,
+   "filter_shapes_by_stage": {
+    "1": [
+     [
+      16,
+      56,
+      29
+     ]
+    ],
+    "2": [
+     [
+      32,
+      28,
+      15
+     ]
+    ]
+   },
+   "blocks_by_stage": {
+    "1": 3,
+    "2": 3
+   },
+   "kernel_shapes_by_head": {
+    "1": [
+     16,
+     3,
+     3
+    ],
+    "2": [
+     16,
+     5,
+     5
+    ],
+    "3": [
+     16,
+     7,
+     7
+    ],
+    "4": [
+     16,
+     9,
+     9
+    ]
+   },
+   "meta": {
+    "epoch": 0,
+    "iter": 40000,
+    "mmengine_version": "0.10.6",
+    "time": "20250221_113619",
+    "seed": 497037290,
+    "experiment_name": "fpn_spanet_s18_hybrid_ade20k-40k_20250221_083706"
+   },
+   "cfg": {
+    "backbone_type": "spanetv2_s18_hybrid",
+    "init_cfg": {
+     "checkpoint": "ckpt/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+     "type": "Pretrained"
+    },
+    "drop_path_rate": 0.15,
+    "optim_wrapper_type": "AmpOptimWrapper",
+    "constructor": "DefaultOptimWrapperConstructor",
+    "paramwise_cfg": null,
+    "optimizer": {
+     "lr": 0.0002,
+     "type": "AdamW",
+     "weight_decay": 0.0001
+    },
+    "accumulative_counts": 1,
+    "clip_grad": null,
+    "param_scheduler": [
+     {
+      "begin": 0,
+      "by_epoch": false,
+      "end": 40000,
+      "eta_min": 0.0,
+      "power": 0.9,
+      "type": "PolyLR"
+     }
+    ],
+    "train_cfg": {
+     "max_iters": 40000,
+     "type": "IterBasedTrainLoop",
+     "val_interval": 4000
+    },
+    "train_batch_size": 8,
+    "auto_scale_lr": null,
+    "load_from": null,
+    "resume": false
+   },
+   "optimizer": {
+    "mapping": "model.parameters() order (state_dict keys without BN buffers)",
+    "n_groups": 1,
+    "filters": {
+     "backbone.stages.0.0.token_mixer.filter_1": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 3.8889714915057993e-07,
+      "exp_avg_sq_mean": 3.7068817460017556e-10
+     },
+     "backbone.stages.0.0.token_mixer.filter_2": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 2.777867109671206e-07,
+      "exp_avg_sq_mean": 5.278543227515975e-11
+     },
+     "backbone.stages.0.0.token_mixer.filter_3": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 1.9011342544672516e-07,
+      "exp_avg_sq_mean": 2.3479657454417158e-11
+     },
+     "backbone.stages.0.0.token_mixer.filter_4": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 1.6631149435397674e-07,
+      "exp_avg_sq_mean": 6.683781306193737e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_1": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 4.649120057820255e-07,
+      "exp_avg_sq_mean": 3.533237244446319e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_2": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 4.789168315255665e-07,
+      "exp_avg_sq_mean": 1.5864283497979415e-10
+     },
+     "backbone.stages.0.1.token_mixer.filter_3": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 4.563970605886425e-07,
+      "exp_avg_sq_mean": 2.985723820958519e-11
+     },
+     "backbone.stages.0.1.token_mixer.filter_4": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 3.914376236480166e-07,
+      "exp_avg_sq_mean": 4.320365940002624e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_1": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 6.710860134262475e-07,
+      "exp_avg_sq_mean": 6.977800282026436e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_2": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 4.378865980925184e-07,
+      "exp_avg_sq_mean": 4.1009490941990023e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_3": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 2.5672943593235686e-07,
+      "exp_avg_sq_mean": 6.750840164659877e-11
+     },
+     "backbone.stages.0.2.token_mixer.filter_4": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 3.3256517895097204e-07,
+      "exp_avg_sq_mean": 5.079425074994148e-11
+     },
+     "backbone.stages.1.0.token_mixer.filter_1": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 7.42759596050746e-07,
+      "exp_avg_sq_mean": 2.4450075297721696e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_2": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 5.377445404519676e-07,
+      "exp_avg_sq_mean": 9.33175967055e-11
+     },
+     "backbone.stages.1.0.token_mixer.filter_3": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 5.714237545362266e-07,
+      "exp_avg_sq_mean": 4.790314811486951e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_4": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 4.470930718980526e-07,
+      "exp_avg_sq_mean": 4.4937667476041554e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_1": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 1.0161220416193828e-06,
+      "exp_avg_sq_mean": 4.0637596065984383e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_2": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 6.353945991577348e-07,
+      "exp_avg_sq_mean": 9.226415464969051e-11
+     },
+     "backbone.stages.1.1.token_mixer.filter_3": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 5.293342724144168e-07,
+      "exp_avg_sq_mean": 9.479645540766413e-11
+     },
+     "backbone.stages.1.1.token_mixer.filter_4": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 5.622517278425221e-07,
+      "exp_avg_sq_mean": 9.177923698810986e-11
+     },
+     "backbone.stages.1.2.token_mixer.filter_1": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 8.951511745181051e-07,
+      "exp_avg_sq_mean": 3.5284786203959584e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_2": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 7.590811037516687e-07,
+      "exp_avg_sq_mean": 1.4060630437739974e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_3": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 6.924763056304073e-07,
+      "exp_avg_sq_mean": 1.4750484167436184e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_4": {
+      "group": null,
+      "lr_scale": 1.0,
+      "lr_at_save": 0.0,
+      "initial_lr": 0.0002,
+      "weight_decay": 0.0001,
+      "step": 39983,
+      "exp_avg_abs_mean": 6.432335908357345e-07,
+      "exp_avg_sq_mean": 1.3632904527494105e-10
+     }
+    },
+    "filters_not_in_optimizer": [],
+    "adam_steps": [
+     39983
+    ],
+    "optimizer_defaults": {
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "eps": 1e-08,
+     "amsgrad": false
+    }
+   },
+   "param_schedulers_state": [
+    {
+     "eta_min": 0.0,
+     "power": 0.9,
+     "begin": 0,
+     "end": 40000,
+     "by_epoch": false,
+     "base_values": [
+      0.0002
+     ],
+     "last_step": 39999,
+     "_last_value": [
+      0.0
+     ]
+    }
+   ],
+   "load_seconds": 0.3,
+   "same_filter_keys_and_shapes_as_IN1K": true,
+   "wd_only_schedule": {
+    "total_iters": 40000,
+    "iters_per_epoch": null,
+    "accumulative_counts": 1,
+    "n_opt_steps_simulated": 40000,
+    "base_lr": 0.0002,
+    "sum_base_lr": 4.210521051546641,
+    "lr_first": 0.0002,
+    "lr_last": 0.0,
+    "lr_after_last_scheduler_step": 0.0,
+    "adam_step_in_ckpt": [
+     39983
+    ]
+   }
+  },
+  "ADE20K/UperNet": {
+   "label": "ADE20K/UperNet",
+   "path": "ckpts/ADE20K/upernet_spanetv2_s18_hybrid_ade20k_4913e-2/upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth",
+   "file": "upernet_spanetv2_s18_hybrid_ade20k_4913e-2.pth",
+   "size_bytes": 477294226,
+   "sha256": "b3114904af334cb1ae111c495aded207f15a34c8e5cbf0c4805e812d57304109",
+   "weights_only": false,
+   "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer",
+   "top_level_keys": [
+    "meta",
+    "state_dict",
+    "message_hub",
+    "optimizer",
+    "param_schedulers"
+   ],
+   "state_dict_used": "ckpt['state_dict']",
+   "filter_key_prefix": "backbone.",
+   "n_filter_keys": 24,
+   "filter_key_example": "backbone.stages.0.0.token_mixer.filter_1",
+   "has_state_dict_ema": false,
+   "filter_shapes_by_stage": {
+    "1": [
+     [
+      16,
+      56,
+      29
+     ]
+    ],
+    "2": [
+     [
+      32,
+      28,
+      15
+     ]
+    ]
+   },
+   "blocks_by_stage": {
+    "1": 3,
+    "2": 3
+   },
+   "kernel_shapes_by_head": {
+    "1": [
+     16,
+     3,
+     3
+    ],
+    "2": [
+     16,
+     5,
+     5
+    ],
+    "3": [
+     16,
+     7,
+     7
+    ],
+    "4": [
+     16,
+     9,
+     9
+    ]
+   },
+   "meta": {
+    "epoch": 0,
+    "iter": 112000,
+    "mmengine_version": "0.10.6",
+    "time": "20250307_103403",
+    "seed": 756374248,
+    "experiment_name": "upernet_spanet_s18_hybrid_ade20k-160k_20250307_012642"
+   },
+   "cfg": {
+    "backbone_type": "spanetv2_s18_hybrid",
+    "init_cfg": {
+     "checkpoint": "ckpt/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+     "type": "Pretrained"
+    },
+    "drop_path_rate": 0.15,
+    "optim_wrapper_type": "AmpOptimWrapper",
+    "constructor": "SPANetV2LearningRateDecayOptimizerConstructor",
+    "paramwise_cfg": {
+     "decay_rate": 0.9,
+     "decay_type": "stage_wise",
+     "num_layers": 7
+    },
+    "optimizer": {
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "lr": 0.0001,
+     "type": "AdamW",
+     "weight_decay": 0.05
+    },
+    "accumulative_counts": 1,
+    "clip_grad": null,
+    "param_scheduler": [
+     {
+      "begin": 0,
+      "by_epoch": false,
+      "end": 1500,
+      "start_factor": 1e-06,
+      "type": "LinearLR"
+     },
+     {
+      "begin": 1500,
+      "by_epoch": false,
+      "end": 160000,
+      "eta_min": 0.0,
+      "power": 1.0,
+      "type": "PolyLR"
+     }
+    ],
+    "train_cfg": {
+     "max_iters": 160000,
+     "type": "IterBasedTrainLoop",
+     "val_interval": 16000
+    },
+    "train_batch_size": 4,
+    "auto_scale_lr": null,
+    "load_from": null,
+    "resume": false
+   },
+   "optimizer": {
+    "mapping": "param_groups[*]['param_names']",
+    "n_groups": 12,
+    "filters": {
+     "backbone.stages.0.0.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 6.9489323095695e-07,
+      "exp_avg_sq_mean": 1.0962117880097821e-09
+     },
+     "backbone.stages.0.0.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 4.747335822230525e-07,
+      "exp_avg_sq_mean": 1.9958644459361352e-10
+     },
+     "backbone.stages.0.0.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 2.9892515840401757e-07,
+      "exp_avg_sq_mean": 9.149088431303909e-11
+     },
+     "backbone.stages.0.0.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 3.4259252856827516e-07,
+      "exp_avg_sq_mean": 4.5970152684482457e-10
+     },
+     "backbone.stages.0.1.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 7.596717637170514e-07,
+      "exp_avg_sq_mean": 1.778916874917158e-10
+     },
+     "backbone.stages.0.1.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 7.462343205588695e-07,
+      "exp_avg_sq_mean": 5.66068802942965e-10
+     },
+     "backbone.stages.0.1.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 7.03398995938187e-07,
+      "exp_avg_sq_mean": 1.3864530357121652e-10
+     },
+     "backbone.stages.0.1.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 5.911882112741296e-07,
+      "exp_avg_sq_mean": 2.38520647677376e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_1": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.2082834928150987e-06,
+      "exp_avg_sq_mean": 3.2512662007100346e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_2": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 8.018820949473593e-07,
+      "exp_avg_sq_mean": 1.7135924623712384e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_3": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 4.831686624129361e-07,
+      "exp_avg_sq_mean": 1.5481776971526529e-10
+     },
+     "backbone.stages.0.2.token_mixer.filter_4": {
+      "group": "layer_1_decay",
+      "lr_scale": 0.4782969000000001,
+      "lr_at_save": 1.4484490692776e-05,
+      "initial_lr": 4.782969000000001e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 6.756761194992578e-07,
+      "exp_avg_sq_mean": 3.6920630441805713e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.3028341072640615e-06,
+      "exp_avg_sq_mean": 1.3897960560171896e-09
+     },
+     "backbone.stages.1.0.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.0260209819534793e-06,
+      "exp_avg_sq_mean": 5.02310304462128e-10
+     },
+     "backbone.stages.1.0.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.3202333093431662e-06,
+      "exp_avg_sq_mean": 2.936767495853587e-09
+     },
+     "backbone.stages.1.0.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.162935063803161e-06,
+      "exp_avg_sq_mean": 3.4299207918309094e-09
+     },
+     "backbone.stages.1.1.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.7032135701811058e-06,
+      "exp_avg_sq_mean": 1.2820905448407416e-09
+     },
+     "backbone.stages.1.1.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.0694366210373119e-06,
+      "exp_avg_sq_mean": 4.153546118157436e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 9.520005619378935e-07,
+      "exp_avg_sq_mean": 5.036450700934836e-10
+     },
+     "backbone.stages.1.1.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 9.328292662758031e-07,
+      "exp_avg_sq_mean": 4.841747003325736e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_1": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.664048454586009e-06,
+      "exp_avg_sq_mean": 1.087147594169835e-09
+     },
+     "backbone.stages.1.2.token_mixer.filter_2": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.5958034964569379e-06,
+      "exp_avg_sq_mean": 8.154898423207158e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_3": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.5635704357919167e-06,
+      "exp_avg_sq_mean": 7.995611395195112e-10
+     },
+     "backbone.stages.1.2.token_mixer.filter_4": {
+      "group": "layer_2_decay",
+      "lr_scale": 0.531441,
+      "lr_at_save": 1.609387854749654e-05,
+      "initial_lr": 5.3144100000000005e-05,
+      "weight_decay": 0.05,
+      "step": 111957,
+      "exp_avg_abs_mean": 1.325595803791657e-06,
+      "exp_avg_sq_mean": 7.280600566872408e-10
+     }
+    },
+    "filters_not_in_optimizer": [],
+    "adam_steps": [
+     111957
+    ],
+    "optimizer_defaults": {
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "eps": 1e-08,
+     "amsgrad": false
+    }
+   },
+   "param_schedulers_state": [
+    {
+     "start_factor": 1e-06,
+     "end_factor": 1.0,
+     "begin": 0,
+     "end": 1500,
+     "by_epoch": false,
+     "base_values": [
+      4.304672100000001e-05,
+      4.304672100000001e-05,
+      4.782969000000001e-05,
+      4.782969000000001e-05,
+      5.3144100000000005e-05,
+      5.3144100000000005e-05,
+      5.904900000000001e-05,
+      5.904900000000001e-05,
+      6.561e-05,
+      6.561e-05,
+      0.0001,
+      0.0001,
+      0.0001
+     ],
+     "last_step": 1499,
+     "_last_value": [
+      1.3036313213335192e-05,
+      1.3036313213335192e-05,
+      1.448479245928557e-05,
+      1.448479245928557e-05,
+      1.609421384361828e-05,
+      1.609421384361828e-05,
+      1.7882459826246662e-05,
+      1.7882459826246662e-05,
+      1.9869399806929065e-05,
+      1.9869399806929065e-05,
+      3.028410273880525e-05,
+      3.028410273880525e-05,
+      3.028410273880525e-05
+     ]
+    },
+    {
+     "eta_min": 0.0,
+     "power": 1.0,
+     "begin": 1500,
+     "end": 160000,
+     "by_epoch": false,
+     "base_values": [
+      4.304672100000001e-05,
+      4.304672100000001e-05,
+      4.782969000000001e-05,
+      4.782969000000001e-05,
+      5.3144100000000005e-05,
+      5.3144100000000005e-05,
+      5.904900000000001e-05,
+      5.904900000000001e-05,
+      6.561e-05,
+      6.561e-05,
+      0.0001,
+      0.0001,
+      0.0001
+     ],
+     "last_step": 110500,
+     "_last_value": [
+      1.303604162347658e-05,
+      1.303604162347658e-05,
+      1.4484490692776e-05,
+      1.4484490692776e-05,
+      1.609387854749654e-05,
+      1.609387854749654e-05,
+      1.7882087275000282e-05,
+      1.7882087275000282e-05,
+      1.9868985861099753e-05,
+      1.9868985861099753e-05,
+      3.028347181999819e-05,
+      3.028347181999819e-05,
+      3.028347181999819e-05
+     ]
+    }
+   ],
+   "load_seconds": 0.4,
+   "same_filter_keys_and_shapes_as_IN1K": true,
+   "wd_only_schedule": {
+    "total_iters": 112000,
+    "iters_per_epoch": null,
+    "accumulative_counts": 1,
+    "n_opt_steps_simulated": 112000,
+    "base_lr": 0.0001,
+    "sum_base_lr": 7.273196751321198,
+    "lr_first": 1e-10,
+    "lr_last": 3.028410273880525e-05,
+    "lr_after_last_scheduler_step": 3.028347181999819e-05,
+    "adam_step_in_ckpt": [
+     111957
+    ]
+   }
+  }
+ },
+ "torch": "2.1.0+cu121",
+ "numpy": "1.25.2",
+ "python": "3.10.22"
+}
