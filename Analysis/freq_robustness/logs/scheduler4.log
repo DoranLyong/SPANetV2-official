@@ -1,0 +1,11 @@
+[2026-11-22 11:10:34] GPU0 start pgd:spanetv2_s18_hybrid
+[2026-11-22 11:10:36] GPU1 start pgd:convformer_s18
+[2026-11-22 11:10:38] GPU2 start pgd:caformer_s18
+[2026-11-22 11:22:39] GPU1 end   pgd:convformer_s18 exit=0 723s
+[2026-11-22 11:22:39] GPU1 start pgd:cdfformer_s18
+[2026-11-22 11:24:53] GPU2 end   pgd:caformer_s18 exit=0 855s
+[2026-11-22 11:24:53] GPU2 start pgd:convnext_tiny
+[2026-11-22 11:27:15] GPU0 end   pgd:spanetv2_s18_hybrid exit=0 1000s
+[2026-11-22 11:27:15] GPU0 start pgd:swin_tiny
+[2026-11-22 11:33:41] GPU2 end   pgd:convnext_tiny exit=0 528s
+[2026-11-22 11:33:41] GPU2 start fourier_sparse:spanetv2_s18_hybrid

@@ -1,0 +1,9 @@
+{
+ "model": "swin_tiny",
+ "n": 5000,
+ "norm": 15.7,
+ "half": 31,
+ "amp": false,
+ "per_channel_sign": true,
+ "seconds": 6308.80154299736
+}

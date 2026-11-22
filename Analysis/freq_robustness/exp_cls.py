@@ -240,9 +240,11 @@ def main():
     ap.add_argument('exp', choices=['clean', 'band', 'fourier', 'fourier_sparse', 'pgd'])
     ap.add_argument('--model', required=True, choices=list(C.MODELS))
     ap.add_argument('--weight', default=None)
-    ap.add_argument('--bs', type=int, default=250)
+    ap.add_argument('--bs', type=int, default=None, help='default 250; 50 for pgd (fp32 backward through the model)')
     ap.add_argument('--amp', action='store_true', help='fp16 autocast (fourier only)')
     args = ap.parse_args()
+    if args.bs is None:
+        args.bs = 50 if args.exp == 'pgd' else 250       # batch 250 with a backward pass exceeds 24 GB
     os.makedirs(RAW, exist_ok=True)
     dev = torch.device('cuda')
     C.set_fp32()

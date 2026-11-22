@@ -1,0 +1,74 @@
+{
+ "model": "spanetv2_s18_pure",
+ "n": 5000,
+ "clean_top1": 82.58,
+ "steps": 10,
+ "low_S": 56,
+ "metric": "chebyshev",
+ "results": {
+  "full|0.25": {
+   "top1": 38.58,
+   "delta_l2_mean": 0.2486264407634735,
+   "delta_l2_max": 0.2500000596046448,
+   "out_of_band_energy_mean": null,
+   "out_of_band_energy_max": null
+  },
+  "full|0.5": {
+   "top1": 21.560000000000002,
+   "delta_l2_mean": 0.4912486672401428,
+   "delta_l2_max": 0.5000000596046448,
+   "out_of_band_energy_mean": null,
+   "out_of_band_energy_max": null
+  },
+  "full|1.0": {
+   "top1": 11.020000000000001,
+   "delta_l2_mean": 0.9590903520584106,
+   "delta_l2_max": 1.0000001192092896,
+   "out_of_band_energy_mean": null,
+   "out_of_band_energy_max": null
+  },
+  "low|0.25": {
+   "top1": 66.14,
+   "delta_l2_mean": 0.22318701446056366,
+   "delta_l2_max": 0.2500000596046448,
+   "out_of_band_energy_mean": 0.0008451554458588362,
+   "out_of_band_energy_max": 0.01618107222020626
+  },
+  "low|0.5": {
+   "top1": 53.480000000000004,
+   "delta_l2_mean": 0.4087323248386383,
+   "delta_l2_max": 0.5000000596046448,
+   "out_of_band_energy_mean": 0.0008712182752788067,
+   "out_of_band_energy_max": 0.014910431578755379
+  },
+  "low|1.0": {
+   "top1": 39.12,
+   "delta_l2_mean": 0.7151848077774048,
+   "delta_l2_max": 1.0000001192092896,
+   "out_of_band_energy_mean": 0.0009358157403767109,
+   "out_of_band_energy_max": 0.014629536308348179
+  },
+  "high|0.25": {
+   "top1": 43.18,
+   "delta_l2_mean": 0.24673783779144287,
+   "delta_l2_max": 0.2500000596046448,
+   "out_of_band_energy_mean": 0.0005449829623103142,
+   "out_of_band_energy_max": 0.05180571973323822
+  },
+  "high|0.5": {
+   "top1": 26.740000000000002,
+   "delta_l2_mean": 0.4818754494190216,
+   "delta_l2_max": 0.5000000596046448,
+   "out_of_band_energy_mean": 0.0007735696854069829,
+   "out_of_band_energy_max": 0.062043946236371994
+  },
+  "high|1.0": {
+   "top1": 14.82,
+   "delta_l2_mean": 0.9214962124824524,
+   "delta_l2_max": 1.0000001192092896,
+   "out_of_band_energy_mean": 0.0012850334169343114,
+   "out_of_band_energy_max": 0.09245575964450836
+  }
+ },
+ "seconds": 983.7865087985992
+}

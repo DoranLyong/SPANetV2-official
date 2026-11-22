@@ -1,0 +1,9 @@
+full 0.25 {"top1": 45.04, "delta_l2_mean": 0.24451854825019836, "delta_l2_max": 0.2500000596046448, "out_of_band_energy_mean": null, "out_of_band_energy_max": null} 115s
+full 0.5 {"top1": 34.699999999999996, "delta_l2_mean": 0.47451573610305786, "delta_l2_max": 0.5000000596046448, "out_of_band_energy_mean": null, "out_of_band_energy_max": null} 224s
+full 1.0 {"top1": 25.1, "delta_l2_mean": 0.9079574346542358, "delta_l2_max": 1.0000001192092896, "out_of_band_energy_mean": null, "out_of_band_energy_max": null} 333s
+low 0.25 {"top1": 66.24, "delta_l2_mean": 0.19748865067958832, "delta_l2_max": 0.2500000298023224, "out_of_band_energy_mean": 0.0009858703706413507, "out_of_band_energy_max": 0.019956976175308228} 443s
+low 0.5 {"top1": 56.26, "delta_l2_mean": 0.34950828552246094, "delta_l2_max": 0.5000000596046448, "out_of_band_energy_mean": 0.0010144887492060661, "out_of_band_energy_max": 0.019969262182712555} 553s
+low 1.0 {"top1": 47.14, "delta_l2_mean": 0.6029737591743469, "delta_l2_max": 0.9999937415122986, "out_of_band_energy_mean": 0.0010492276633158326, "out_of_band_energy_max": 0.01670890487730503} 662s
+high 0.25 {"top1": 48.699999999999996, "delta_l2_mean": 0.23834243416786194, "delta_l2_max": 0.2500000596046448, "out_of_band_energy_mean": 0.0011814888566732407, "out_of_band_energy_max": 0.15539413690567017} 772s
+high 0.5 {"top1": 39.18, "delta_l2_mean": 0.4516020119190216, "delta_l2_max": 0.5000000596046448, "out_of_band_energy_mean": 0.0017952625639736652, "out_of_band_energy_max": 0.178125262260437} 882s
+high 1.0 {"top1": 29.38, "delta_l2_mean": 0.8362330794334412, "delta_l2_max": 1.0000001192092896, "out_of_band_energy_mean": 0.0027542314492166042, "out_of_band_energy_max": 0.19062039256095886} 992s

@@ -1,1 +1,7 @@
 [2026-11-22 07:45:23] GPU3 start fourier:dfformer_s18
+[2026-11-22 10:55:06] GPU3 end   fourier:dfformer_s18 exit=0 11383s
+[2026-11-22 10:55:06] GPU3 start pgd:spanetv2_s18_pure
+[2026-11-22 11:11:34] GPU3 end   pgd:spanetv2_s18_pure exit=0 988s
+[2026-11-22 11:11:34] GPU3 start pgd:dfformer_s18
+[2026-11-22 11:31:17] GPU3 end   pgd:dfformer_s18 exit=0 1183s
+[2026-11-22 11:31:17] GPU3 start fourier_sparse:spanetv2_s18_pure
