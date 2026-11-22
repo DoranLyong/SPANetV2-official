@@ -1,0 +1,31 @@
+{
+ "eps": 1.0,
+ "steps": 100,
+ "n": 1000,
+ "results": {
+  "caformer_s18->spanetv2_s18_hybrid|high": {
+   "top1": 74.0
+  },
+  "caformer_s18->spanetv2_s18_hybrid|full": {
+   "top1": 70.8
+  },
+  "spanetv2_s18_hybrid->caformer_s18|high": {
+   "top1": 70.89999999999999
+  },
+  "spanetv2_s18_hybrid->caformer_s18|full": {
+   "top1": 70.1
+  },
+  "convformer_s18->spanetv2_s18_pure|high": {
+   "top1": 68.7
+  },
+  "convformer_s18->spanetv2_s18_pure|full": {
+   "top1": 65.0
+  },
+  "spanetv2_s18_pure->convformer_s18|high": {
+   "top1": 68.2
+  },
+  "spanetv2_s18_pure->convformer_s18|full": {
+   "top1": 65.2
+  }
+ }
+}

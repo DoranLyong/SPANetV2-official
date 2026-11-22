@@ -1,0 +1,13 @@
+[2026-11-22 15:03:42] GPU0 start b_spanetv2_s18_pure
+[2026-11-22 15:03:45] GPU1 start b_spanetv2_s18_hybrid
+[2026-11-22 15:03:48] GPU2 start b_convformer_s18
+[2026-11-22 15:03:51] GPU3 start b_caformer_s18
+[2026-11-22 15:05:08] GPU1 end   b_spanetv2_s18_hybrid exit=0 83s
+[2026-11-22 15:05:08] GPU1 start b_dfformer_s18
+[2026-11-22 15:05:37] GPU2 end   b_convformer_s18 exit=0 109s
+[2026-11-22 15:05:37] GPU2 start b_cdfformer_s18
+[2026-11-22 15:05:45] GPU0 end   b_spanetv2_s18_pure exit=0 123s
+[2026-11-22 15:05:47] GPU3 end   b_caformer_s18 exit=0 116s
+[2026-11-22 15:15:30] GPU2 end   b_cdfformer_s18 exit=0 593s
+[2026-11-22 15:17:08] GPU1 end   b_dfformer_s18 exit=0 720s
+[2026-11-22 15:17:08] ALL DONE

@@ -1,0 +1,13 @@
+[2026-11-22 17:41:56] GPU1 start a_main_deit_small_high
+[2026-11-22 17:41:59] GPU2 start a_main_deit_small_full
+[2026-11-22 17:42:02] GPU3 start a_large_deit_small
+[2026-11-22 17:46:58] GPU3 end   a_large_deit_small exit=0 297s
+[2026-11-22 17:46:58] GPU3 start a_apgd_caformer_s18
+[2026-11-22 17:53:17] GPU3 end   a_apgd_caformer_s18 exit=0 379s
+[2026-11-22 17:53:17] GPU3 start a_apgd_convformer_s18
+[2026-11-22 18:02:36] GPU3 end   a_apgd_convformer_s18 exit=0 559s
+[2026-11-22 18:02:36] GPU3 start a_apgd_deit_small
+[2026-11-22 18:09:43] GPU3 end   a_apgd_deit_small exit=0 427s
+[2026-11-22 18:14:07] GPU1 end   a_main_deit_small_high exit=0 1931s
+[2026-11-22 18:14:19] GPU2 end   a_main_deit_small_full exit=0 1940s
+[2026-11-22 18:14:19] ALL DONE

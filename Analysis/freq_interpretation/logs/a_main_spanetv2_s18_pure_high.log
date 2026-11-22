@@ -1,0 +1,9 @@
+spanetv2_s18_pure high 0.5 10 norand 25.90 26s
+spanetv2_s18_pure high 0.5 50 norand 14.90 116s
+spanetv2_s18_pure high 0.5 100 norand 14.70 255s
+spanetv2_s18_pure high 0.5 rand5 worst 11.80
+spanetv2_s18_pure high 1.0 10 norand 14.30 32s
+spanetv2_s18_pure high 1.0 50 norand 4.50 160s
+spanetv2_s18_pure high 1.0 100 norand 4.70 279s
+spanetv2_s18_pure high nondeterministic repeats [14.299999999999999, 14.299999999999999]
+spanetv2_s18_pure high 1.0 rand5 worst 3.00

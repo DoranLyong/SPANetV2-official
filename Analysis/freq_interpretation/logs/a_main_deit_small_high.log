@@ -1,0 +1,9 @@
+deit_small high 0.5 10 norand 35.70 15s
+deit_small high 0.5 50 norand 29.40 46s
+deit_small high 0.5 100 norand 28.40 92s
+deit_small high 0.5 rand5 worst 27.60
+deit_small high 1.0 10 norand 21.00 10s
+deit_small high 1.0 50 norand 14.00 76s
+deit_small high 1.0 100 norand 13.00 189s
+deit_small high nondeterministic repeats [21.0, 21.0]
+deit_small high 1.0 rand5 worst 9.60

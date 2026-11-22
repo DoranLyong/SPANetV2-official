@@ -1,0 +1,9 @@
+caformer_s18 high 0.5 10 norand 35.00 19s
+caformer_s18 high 0.5 50 norand 20.20 89s
+caformer_s18 high 0.5 100 norand 19.20 179s
+caformer_s18 high 0.5 rand5 worst 12.60
+caformer_s18 high 1.0 10 norand 24.20 19s
+caformer_s18 high 1.0 50 norand 7.80 91s
+caformer_s18 high 1.0 100 norand 8.00 183s
+caformer_s18 high nondeterministic repeats [24.4, 24.7]
+caformer_s18 high 1.0 rand5 worst 3.40

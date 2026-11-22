@@ -1,0 +1,9 @@
+deit_small full 0.5 10 norand 26.10 15s
+deit_small full 0.5 50 norand 16.70 47s
+deit_small full 0.5 100 norand 16.30 93s
+deit_small full 0.5 rand5 worst 14.30
+deit_small full 1.0 10 norand 12.50 15s
+deit_small full 1.0 50 norand 5.80 92s
+deit_small full 1.0 100 norand 6.00 189s
+deit_small full nondeterministic repeats [12.5, 12.5]
+deit_small full 1.0 rand5 worst 3.50

@@ -1,0 +1,9 @@
+convformer_s18 full 0.5 10 norand 23.70 18s
+convformer_s18 full 0.5 50 norand 10.10 77s
+convformer_s18 full 0.5 100 norand 8.40 154s
+convformer_s18 full 0.5 rand5 worst 7.60
+convformer_s18 full 1.0 10 norand 11.30 16s
+convformer_s18 full 1.0 50 norand 2.40 77s
+convformer_s18 full 1.0 100 norand 1.60 155s
+convformer_s18 full nondeterministic repeats [11.200000000000001, 11.3]
+convformer_s18 full 1.0 rand5 worst 0.90

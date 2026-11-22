@@ -1,0 +1,41 @@
+[2026-11-22 14:23:16] GPU0 start a_main_spanetv2_s18_hybrid_high
+[2026-11-22 14:23:19] GPU1 start a_main_caformer_s18_high
+[2026-11-22 14:23:22] GPU2 start a_main_spanetv2_s18_pure_high
+[2026-11-22 14:23:25] GPU3 start a_main_convformer_s18_high
+[2026-11-22 15:00:20] GPU3 end   a_main_convformer_s18_high exit=0 2215s
+[2026-11-22 15:00:20] GPU3 start a_main_deit_small_high
+[2026-11-22 15:04:38] GPU1 end   a_main_caformer_s18_high exit=0 2479s
+[2026-11-22 15:04:38] GPU1 start a_main_spanetv2_s18_hybrid_full
+[2026-11-22 15:20:37] GPU0 end   a_main_spanetv2_s18_hybrid_high exit=0 3441s
+[2026-11-22 15:20:37] GPU0 start a_main_caformer_s18_full
+[2026-11-22 15:41:25] GPU2 end   a_main_spanetv2_s18_pure_high exit=0 4683s
+[2026-11-22 15:41:25] GPU2 start a_main_spanetv2_s18_pure_full
+[2026-11-22 16:10:19] GPU0 end   a_main_caformer_s18_full exit=0 2982s
+[2026-11-22 16:10:19] GPU0 start a_main_convformer_s18_full
+[2026-11-22 16:15:43] GPU1 end   a_main_spanetv2_s18_hybrid_full exit=0 4265s
+[2026-11-22 16:15:43] GPU1 start a_main_deit_small_full
+[2026-11-22 16:43:48] GPU2 end   a_main_spanetv2_s18_pure_full exit=0 3743s
+[2026-11-22 16:43:48] GPU2 start a_large_spanetv2_s18_hybrid
+[2026-11-22 16:45:16] GPU0 end   a_main_convformer_s18_full exit=0 2097s
+[2026-11-22 16:45:16] GPU0 start a_large_caformer_s18
+[2026-11-22 16:54:26] GPU0 end   a_large_caformer_s18 exit=0 550s
+[2026-11-22 16:54:26] GPU0 start a_large_spanetv2_s18_pure
+[2026-11-22 16:56:05] GPU2 end   a_large_spanetv2_s18_hybrid exit=0 737s
+[2026-11-22 16:56:05] GPU2 start a_large_convformer_s18
+[2026-11-22 17:04:02] GPU2 end   a_large_convformer_s18 exit=0 477s
+[2026-11-22 17:04:02] GPU2 start a_large_deit_small
+[2026-11-22 17:08:09] GPU0 end   a_large_spanetv2_s18_pure exit=0 823s
+[2026-11-22 17:08:09] GPU0 start a_apgd_spanetv2_s18_hybrid
+[2026-11-22 17:08:25] GPU0 end   a_apgd_spanetv2_s18_hybrid exit=1 16s
+[2026-11-22 17:08:25] GPU0 start a_apgd_caformer_s18
+[2026-11-22 17:08:35] GPU0 end   a_apgd_caformer_s18 exit=1 10s
+[2026-11-22 17:08:35] GPU0 start a_apgd_spanetv2_s18_pure
+[2026-11-22 17:08:55] GPU0 end   a_apgd_spanetv2_s18_pure exit=1 20s
+[2026-11-22 17:08:55] GPU0 start a_apgd_convformer_s18
+[2026-11-22 17:09:08] GPU0 end   a_apgd_convformer_s18 exit=1 13s
+[2026-11-22 17:09:08] GPU0 start a_apgd_deit_small
+[2026-11-22 17:09:15] GPU0 end   a_apgd_deit_small exit=1 7s
+[2026-11-22 17:41:45] GPU1 end   a_main_deit_small_full exit=-15 5162s
+[2026-11-22 17:41:45] GPU2 end   a_large_deit_small exit=-15 2263s
+[2026-11-22 17:41:45] GPU3 end   a_main_deit_small_high exit=-15 9685s
+[2026-11-22 17:41:45] ALL DONE

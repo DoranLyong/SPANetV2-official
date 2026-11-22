@@ -1,0 +1,9 @@
+spanetv2_s18_hybrid full 0.5 10 norand 36.30 40s
+spanetv2_s18_hybrid full 0.5 50 norand 17.50 271s
+spanetv2_s18_hybrid full 0.5 100 norand 18.50 451s
+spanetv2_s18_hybrid full 0.5 rand5 worst 11.90
+spanetv2_s18_hybrid full 1.0 10 norand 25.50 25s
+spanetv2_s18_hybrid full 1.0 50 norand 6.70 120s
+spanetv2_s18_hybrid full 1.0 100 norand 5.20 240s
+spanetv2_s18_hybrid full nondeterministic repeats [24.9, 25.1]
+spanetv2_s18_hybrid full 1.0 rand5 worst 1.70

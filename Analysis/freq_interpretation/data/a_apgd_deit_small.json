@@ -1,0 +1,17 @@
+{
+ "model": "deit_small",
+ "variant": "full",
+ "attack": "APGD-CE L2, 100 iter, 1 restart",
+ "autoattack_commit": "a39220048b3c9f2cca9a4d3a54604793c68eca7e",
+ "n": 1000,
+ "results": {
+  "0.5": {
+   "top1": 3.5000000000000004,
+   "max_l2": 0.5000013709068298
+  },
+  "1.0": {
+   "top1": 0.0,
+   "max_l2": 1.0000014305114746
+  }
+ }
+}

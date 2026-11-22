@@ -1,0 +1,9 @@
+convformer_s18 high 0.5 10 norand 26.80 18s
+convformer_s18 high 0.5 50 norand 14.90 80s
+convformer_s18 high 0.5 100 norand 12.90 162s
+convformer_s18 high 0.5 rand5 worst 11.40
+convformer_s18 high 1.0 10 norand 14.60 17s
+convformer_s18 high 1.0 50 norand 3.60 80s
+convformer_s18 high 1.0 100 norand 3.20 161s
+convformer_s18 high nondeterministic repeats [14.6, 14.6]
+convformer_s18 high 1.0 rand5 worst 1.80

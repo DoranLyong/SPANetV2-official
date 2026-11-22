@@ -1,0 +1,5 @@
+[2026-11-22 17:42:57] GPU0 start a_apgd_spanetv2_s18_hybrid
+[2026-11-22 17:51:00] GPU0 end   a_apgd_spanetv2_s18_hybrid exit=0 482s
+[2026-11-22 17:51:00] GPU0 start a_apgd_spanetv2_s18_pure
+[2026-11-22 18:07:55] GPU0 end   a_apgd_spanetv2_s18_pure exit=0 1015s
+[2026-11-22 18:07:55] ALL DONE

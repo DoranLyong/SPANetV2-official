@@ -1,0 +1,9 @@
+caformer_s18 full 0.5 10 norand 31.80 43s
+caformer_s18 full 0.5 50 norand 14.70 204s
+caformer_s18 full 0.5 100 norand 14.20 407s
+caformer_s18 full 0.5 rand5 worst 8.60
+caformer_s18 full 1.0 10 norand 21.50 19s
+caformer_s18 full 1.0 50 norand 4.10 90s
+caformer_s18 full 1.0 100 norand 3.50 181s
+caformer_s18 full nondeterministic repeats [20.4, 20.4]
+caformer_s18 full 1.0 rand5 worst 1.20

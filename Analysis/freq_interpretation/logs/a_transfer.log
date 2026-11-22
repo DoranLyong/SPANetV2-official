@@ -1,0 +1,8 @@
+caformer_s18 -> spanetv2_s18_hybrid high 74.00
+caformer_s18 -> spanetv2_s18_hybrid full 70.80
+spanetv2_s18_hybrid -> caformer_s18 high 70.90
+spanetv2_s18_hybrid -> caformer_s18 full 70.10
+convformer_s18 -> spanetv2_s18_pure high 68.70
+convformer_s18 -> spanetv2_s18_pure full 65.00
+spanetv2_s18_pure -> convformer_s18 high 68.20
+spanetv2_s18_pure -> convformer_s18 full 65.20
