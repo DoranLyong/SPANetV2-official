@@ -1,0 +1,5 @@
+[Warning] Fused window process have not been installed. Please refer to get_started.md for installation.
+0/369 (0,32) err 0.329 4s
+100/369 (32,104) err 0.294 323s
+200/369 (64,8) err 0.308 641s
+300/369 (96,-88) err 0.414 959s

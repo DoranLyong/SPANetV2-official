@@ -9,3 +9,19 @@
 [2026-11-22 11:27:15] GPU0 start pgd:swin_tiny
 [2026-11-22 11:33:41] GPU2 end   pgd:convnext_tiny exit=0 528s
 [2026-11-22 11:33:41] GPU2 start fourier_sparse:spanetv2_s18_hybrid
+[2026-11-22 11:38:23] GPU1 end   pgd:cdfformer_s18 exit=0 944s
+[2026-11-22 11:38:23] GPU1 start fourier_sparse:convformer_s18
+[2026-11-22 11:39:16] GPU0 end   pgd:swin_tiny exit=0 721s
+[2026-11-22 11:39:16] GPU0 start fourier_sparse:caformer_s18
+[2026-11-22 12:00:18] GPU1 end   fourier_sparse:convformer_s18 exit=0 1314s
+[2026-11-22 12:00:18] GPU1 start fourier_sparse:cdfformer_s18
+[2026-11-22 12:01:32] GPU2 end   fourier_sparse:spanetv2_s18_hybrid exit=0 1671s
+[2026-11-22 12:01:32] GPU2 start fourier_sparse:convnext_tiny
+[2026-11-22 12:03:13] GPU0 end   fourier_sparse:caformer_s18 exit=0 1437s
+[2026-11-22 12:03:13] GPU0 start fourier_sparse:swin_tiny
+[2026-11-22 12:18:05] GPU2 end   fourier_sparse:convnext_tiny exit=0 992s
+[2026-11-22 12:18:05] GPU2 start fourier_sparse:deit_small
+[2026-11-22 12:23:01] GPU0 end   fourier_sparse:swin_tiny exit=0 1188s
+[2026-11-22 12:29:05] GPU1 end   fourier_sparse:cdfformer_s18 exit=0 1727s
+[2026-11-22 12:31:15] GPU2 end   fourier_sparse:deit_small exit=0 790s
+[2026-11-22 12:31:15] ALL DONE

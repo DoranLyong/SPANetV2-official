@@ -283,7 +283,8 @@ def main():
           '- `make_cache.py`: ImageNet val을 모델별 평가 전처리(crop_pct 1.0 / 0.875)로 한 번 디코딩해 uint8로 저장한다. 5,000장 표본도 만든다.',
           '- `exp_cls.py`: 0, A, B, C 실행(`--weight`로 가중치 경로를 받는다). `scheduler.py`는 GPU마다 작업을 배분한다.',
           '- `seg_eval.py`, `det_eval.py`: D 추론. `boundary_eval.py`: mIoU, Boundary IoU, 예시 영상 선택. `boundary_ap.py`: COCO Boundary AP.',
-          '- `make_figs.py`: figs/와 `data/summary.csv`(열 model, experiment, setting, value). `make_report.py`: 이 보고서.',
+          '- `make_figs.py`: figs/와 `data/summary.csv`(열 model, experiment, setting, value).',
+          '- `write_conclusions.py`: 실험별 결론 문장(`conclusions.md`, 수치는 data/raw에서 채움). `make_report.py`: 이 보고서.',
           '- `data/raw/`: 실험별 원자료(json, npy).', '']
     with open(os.path.join(HERE, 'report.md'), 'w') as fh:
         fh.write('\n'.join(L))

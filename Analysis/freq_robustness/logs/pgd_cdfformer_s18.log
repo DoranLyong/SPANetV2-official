@@ -6,3 +6,4 @@ low 0.5 {"top1": 52.76, "delta_l2_mean": 0.39929139614105225, "delta_l2_max": 0.
 low 1.0 {"top1": 40.28, "delta_l2_mean": 0.6972447633743286, "delta_l2_max": 1.0, "out_of_band_energy_mean": 0.0008950034971348941, "out_of_band_energy_max": 0.013736904598772526} 624s
 high 0.25 {"top1": 42.14, "delta_l2_mean": 0.24703456461429596, "delta_l2_max": 0.2500000596046448, "out_of_band_energy_mean": 0.0006686286069452763, "out_of_band_energy_max": 0.08419647067785263} 727s
 high 0.5 {"top1": 27.560000000000002, "delta_l2_mean": 0.4825676679611206, "delta_l2_max": 0.5000000596046448, "out_of_band_energy_mean": 0.0008740241173654795, "out_of_band_energy_max": 0.07738999277353287} 831s
+high 1.0 {"top1": 17.32, "delta_l2_mean": 0.9218416810035706, "delta_l2_max": 1.0000001192092896, "out_of_band_energy_mean": 0.001337552210316062, "out_of_band_energy_max": 0.09466660022735596} 934s

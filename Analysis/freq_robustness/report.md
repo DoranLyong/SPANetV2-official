@@ -37,7 +37,7 @@
 | poolformer | `a075575b8b3dc3c76ecc5c49985d156167372bfa` |
 | metaformer | `64c534ab8f65105fd21713b38e3393a449ca742d` |
 | dfformer | `2b757c511a1bf1e66a12d494f3b0c42daa5b3636` |
-| SPANetV2-official | `893567e75c30ab0de1e29f2f232b72265db25e19` |
+| SPANetV2-official | `631fca0fd90b765daed83c21dcab43f70719ae7a` |
 
 ## A. 대역 필터 검증 데이터의 정확도 곡선
 
@@ -68,6 +68,8 @@
 
 L = 저역 통과 크기 S, H = 고역 통과 크기 S, top-1 (%).
 
+**결론 (A).** 저역 통과 11개 크기(S = 20–220)의 평균 top-1은 SPANetV2-S18-hybrid 69.25(9개 중 2위), SPANetV2-S18-pure 68.19(5위)이고, 가장 높은 값은 CAFormer-S18 69.45, 가장 낮은 값은 Swin-T 65.13이다. 고역 통과 6개 크기(S = 170–220)의 평균 top-1은 SPANetV2-S18-hybrid 30.71(2위), SPANetV2-S18-pure 21.91(8위)이고, 가장 높은 값은 ConvNeXt-T 31.71, 가장 낮은 값은 DeiT-S 20.00이다. 고역 통과 S = 220에서 SPANetV2-S18-pure는 59.54로 9개 중 9위, SPANetV2-S18-hybrid는 74.14로 1위이다.
+
 ## B. Fourier heat map
 
 - **방법:** Yin et al.(NeurIPS 2019)을 Bai et al. 5.6절의 설정으로 따랐다.
@@ -89,17 +91,19 @@ L = 저역 통과 크기 S, H = 고역 통과 크기 S, top-1 (%).
 
 | 모델 | 저역 ρ ≤ 0.25 (63×63) | 0.25 < ρ ≤ 0.39 (63×63 안) | 중역 0.25 < ρ ≤ 0.5 (stride 8) | 고역 ρ > 0.5 (stride 8) | 63×63 전체 평균 | 63×63 최대 |
 |---|---|---|---|---|---|---|
-| SPANetV2-S18-pure | 25.67 | 28.30 | — | — | 26.67 | 31.40 |
-| SPANetV2-S18-hybrid | 23.10 | 25.01 | — | — | 23.83 | 27.00 |
-| ConvFormer-S18 | 29.79 | 33.18 | — | — | 31.08 | 38.70 |
-| CAFormer-S18 | 24.34 | 26.05 | — | — | 24.99 | 28.06 |
-| DFFormer-S18 | 26.22 | 28.95 | — | — | 27.26 | 31.78 |
-| CDFFormer-S18 | 26.50 | 29.39 | — | — | 27.61 | 32.88 |
-| ConvNeXt-T | 31.92 | 33.66 | — | — | 32.58 | 39.52 |
-| Swin-T | 31.41 | 35.16 | — | — | 32.84 | 37.52 |
-| DeiT-S | 27.31 | 27.74 | — | — | 27.47 | 29.36 |
+| SPANetV2-S18-pure | 25.67 | 28.30 | 26.99 | 23.86 | 26.67 | 31.40 |
+| SPANetV2-S18-hybrid | 23.10 | 25.01 | 24.05 | 21.57 | 23.83 | 27.00 |
+| ConvFormer-S18 | 29.79 | 33.18 | 29.02 | 24.31 | 31.08 | 38.70 |
+| CAFormer-S18 | 24.34 | 26.05 | 24.85 | 23.17 | 24.99 | 28.06 |
+| DFFormer-S18 | 26.22 | 28.95 | 26.70 | 25.01 | 27.26 | 31.78 |
+| CDFFormer-S18 | 26.50 | 29.39 | 27.95 | 24.85 | 27.61 | 32.88 |
+| ConvNeXt-T | 31.92 | 33.66 | 31.51 | 28.19 | 32.58 | 39.52 |
+| Swin-T | 31.41 | 35.16 | 34.12 | 32.75 | 32.84 | 37.52 |
+| DeiT-S | 27.31 | 27.74 | 26.12 | 22.92 | 27.47 | 29.36 |
 
 값은 오류율(%)이다.
+
+**결론 (B).** 5,000장 Fourier heat map에서 저역(ρ ≤ 0.25) 평균 오류율은 SPANetV2-S18-hybrid 23.10%(9개 중 낮은 순 1위), SPANetV2-S18-pure 25.67%(3위)이고, 가장 높은 값은 ConvNeXt-T 31.92%이다. 고역(ρ > 0.5, stride 8 격자) 평균 오류율은 SPANetV2-S18-hybrid 21.57%(1위), SPANetV2-S18-pure 23.86%(4위)이고, 가장 높은 값은 Swin-T 32.75%이다. 같은 5,000장의 잡음 없는 오류율은 16.72–20.36%이다(SPANetV2-S18-hybrid 16.72%, SPANetV2-S18-pure 17.42%).
 
 ## C. 대역을 제한한 적대적 공격
 
@@ -122,10 +126,14 @@ L = 저역 통과 크기 S, H = 고역 통과 크기 S, top-1 (%).
 | ConvFormer-S18 | 82.68 | 39.16 | 22.24 | 12.02 | 66.08 | 52.90 | 40.40 | 43.40 | 27.14 | 15.28 | 0.09, 0.13 |
 | CAFormer-S18 | 83.10 | 42.90 | 31.40 | 21.84 | 68.16 | 58.58 | 48.56 | 45.86 | 34.62 | 25.32 | 0.10, 0.24 |
 | DFFormer-S18 | 82.26 | 37.02 | 21.76 | 12.14 | 64.58 | 51.72 | 38.86 | 42.16 | 25.78 | 15.58 | 0.09, 0.14 |
+| CDFFormer-S18 | 82.56 | 37.90 | 23.82 | 14.26 | 65.76 | 52.76 | 40.28 | 42.14 | 27.56 | 17.32 | 0.09, 0.13 |
 | ConvNeXt-T | 80.96 | 31.82 | 13.74 | 3.98 | 64.76 | 50.78 | 35.44 | 35.32 | 16.60 | 5.78 | 0.09, 0.11 |
+| Swin-T | 80.62 | 29.86 | 14.70 | 6.00 | 67.72 | 57.20 | 44.78 | 32.56 | 16.60 | 7.58 | 0.08, 0.13 |
 | DeiT-S | 79.64 | 43.22 | 25.38 | 12.64 | 59.36 | 45.94 | 33.00 | 51.14 | 34.92 | 20.76 | 0.08, 0.12 |
 
 top-1 (%), 5,000장.
+
+**결론 (C).** 제한 없는 L2 PGD ε = 1.0에서 top-1은 SPANetV2-S18-hybrid 25.10%(9개 중 1위), SPANetV2-S18-pure 11.02%(7위)이고, 가장 낮은 값은 ConvNeXt-T 3.98%이다. ε = 1.0에서 저역만 제한한 공격(M_l^56)은 SPANetV2-S18-hybrid 47.14%(2위; 1위 CAFormer-S18 48.56%), SPANetV2-S18-pure 39.12%(6위)이고, 고역만 제한한 공격은 SPANetV2-S18-hybrid 29.38%(1위), SPANetV2-S18-pure 14.82%(7위)이다. 마지막 [0,1] clamp 뒤 δ 에너지 가운데 대역 밖 비율의 평균은 ε = 1.0에서 모델·변형마다 0.08–0.28%이다.
 
 ## D. 미세 경계 지표
 
@@ -163,6 +171,8 @@ top-1 (%), 5,000장.
 
 공개 mIoU의 출처: SPANetV2는 SPANetV2-official README, ConvNeXt는 facebookresearch/ConvNeXt semantic_segmentation README의 ss 값, Swin은 Swin-Transformer-Semantic-Segmentation README의 단일 스케일 값, PoolFormer는 mmseg model zoo README의 mIoU*(Resize + ResizeToMultiple; ResizeToMultiple 없이 S24 40.12, S36 41.61; 저장소 README 40.3, 42.0)이다.
 
+**결론 (D1).** UperNet 단일 스케일의 mIoU / Boundary IoU는 S18 짝에서 SPANetV2-S18-pure 48.72 / 35.59, SPANetV2-S18-hybrid 49.13 / 36.22, ConvNeXt-T 45.99 / 33.35, Swin-T 44.51 / 31.80이고, S36 짝에서 SPANetV2-S36-pure 49.76 / 37.26, SPANetV2-S36-hybrid 51.63 / 38.29, ConvNeXt-S 48.74 / 35.85, Swin-S 47.64 / 35.18이다. 여덟 모델의 mIoU 순위와 Boundary IoU 순위는 같다.
+
 ### D2. ADE20K Semantic FPN (40k, 512×512)
 
 | 짝 | 모델 | mIoU (이번) | mIoU (저장 예측에서 재계산) | Boundary IoU | 공개 mIoU (단일 스케일) | test mode | 가중치 읽기 |
@@ -175,6 +185,8 @@ top-1 (%), 5,000장.
 | S36 | SPANetV2-S36-pure | 47.90 | 47.90 | 34.77 | 47.90 | whole | weights_only=False, missing 0, unexpected 0 |
 
 공개 mIoU의 출처: SPANetV2는 SPANetV2-official README, ConvNeXt는 facebookresearch/ConvNeXt semantic_segmentation README의 ss 값, Swin은 Swin-Transformer-Semantic-Segmentation README의 단일 스케일 값, PoolFormer는 mmseg model zoo README의 mIoU*(Resize + ResizeToMultiple; ResizeToMultiple 없이 S24 40.12, S36 41.61; 저장소 README 40.3, 42.0)이다.
+
+**결론 (D2).** Semantic FPN의 mIoU / Boundary IoU는 SPANetV2-S18-pure 46.68 / 33.27, SPANetV2-S18-hybrid 47.83 / 34.64, PoolFormer-S24 40.35 / 27.61, SPANetV2-S36-pure 47.90 / 34.77, SPANetV2-S36-hybrid 48.57 / 34.64, PoolFormer-S36 41.80 / 28.94이다. 같은 크기 짝(S18 ↔ PoolFormer-S24, S36 ↔ PoolFormer-S36)에서 SPANetV2와 PoolFormer의 차이는 mIoU 6.09–7.47, Boundary IoU 5.66–7.03이다.
 
 ### D3. COCO val2017 (3× 일정, 단일 스케일 1333×800)
 
@@ -193,6 +205,8 @@ top-1 (%), 5,000장.
 | mask_rcnn | S18 | SPANetV2-S18-pure | 48.0 | 42.9 | 28.3 | 48.0 | 42.9 | weights_only=False, missing 0, unexpected 0 |
 | mask_rcnn | S18 | Swin-T | 46.0 | 41.7 | 26.8 | 46.0 | 41.6 | weights_only=True, missing 0, unexpected 0 |
 
+**결론 (D3).** COCO val2017의 mask AP / Boundary AP는 Mask R-CNN 3×(S18 짝)에서 SPANetV2-S18-pure 42.9 / 28.27, SPANetV2-S18-hybrid 44.3 / 29.23, ConvNeXt-T 41.7 / 26.74, Swin-T 41.7 / 26.84이다. Cascade Mask R-CNN 3×에서는 S18 짝 SPANetV2-S18-pure 44.7 / 30.07, SPANetV2-S18-hybrid 45.7 / 30.64, ConvNeXt-T 43.6 / 28.92, Swin-T 43.7 / 28.97, S36 짝 SPANetV2-S36-pure 45.9 / 30.86, SPANetV2-S36-hybrid 46.4 / 31.01, ConvNeXt-S 45.0 / 30.03, Swin-S 45.0 / 30.21이다.
+
 ![boundary examples](figs/boundary_examples.png)
 
 경계 오류 지도 영상 선택 규칙: thin-structure score = fraction of labelled pixels removed by a per-class 5x5 opening; top 60 of 2000 images, then 6 drawn with numpy default_rng(0). 고른 영상: ADE_val_00000189, ADE_val_00001152, ADE_val_00001387, ADE_val_00001480, ADE_val_00001498, ADE_val_00001943.
@@ -203,5 +217,6 @@ top-1 (%), 5,000장.
 - `make_cache.py`: ImageNet val을 모델별 평가 전처리(crop_pct 1.0 / 0.875)로 한 번 디코딩해 uint8로 저장한다. 5,000장 표본도 만든다.
 - `exp_cls.py`: 0, A, B, C 실행(`--weight`로 가중치 경로를 받는다). `scheduler.py`는 GPU마다 작업을 배분한다.
 - `seg_eval.py`, `det_eval.py`: D 추론. `boundary_eval.py`: mIoU, Boundary IoU, 예시 영상 선택. `boundary_ap.py`: COCO Boundary AP.
-- `make_figs.py`: figs/와 `data/summary.csv`(열 model, experiment, setting, value). `make_report.py`: 이 보고서.
+- `make_figs.py`: figs/와 `data/summary.csv`(열 model, experiment, setting, value).
+- `write_conclusions.py`: 실험별 결론 문장(`conclusions.md`, 수치는 data/raw에서 채움). `make_report.py`: 이 보고서.
 - `data/raw/`: 실험별 원자료(json, npy).

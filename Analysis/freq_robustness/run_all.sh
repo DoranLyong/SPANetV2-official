@@ -24,4 +24,5 @@ $PYD boundary_eval.py --select-examples
 $PYD boundary_eval.py --models $(ls data/raw/seg_*.json | sed 's|.*/seg_||; s|\.json||')
 $PYD boundary_ap.py --models $(ls data/raw/det_*.json | sed 's|.*/det_||; s|\.json||')
 CUDA_VISIBLE_DEVICES= $PYD make_figs.py
+$PYD write_conclusions.py
 $PYD make_report.py
