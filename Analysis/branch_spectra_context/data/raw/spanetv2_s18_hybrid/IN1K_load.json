@@ -1,0 +1,134 @@
+{
+ "weights_only": true,
+ "source": "flat state_dict",
+ "path": "freq_robustness/weights/cls/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM/spanetv2_s18_hybrid_k7_res-scale_Full-ExSPAM.pth",
+ "sha256": "4e27616f75cc7e7323d9a8b1846bfffb9b001db93d071879a0c6729cb5f6e7d4",
+ "missing": [],
+ "unexpected": [],
+ "n_loaded": 299,
+ "R224": {
+  "sum_x4_check": {
+   "s1b0": {
+    "max_abs_diff": 2.2351741790771484e-08,
+    "rel_l2_max": 4.120238727978176e-08,
+    "bias": false
+   },
+   "s1b1": {
+    "max_abs_diff": 1.4901161193847656e-08,
+    "rel_l2_max": 4.541843523497846e-08,
+    "bias": false
+   },
+   "s1b2": {
+    "max_abs_diff": 1.4901161193847656e-08,
+    "rel_l2_max": 4.5684036109605586e-08,
+    "bias": false
+   },
+   "s2b0": {
+    "max_abs_diff": 2.9802322387695312e-08,
+    "rel_l2_max": 4.847474244229488e-08,
+    "bias": false
+   },
+   "s2b1": {
+    "max_abs_diff": 2.9802322387695312e-08,
+    "rel_l2_max": 4.4344258043338414e-08,
+    "bias": false
+   },
+   "s2b2": {
+    "max_abs_diff": 2.9802322387695312e-08,
+    "rel_l2_max": 4.4475342519945116e-08,
+    "bias": false
+   }
+  },
+  "imagenet_top1_pred": [
+   1,
+   98,
+   330,
+   774,
+   665,
+   104,
+   665,
+   9,
+   383,
+   4,
+   340,
+   920,
+   654,
+   339,
+   752,
+   879,
+   805,
+   963,
+   750,
+   905,
+   624,
+   979,
+   442,
+   156,
+   743,
+   970
+  ]
+ },
+ "R512": {
+  "sum_x4_check": {
+   "s1b0": {
+    "max_abs_diff": 1.4901161193847656e-08,
+    "rel_l2_max": 4.064416359028655e-08,
+    "bias": false
+   },
+   "s1b1": {
+    "max_abs_diff": 1.4901161193847656e-08,
+    "rel_l2_max": 4.5248711444401124e-08,
+    "bias": false
+   },
+   "s1b2": {
+    "max_abs_diff": 1.4901161193847656e-08,
+    "rel_l2_max": 4.5607237098010955e-08,
+    "bias": false
+   },
+   "s2b0": {
+    "max_abs_diff": 2.9802322387695312e-08,
+    "rel_l2_max": 4.874810244359651e-08,
+    "bias": false
+   },
+   "s2b1": {
+    "max_abs_diff": 2.9802322387695312e-08,
+    "rel_l2_max": 4.383524654372195e-08,
+    "bias": false
+   },
+   "s2b2": {
+    "max_abs_diff": 2.9802322387695312e-08,
+    "rel_l2_max": 4.415894849785218e-08,
+    "bias": false
+   }
+  },
+  "imagenet_top1_pred": [
+   1,
+   98,
+   330,
+   281,
+   665,
+   104,
+   665,
+   9,
+   383,
+   4,
+   340,
+   920,
+   654,
+   339,
+   752,
+   879,
+   805,
+   963,
+   750,
+   831,
+   660,
+   979,
+   442,
+   152,
+   743,
+   449
+  ]
+ },
+ "seconds": 62.471582889556885
+}

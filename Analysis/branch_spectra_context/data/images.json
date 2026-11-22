@@ -1,0 +1,337 @@
+{
+ "rule": "Images for the branch-spectra / context study (fixed seeds) at R1 = 224 and R2 = 512.\n\n    python select_images.py [--misc DIR] [--imnet-val DIR] [--coco DIR] [--ade DIR]\n\nGroups\n  imagenet : the images of image_classification/misc/imgs. All 10 are ImageNet-1K val files (byte-identical, matched by\n             md5 against /home/server/dataset/ImageNet2012/val, see data/images.json). The task asks for 8 per group\n             and for the misc images to be included; all 10 are kept so none of them is dropped. Order: numpy\n             default_rng(0).permutation(10).\n  coco     : 8 COCO val2017 images, default_rng(1).choice over the image ids sorted ascending.\n  ade20k   : 8 ADE20K val images, default_rng(2).choice over the sorted file names.\nMain-text figures use the first 3 images of each group in this order; the rest go to the appendix.\nPreprocessing (both resolutions, every checkpoint): Resize(shorter side = R, PIL bicubic) -> CenterCrop(R); the model\ninput is (x / 255 - ImageNet mean) / std. Object masks (same geometry, nearest): COCO = union of all instance masks\n(crowd included); ADE20K = pixels of the 100 'thing' classes of the Mask2Former ADE20K-150 panoptic split\n(data/ade20k_150_isthing.json). ImageNet images have no mask.",
+ "images": [
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/5.JPEG",
+   "imagenet_val_file": [
+    "n01443537/ILSVRC2012_val_00045761.JPEG"
+   ],
+   "original_size": [
+    500,
+    500
+   ],
+   "has_mask": false,
+   "figure": "main",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/7.JPEG",
+   "imagenet_val_file": [
+    "n01855032/ILSVRC2012_val_00011488.JPEG"
+   ],
+   "original_size": [
+    500,
+    373
+   ],
+   "has_mask": false,
+   "figure": "main",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/3.JPEG",
+   "imagenet_val_file": [
+    "n02325366/ILSVRC2012_val_00026361.JPEG"
+   ],
+   "original_size": [
+    567,
+    425
+   ],
+   "has_mask": false,
+   "figure": "main",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/8.JPEG",
+   "imagenet_val_file": [
+    "n02123045/ILSVRC2012_val_00011015.JPEG"
+   ],
+   "original_size": [
+    2060,
+    2808
+   ],
+   "has_mask": false,
+   "figure": "appendix",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/4.JPEG",
+   "imagenet_val_file": [
+    "n03785016/ILSVRC2012_val_00031789.JPEG"
+   ],
+   "original_size": [
+    500,
+    333
+   ],
+   "has_mask": false,
+   "figure": "appendix",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/6.JPEG",
+   "imagenet_val_file": [
+    "n01877812/ILSVRC2012_val_00001036.JPEG"
+   ],
+   "original_size": [
+    500,
+    339
+   ],
+   "has_mask": false,
+   "figure": "appendix",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/10.JPEG",
+   "imagenet_val_file": [
+    "n03785016/ILSVRC2012_val_00009268.JPEG"
+   ],
+   "original_size": [
+    500,
+    375
+   ],
+   "has_mask": false,
+   "figure": "appendix",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/1.JPEG",
+   "imagenet_val_file": [
+    "n01518878/ILSVRC2012_val_00038156.JPEG"
+   ],
+   "original_size": [
+    500,
+    375
+   ],
+   "has_mask": false,
+   "figure": "appendix",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/9.JPEG",
+   "imagenet_val_file": [
+    "n02497673/ILSVRC2012_val_00021138.JPEG"
+   ],
+   "original_size": [
+    1128,
+    902
+   ],
+   "has_mask": false,
+   "figure": "appendix",
+   "object_area_R224": null
+  },
+  {
+   "group": "imagenet",
+   "file": "misc/imgs/2.JPEG",
+   "imagenet_val_file": [
+    "n01494475/ILSVRC2012_val_00045925.JPEG"
+   ],
+   "original_size": [
+    500,
+    375
+   ],
+   "has_mask": false,
+   "figure": "appendix",
+   "object_area_R224": null
+  },
+  {
+   "group": "coco",
+   "file": "000000552902.jpg",
+   "coco_image_id": 552902,
+   "n_instances": 1,
+   "original_size": [
+    640,
+    427
+   ],
+   "has_mask": true,
+   "figure": "main",
+   "object_area_R224": 0.2185108418367347
+  },
+  {
+   "group": "coco",
+   "file": "000000273617.jpg",
+   "coco_image_id": 273617,
+   "n_instances": 1,
+   "original_size": [
+    640,
+    427
+   ],
+   "has_mask": true,
+   "figure": "main",
+   "object_area_R224": 0.005919164540816327
+  },
+  {
+   "group": "coco",
+   "file": "000000017627.jpg",
+   "coco_image_id": 17627,
+   "n_instances": 16,
+   "original_size": [
+    640,
+    480
+   ],
+   "has_mask": true,
+   "figure": "main",
+   "object_area_R224": 0.12408322704081633
+  },
+  {
+   "group": "coco",
+   "file": "000000552371.jpg",
+   "coco_image_id": 552371,
+   "n_instances": 2,
+   "original_size": [
+    640,
+    426
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.5798588966836735
+  },
+  {
+   "group": "coco",
+   "file": "000000475191.jpg",
+   "coco_image_id": 475191,
+   "n_instances": 2,
+   "original_size": [
+    640,
+    480
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.10212053571428571
+  },
+  {
+   "group": "coco",
+   "file": "000000084477.jpg",
+   "coco_image_id": 84477,
+   "n_instances": 3,
+   "original_size": [
+    640,
+    427
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.2768056441326531
+  },
+  {
+   "group": "coco",
+   "file": "000000438862.jpg",
+   "coco_image_id": 438862,
+   "n_instances": 10,
+   "original_size": [
+    640,
+    427
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.3435108418367347
+  },
+  {
+   "group": "coco",
+   "file": "000000294831.jpg",
+   "coco_image_id": 294831,
+   "n_instances": 5,
+   "original_size": [
+    640,
+    361
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.4087412308673469
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00000184.jpg",
+   "original_size": [
+    512,
+    770
+   ],
+   "has_mask": true,
+   "figure": "main",
+   "object_area_R224": 0.5547871492346939
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00000522.jpg",
+   "original_size": [
+    768,
+    512
+   ],
+   "has_mask": true,
+   "figure": "main",
+   "object_area_R224": 0.3984375
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00001670.jpg",
+   "original_size": [
+    200,
+    258
+   ],
+   "has_mask": true,
+   "figure": "main",
+   "object_area_R224": 0.03964046556122449
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00001627.jpg",
+   "original_size": [
+    256,
+    256
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.0
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00000596.jpg",
+   "original_size": [
+    784,
+    512
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.0
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00000903.jpg",
+   "original_size": [
+    512,
+    584
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.3527782206632653
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00000827.jpg",
+   "original_size": [
+    683,
+    512
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.07372050382653061
+  },
+  {
+   "group": "ade20k",
+   "file": "ADE_val_00000219.jpg",
+   "original_size": [
+    300,
+    240
+   ],
+   "has_mask": true,
+   "figure": "appendix",
+   "object_area_R224": 0.0
+  }
+ ]
+}

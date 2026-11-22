@@ -1,0 +1,129 @@
+arch,res,group,quantity,cells,cross_min_gt_within_max,median_Xmin_over_W
+spanetv2_s18_hybrid,224,ade20k,all quantities,96,2,0.3036
+spanetv2_s18_hybrid,224,ade20k,gain conv,24,0,0.3464
+spanetv2_s18_hybrid,224,ade20k,gain exp,24,0,0.392
+spanetv2_s18_hybrid,224,ade20k,gain mod_q,6,0,0.02983
+spanetv2_s18_hybrid,224,ade20k,gain mod_s,6,0,0.08305
+spanetv2_s18_hybrid,224,ade20k,gain proj,6,0,0.3392
+spanetv2_s18_hybrid,224,ade20k,gain srf,24,1,0.1942
+spanetv2_s18_hybrid,224,ade20k,s_ctx,6,1,0.2015
+spanetv2_s18_hybrid,224,all,all quantities,96,3,0.3176
+spanetv2_s18_hybrid,224,all,gain conv,24,0,0.3607
+spanetv2_s18_hybrid,224,all,gain exp,24,0,0.381
+spanetv2_s18_hybrid,224,all,gain mod_q,6,0,0.04466
+spanetv2_s18_hybrid,224,all,gain mod_s,6,0,0.07725
+spanetv2_s18_hybrid,224,all,gain proj,6,0,0.3599
+spanetv2_s18_hybrid,224,all,gain srf,24,1,0.2272
+spanetv2_s18_hybrid,224,all,s_ctx,6,2,0.3728
+spanetv2_s18_hybrid,224,coco,all quantities,96,3,0.3469
+spanetv2_s18_hybrid,224,coco,gain conv,24,0,0.3985
+spanetv2_s18_hybrid,224,coco,gain exp,24,0,0.3769
+spanetv2_s18_hybrid,224,coco,gain mod_q,6,0,0.03535
+spanetv2_s18_hybrid,224,coco,gain mod_s,6,0,0.1194
+spanetv2_s18_hybrid,224,coco,gain proj,6,0,0.3766
+spanetv2_s18_hybrid,224,coco,gain srf,24,2,0.3761
+spanetv2_s18_hybrid,224,coco,s_ctx,6,1,0.2741
+spanetv2_s18_hybrid,224,imagenet,all quantities,96,5,0.3354
+spanetv2_s18_hybrid,224,imagenet,gain conv,24,0,0.3458
+spanetv2_s18_hybrid,224,imagenet,gain exp,24,0,0.3737
+spanetv2_s18_hybrid,224,imagenet,gain mod_q,6,0,0.02932
+spanetv2_s18_hybrid,224,imagenet,gain mod_s,6,0,0.05679
+spanetv2_s18_hybrid,224,imagenet,gain proj,6,0,0.3623
+spanetv2_s18_hybrid,224,imagenet,gain srf,24,2,0.3238
+spanetv2_s18_hybrid,224,imagenet,s_ctx,6,3,0.7395
+spanetv2_s18_hybrid,512,ade20k,all quantities,96,7,0.3364
+spanetv2_s18_hybrid,512,ade20k,gain conv,24,0,0.3792
+spanetv2_s18_hybrid,512,ade20k,gain exp,24,0,0.3864
+spanetv2_s18_hybrid,512,ade20k,gain mod_q,6,0,0.08642
+spanetv2_s18_hybrid,512,ade20k,gain mod_s,6,0,0.07322
+spanetv2_s18_hybrid,512,ade20k,gain proj,6,0,0.3406
+spanetv2_s18_hybrid,512,ade20k,gain srf,24,5,0.3834
+spanetv2_s18_hybrid,512,ade20k,s_ctx,6,2,0.6454
+spanetv2_s18_hybrid,512,all,all quantities,96,7,0.3498
+spanetv2_s18_hybrid,512,all,gain conv,24,0,0.3773
+spanetv2_s18_hybrid,512,all,gain exp,24,0,0.3919
+spanetv2_s18_hybrid,512,all,gain mod_q,6,0,0.06136
+spanetv2_s18_hybrid,512,all,gain mod_s,6,0,0.06638
+spanetv2_s18_hybrid,512,all,gain proj,6,0,0.3662
+spanetv2_s18_hybrid,512,all,gain srf,24,6,0.3562
+spanetv2_s18_hybrid,512,all,s_ctx,6,1,0.3908
+spanetv2_s18_hybrid,512,coco,all quantities,96,6,0.3351
+spanetv2_s18_hybrid,512,coco,gain conv,24,0,0.4132
+spanetv2_s18_hybrid,512,coco,gain exp,24,0,0.4069
+spanetv2_s18_hybrid,512,coco,gain mod_q,6,0,0.07463
+spanetv2_s18_hybrid,512,coco,gain mod_s,6,0,0.06056
+spanetv2_s18_hybrid,512,coco,gain proj,6,0,0.3905
+spanetv2_s18_hybrid,512,coco,gain srf,24,5,0.4176
+spanetv2_s18_hybrid,512,coco,s_ctx,6,1,0.2488
+spanetv2_s18_hybrid,512,imagenet,all quantities,96,6,0.3513
+spanetv2_s18_hybrid,512,imagenet,gain conv,24,0,0.3862
+spanetv2_s18_hybrid,512,imagenet,gain exp,24,0,0.4004
+spanetv2_s18_hybrid,512,imagenet,gain mod_q,6,0,0.07876
+spanetv2_s18_hybrid,512,imagenet,gain mod_s,6,0,0.06977
+spanetv2_s18_hybrid,512,imagenet,gain proj,6,0,0.3684
+spanetv2_s18_hybrid,512,imagenet,gain srf,24,5,0.4128
+spanetv2_s18_hybrid,512,imagenet,s_ctx,6,1,0.2618
+spanetv2_s18_pure,224,ade20k,all quantities,192,61,0.4335
+spanetv2_s18_pure,224,ade20k,gain conv,48,20,0.6326
+spanetv2_s18_pure,224,ade20k,gain exp,48,20,0.4499
+spanetv2_s18_pure,224,ade20k,gain mod_q,12,5,0.2557
+spanetv2_s18_pure,224,ade20k,gain mod_s,12,3,0.258
+spanetv2_s18_pure,224,ade20k,gain proj,12,0,0.4573
+spanetv2_s18_pure,224,ade20k,gain srf,48,9,0.3228
+spanetv2_s18_pure,224,ade20k,s_ctx,12,4,0.3695
+spanetv2_s18_pure,224,all,all quantities,192,61,0.4454
+spanetv2_s18_pure,224,all,gain conv,48,20,0.6594
+spanetv2_s18_pure,224,all,gain exp,48,20,0.4542
+spanetv2_s18_pure,224,all,gain mod_q,12,5,0.2299
+spanetv2_s18_pure,224,all,gain mod_s,12,3,0.191
+spanetv2_s18_pure,224,all,gain proj,12,0,0.4464
+spanetv2_s18_pure,224,all,gain srf,48,10,0.3743
+spanetv2_s18_pure,224,all,s_ctx,12,3,0.214
+spanetv2_s18_pure,224,coco,all quantities,192,62,0.4546
+spanetv2_s18_pure,224,coco,gain conv,48,20,0.6828
+spanetv2_s18_pure,224,coco,gain exp,48,20,0.4597
+spanetv2_s18_pure,224,coco,gain mod_q,12,5,0.2786
+spanetv2_s18_pure,224,coco,gain mod_s,12,3,0.2573
+spanetv2_s18_pure,224,coco,gain proj,12,0,0.4452
+spanetv2_s18_pure,224,coco,gain srf,48,11,0.311
+spanetv2_s18_pure,224,coco,s_ctx,12,3,0.2201
+spanetv2_s18_pure,224,imagenet,all quantities,192,65,0.4445
+spanetv2_s18_pure,224,imagenet,gain conv,48,20,0.6617
+spanetv2_s18_pure,224,imagenet,gain exp,48,20,0.4549
+spanetv2_s18_pure,224,imagenet,gain mod_q,12,5,0.1705
+spanetv2_s18_pure,224,imagenet,gain mod_s,12,4,0.2064
+spanetv2_s18_pure,224,imagenet,gain proj,12,0,0.4389
+spanetv2_s18_pure,224,imagenet,gain srf,48,12,0.3792
+spanetv2_s18_pure,224,imagenet,s_ctx,12,4,0.2346
+spanetv2_s18_pure,512,ade20k,all quantities,192,70,0.4558
+spanetv2_s18_pure,512,ade20k,gain conv,48,21,0.7716
+spanetv2_s18_pure,512,ade20k,gain exp,48,24,0.7539
+spanetv2_s18_pure,512,ade20k,gain mod_q,12,6,0.6814
+spanetv2_s18_pure,512,ade20k,gain mod_s,12,3,0.1301
+spanetv2_s18_pure,512,ade20k,gain proj,12,0,0.442
+spanetv2_s18_pure,512,ade20k,gain srf,48,14,0.3398
+spanetv2_s18_pure,512,ade20k,s_ctx,12,2,0.372
+spanetv2_s18_pure,512,all,all quantities,192,72,0.4602
+spanetv2_s18_pure,512,all,gain conv,48,22,0.8988
+spanetv2_s18_pure,512,all,gain exp,48,24,0.7602
+spanetv2_s18_pure,512,all,gain mod_q,12,6,0.7644
+spanetv2_s18_pure,512,all,gain mod_s,12,3,0.2327
+spanetv2_s18_pure,512,all,gain proj,12,0,0.5145
+spanetv2_s18_pure,512,all,gain srf,48,16,0.4098
+spanetv2_s18_pure,512,all,s_ctx,12,1,0.1134
+spanetv2_s18_pure,512,coco,all quantities,192,75,0.5408
+spanetv2_s18_pure,512,coco,gain conv,48,24,0.9704
+spanetv2_s18_pure,512,coco,gain exp,48,24,0.7609
+spanetv2_s18_pure,512,coco,gain mod_q,12,6,0.8046
+spanetv2_s18_pure,512,coco,gain mod_s,12,3,0.1471
+spanetv2_s18_pure,512,coco,gain proj,12,0,0.5014
+spanetv2_s18_pure,512,coco,gain srf,48,16,0.5101
+spanetv2_s18_pure,512,coco,s_ctx,12,2,0.0793
+spanetv2_s18_pure,512,imagenet,all quantities,192,75,0.456
+spanetv2_s18_pure,512,imagenet,gain conv,48,24,0.9346
+spanetv2_s18_pure,512,imagenet,gain exp,48,24,0.7644
+spanetv2_s18_pure,512,imagenet,gain mod_q,12,6,0.66
+spanetv2_s18_pure,512,imagenet,gain mod_s,12,3,0.2556
+spanetv2_s18_pure,512,imagenet,gain proj,12,0,0.5779
+spanetv2_s18_pure,512,imagenet,gain srf,48,16,0.3693
+spanetv2_s18_pure,512,imagenet,s_ctx,12,2,0.2309

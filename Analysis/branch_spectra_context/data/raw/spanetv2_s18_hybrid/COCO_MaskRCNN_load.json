@@ -1,0 +1,141 @@
+{
+ "weights_only": false,
+ "weights_only_true_error": "UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported class mmengine.logging.history_buffer.HistoryBuffer",
+ "source": "ckpt['state_dict'], keys starting with 'backbone.' (prefix removed)",
+ "n_non_backbone_keys_ignored": 42,
+ "path": "freq_robustness/weights/det/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36/mask-rcnn_spanetv2_s18_hybrid_3x_epoch_36.pth",
+ "sha256": "1e8d0cff6ea534f50b16f8033121ac5c6cb77887083bbc01d9608b88fc9bd878",
+ "missing": [],
+ "unexpected": [
+  "norm0.weight",
+  "norm1.weight",
+  "norm2.weight",
+  "norm3.weight"
+ ],
+ "n_loaded": 299,
+ "R224": {
+  "sum_x4_check": {
+   "s1b0": {
+    "max_abs_diff": 7.450580596923828e-09,
+    "rel_l2_max": 4.300220979303049e-08,
+    "bias": false
+   },
+   "s1b1": {
+    "max_abs_diff": 7.450580596923828e-09,
+    "rel_l2_max": 4.535700526275832e-08,
+    "bias": false
+   },
+   "s1b2": {
+    "max_abs_diff": 3.725290298461914e-09,
+    "rel_l2_max": 4.6136104714378234e-08,
+    "bias": false
+   },
+   "s2b0": {
+    "max_abs_diff": 7.450580596923828e-09,
+    "rel_l2_max": 5.822098714247659e-08,
+    "bias": false
+   },
+   "s2b1": {
+    "max_abs_diff": 7.450580596923828e-09,
+    "rel_l2_max": 4.907226980321866e-08,
+    "bias": false
+   },
+   "s2b2": {
+    "max_abs_diff": 7.450580596923828e-09,
+    "rel_l2_max": 4.8582400324903574e-08,
+    "bias": false
+   }
+  },
+  "imagenet_top1_pred": [
+   574,
+   141,
+   330,
+   574,
+   574,
+   349,
+   574,
+   574,
+   574,
+   976,
+   574,
+   574,
+   168,
+   339,
+   574,
+   977,
+   805,
+   574,
+   574,
+   168,
+   975,
+   975,
+   975,
+   574,
+   975,
+   975
+  ]
+ },
+ "R512": {
+  "sum_x4_check": {
+   "s1b0": {
+    "max_abs_diff": 7.450580596923828e-09,
+    "rel_l2_max": 4.251267782251489e-08,
+    "bias": false
+   },
+   "s1b1": {
+    "max_abs_diff": 3.725290298461914e-09,
+    "rel_l2_max": 4.5830645944988646e-08,
+    "bias": false
+   },
+   "s1b2": {
+    "max_abs_diff": 3.725290298461914e-09,
+    "rel_l2_max": 4.604374126415678e-08,
+    "bias": false
+   },
+   "s2b0": {
+    "max_abs_diff": 9.313225746154785e-09,
+    "rel_l2_max": 5.904830757685886e-08,
+    "bias": false
+   },
+   "s2b1": {
+    "max_abs_diff": 5.587935447692871e-09,
+    "rel_l2_max": 4.6869093495160996e-08,
+    "bias": false
+   },
+   "s2b2": {
+    "max_abs_diff": 7.450580596923828e-09,
+    "rel_l2_max": 4.81807624908015e-08,
+    "bias": false
+   }
+  },
+  "imagenet_top1_pred": [
+   574,
+   141,
+   574,
+   574,
+   574,
+   276,
+   574,
+   574,
+   852,
+   405,
+   574,
+   975,
+   168,
+   339,
+   574,
+   977,
+   805,
+   574,
+   975,
+   975,
+   975,
+   975,
+   975,
+   574,
+   975,
+   975
+  ]
+ },
+ "seconds": 60.25080633163452
+}

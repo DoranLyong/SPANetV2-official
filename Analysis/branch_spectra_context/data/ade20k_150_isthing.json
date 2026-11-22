@@ -1,0 +1,756 @@
+{
+ "source": "facebookresearch/Mask2Former@9b0651c6c1d5b3af2e6da0589b719c514ec0d69a mask2former/data/datasets/register_ade20k_panoptic.py ADE20K_150_CATEGORIES",
+ "note": "id = class index after reduce_zero_label (annotation value - 1)",
+ "categories": [
+  {
+   "id": 0,
+   "name": "wall",
+   "isthing": 0
+  },
+  {
+   "id": 1,
+   "name": "building",
+   "isthing": 0
+  },
+  {
+   "id": 2,
+   "name": "sky",
+   "isthing": 0
+  },
+  {
+   "id": 3,
+   "name": "floor",
+   "isthing": 0
+  },
+  {
+   "id": 4,
+   "name": "tree",
+   "isthing": 0
+  },
+  {
+   "id": 5,
+   "name": "ceiling",
+   "isthing": 0
+  },
+  {
+   "id": 6,
+   "name": "road, route",
+   "isthing": 0
+  },
+  {
+   "id": 7,
+   "name": "bed",
+   "isthing": 1
+  },
+  {
+   "id": 8,
+   "name": "window ",
+   "isthing": 1
+  },
+  {
+   "id": 9,
+   "name": "grass",
+   "isthing": 0
+  },
+  {
+   "id": 10,
+   "name": "cabinet",
+   "isthing": 1
+  },
+  {
+   "id": 11,
+   "name": "sidewalk, pavement",
+   "isthing": 0
+  },
+  {
+   "id": 12,
+   "name": "person",
+   "isthing": 1
+  },
+  {
+   "id": 13,
+   "name": "earth, ground",
+   "isthing": 0
+  },
+  {
+   "id": 14,
+   "name": "door",
+   "isthing": 1
+  },
+  {
+   "id": 15,
+   "name": "table",
+   "isthing": 1
+  },
+  {
+   "id": 16,
+   "name": "mountain, mount",
+   "isthing": 0
+  },
+  {
+   "id": 17,
+   "name": "plant",
+   "isthing": 0
+  },
+  {
+   "id": 18,
+   "name": "curtain",
+   "isthing": 1
+  },
+  {
+   "id": 19,
+   "name": "chair",
+   "isthing": 1
+  },
+  {
+   "id": 20,
+   "name": "car",
+   "isthing": 1
+  },
+  {
+   "id": 21,
+   "name": "water",
+   "isthing": 0
+  },
+  {
+   "id": 22,
+   "name": "painting, picture",
+   "isthing": 1
+  },
+  {
+   "id": 23,
+   "name": "sofa",
+   "isthing": 1
+  },
+  {
+   "id": 24,
+   "name": "shelf",
+   "isthing": 1
+  },
+  {
+   "id": 25,
+   "name": "house",
+   "isthing": 0
+  },
+  {
+   "id": 26,
+   "name": "sea",
+   "isthing": 0
+  },
+  {
+   "id": 27,
+   "name": "mirror",
+   "isthing": 1
+  },
+  {
+   "id": 28,
+   "name": "rug",
+   "isthing": 0
+  },
+  {
+   "id": 29,
+   "name": "field",
+   "isthing": 0
+  },
+  {
+   "id": 30,
+   "name": "armchair",
+   "isthing": 1
+  },
+  {
+   "id": 31,
+   "name": "seat",
+   "isthing": 1
+  },
+  {
+   "id": 32,
+   "name": "fence",
+   "isthing": 1
+  },
+  {
+   "id": 33,
+   "name": "desk",
+   "isthing": 1
+  },
+  {
+   "id": 34,
+   "name": "rock, stone",
+   "isthing": 0
+  },
+  {
+   "id": 35,
+   "name": "wardrobe, closet, press",
+   "isthing": 1
+  },
+  {
+   "id": 36,
+   "name": "lamp",
+   "isthing": 1
+  },
+  {
+   "id": 37,
+   "name": "tub",
+   "isthing": 1
+  },
+  {
+   "id": 38,
+   "name": "rail",
+   "isthing": 1
+  },
+  {
+   "id": 39,
+   "name": "cushion",
+   "isthing": 1
+  },
+  {
+   "id": 40,
+   "name": "base, pedestal, stand",
+   "isthing": 0
+  },
+  {
+   "id": 41,
+   "name": "box",
+   "isthing": 1
+  },
+  {
+   "id": 42,
+   "name": "column, pillar",
+   "isthing": 1
+  },
+  {
+   "id": 43,
+   "name": "signboard, sign",
+   "isthing": 1
+  },
+  {
+   "id": 44,
+   "name": "chest of drawers, chest, bureau, dresser",
+   "isthing": 1
+  },
+  {
+   "id": 45,
+   "name": "counter",
+   "isthing": 1
+  },
+  {
+   "id": 46,
+   "name": "sand",
+   "isthing": 0
+  },
+  {
+   "id": 47,
+   "name": "sink",
+   "isthing": 1
+  },
+  {
+   "id": 48,
+   "name": "skyscraper",
+   "isthing": 0
+  },
+  {
+   "id": 49,
+   "name": "fireplace",
+   "isthing": 1
+  },
+  {
+   "id": 50,
+   "name": "refrigerator, icebox",
+   "isthing": 1
+  },
+  {
+   "id": 51,
+   "name": "grandstand, covered stand",
+   "isthing": 0
+  },
+  {
+   "id": 52,
+   "name": "path",
+   "isthing": 0
+  },
+  {
+   "id": 53,
+   "name": "stairs",
+   "isthing": 1
+  },
+  {
+   "id": 54,
+   "name": "runway",
+   "isthing": 0
+  },
+  {
+   "id": 55,
+   "name": "case, display case, showcase, vitrine",
+   "isthing": 1
+  },
+  {
+   "id": 56,
+   "name": "pool table, billiard table, snooker table",
+   "isthing": 1
+  },
+  {
+   "id": 57,
+   "name": "pillow",
+   "isthing": 1
+  },
+  {
+   "id": 58,
+   "name": "screen door, screen",
+   "isthing": 1
+  },
+  {
+   "id": 59,
+   "name": "stairway, staircase",
+   "isthing": 0
+  },
+  {
+   "id": 60,
+   "name": "river",
+   "isthing": 0
+  },
+  {
+   "id": 61,
+   "name": "bridge, span",
+   "isthing": 0
+  },
+  {
+   "id": 62,
+   "name": "bookcase",
+   "isthing": 1
+  },
+  {
+   "id": 63,
+   "name": "blind, screen",
+   "isthing": 0
+  },
+  {
+   "id": 64,
+   "name": "coffee table",
+   "isthing": 1
+  },
+  {
+   "id": 65,
+   "name": "toilet, can, commode, crapper, pot, potty, stool, throne",
+   "isthing": 1
+  },
+  {
+   "id": 66,
+   "name": "flower",
+   "isthing": 1
+  },
+  {
+   "id": 67,
+   "name": "book",
+   "isthing": 1
+  },
+  {
+   "id": 68,
+   "name": "hill",
+   "isthing": 0
+  },
+  {
+   "id": 69,
+   "name": "bench",
+   "isthing": 1
+  },
+  {
+   "id": 70,
+   "name": "countertop",
+   "isthing": 1
+  },
+  {
+   "id": 71,
+   "name": "stove",
+   "isthing": 1
+  },
+  {
+   "id": 72,
+   "name": "palm, palm tree",
+   "isthing": 1
+  },
+  {
+   "id": 73,
+   "name": "kitchen island",
+   "isthing": 1
+  },
+  {
+   "id": 74,
+   "name": "computer",
+   "isthing": 1
+  },
+  {
+   "id": 75,
+   "name": "swivel chair",
+   "isthing": 1
+  },
+  {
+   "id": 76,
+   "name": "boat",
+   "isthing": 1
+  },
+  {
+   "id": 77,
+   "name": "bar",
+   "isthing": 0
+  },
+  {
+   "id": 78,
+   "name": "arcade machine",
+   "isthing": 1
+  },
+  {
+   "id": 79,
+   "name": "hovel, hut, hutch, shack, shanty",
+   "isthing": 0
+  },
+  {
+   "id": 80,
+   "name": "bus",
+   "isthing": 1
+  },
+  {
+   "id": 81,
+   "name": "towel",
+   "isthing": 1
+  },
+  {
+   "id": 82,
+   "name": "light",
+   "isthing": 1
+  },
+  {
+   "id": 83,
+   "name": "truck",
+   "isthing": 1
+  },
+  {
+   "id": 84,
+   "name": "tower",
+   "isthing": 0
+  },
+  {
+   "id": 85,
+   "name": "chandelier",
+   "isthing": 1
+  },
+  {
+   "id": 86,
+   "name": "awning, sunshade, sunblind",
+   "isthing": 1
+  },
+  {
+   "id": 87,
+   "name": "street lamp",
+   "isthing": 1
+  },
+  {
+   "id": 88,
+   "name": "booth",
+   "isthing": 1
+  },
+  {
+   "id": 89,
+   "name": "tv",
+   "isthing": 1
+  },
+  {
+   "id": 90,
+   "name": "plane",
+   "isthing": 1
+  },
+  {
+   "id": 91,
+   "name": "dirt track",
+   "isthing": 0
+  },
+  {
+   "id": 92,
+   "name": "clothes",
+   "isthing": 1
+  },
+  {
+   "id": 93,
+   "name": "pole",
+   "isthing": 1
+  },
+  {
+   "id": 94,
+   "name": "land, ground, soil",
+   "isthing": 0
+  },
+  {
+   "id": 95,
+   "name": "bannister, banister, balustrade, balusters, handrail",
+   "isthing": 1
+  },
+  {
+   "id": 96,
+   "name": "escalator, moving staircase, moving stairway",
+   "isthing": 0
+  },
+  {
+   "id": 97,
+   "name": "ottoman, pouf, pouffe, puff, hassock",
+   "isthing": 1
+  },
+  {
+   "id": 98,
+   "name": "bottle",
+   "isthing": 1
+  },
+  {
+   "id": 99,
+   "name": "buffet, counter, sideboard",
+   "isthing": 0
+  },
+  {
+   "id": 100,
+   "name": "poster, posting, placard, notice, bill, card",
+   "isthing": 0
+  },
+  {
+   "id": 101,
+   "name": "stage",
+   "isthing": 0
+  },
+  {
+   "id": 102,
+   "name": "van",
+   "isthing": 1
+  },
+  {
+   "id": 103,
+   "name": "ship",
+   "isthing": 1
+  },
+  {
+   "id": 104,
+   "name": "fountain",
+   "isthing": 1
+  },
+  {
+   "id": 105,
+   "name": "conveyer belt, conveyor belt, conveyer, conveyor, transporter",
+   "isthing": 0
+  },
+  {
+   "id": 106,
+   "name": "canopy",
+   "isthing": 0
+  },
+  {
+   "id": 107,
+   "name": "washer, automatic washer, washing machine",
+   "isthing": 1
+  },
+  {
+   "id": 108,
+   "name": "plaything, toy",
+   "isthing": 1
+  },
+  {
+   "id": 109,
+   "name": "pool",
+   "isthing": 0
+  },
+  {
+   "id": 110,
+   "name": "stool",
+   "isthing": 1
+  },
+  {
+   "id": 111,
+   "name": "barrel, cask",
+   "isthing": 1
+  },
+  {
+   "id": 112,
+   "name": "basket, handbasket",
+   "isthing": 1
+  },
+  {
+   "id": 113,
+   "name": "falls",
+   "isthing": 0
+  },
+  {
+   "id": 114,
+   "name": "tent",
+   "isthing": 0
+  },
+  {
+   "id": 115,
+   "name": "bag",
+   "isthing": 1
+  },
+  {
+   "id": 116,
+   "name": "minibike, motorbike",
+   "isthing": 1
+  },
+  {
+   "id": 117,
+   "name": "cradle",
+   "isthing": 0
+  },
+  {
+   "id": 118,
+   "name": "oven",
+   "isthing": 1
+  },
+  {
+   "id": 119,
+   "name": "ball",
+   "isthing": 1
+  },
+  {
+   "id": 120,
+   "name": "food, solid food",
+   "isthing": 1
+  },
+  {
+   "id": 121,
+   "name": "step, stair",
+   "isthing": 1
+  },
+  {
+   "id": 122,
+   "name": "tank, storage tank",
+   "isthing": 0
+  },
+  {
+   "id": 123,
+   "name": "trade name",
+   "isthing": 1
+  },
+  {
+   "id": 124,
+   "name": "microwave",
+   "isthing": 1
+  },
+  {
+   "id": 125,
+   "name": "pot",
+   "isthing": 1
+  },
+  {
+   "id": 126,
+   "name": "animal",
+   "isthing": 1
+  },
+  {
+   "id": 127,
+   "name": "bicycle",
+   "isthing": 1
+  },
+  {
+   "id": 128,
+   "name": "lake",
+   "isthing": 0
+  },
+  {
+   "id": 129,
+   "name": "dishwasher",
+   "isthing": 1
+  },
+  {
+   "id": 130,
+   "name": "screen",
+   "isthing": 1
+  },
+  {
+   "id": 131,
+   "name": "blanket, cover",
+   "isthing": 0
+  },
+  {
+   "id": 132,
+   "name": "sculpture",
+   "isthing": 1
+  },
+  {
+   "id": 133,
+   "name": "hood, exhaust hood",
+   "isthing": 1
+  },
+  {
+   "id": 134,
+   "name": "sconce",
+   "isthing": 1
+  },
+  {
+   "id": 135,
+   "name": "vase",
+   "isthing": 1
+  },
+  {
+   "id": 136,
+   "name": "traffic light",
+   "isthing": 1
+  },
+  {
+   "id": 137,
+   "name": "tray",
+   "isthing": 1
+  },
+  {
+   "id": 138,
+   "name": "trash can",
+   "isthing": 1
+  },
+  {
+   "id": 139,
+   "name": "fan",
+   "isthing": 1
+  },
+  {
+   "id": 140,
+   "name": "pier",
+   "isthing": 0
+  },
+  {
+   "id": 141,
+   "name": "crt screen",
+   "isthing": 0
+  },
+  {
+   "id": 142,
+   "name": "plate",
+   "isthing": 1
+  },
+  {
+   "id": 143,
+   "name": "monitor",
+   "isthing": 1
+  },
+  {
+   "id": 144,
+   "name": "bulletin board",
+   "isthing": 1
+  },
+  {
+   "id": 145,
+   "name": "shower",
+   "isthing": 0
+  },
+  {
+   "id": 146,
+   "name": "radiator",
+   "isthing": 1
+  },
+  {
+   "id": 147,
+   "name": "glass, drinking glass",
+   "isthing": 1
+  },
+  {
+   "id": 148,
+   "name": "clock",
+   "isthing": 1
+  },
+  {
+   "id": 149,
+   "name": "flag",
+   "isthing": 1
+  }
+ ]
+}

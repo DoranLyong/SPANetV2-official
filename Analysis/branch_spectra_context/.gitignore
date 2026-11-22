@@ -1,0 +1,5 @@
+# regenerable large arrays (select_images.py, extract.py, analyze.py)
+data/stage_maps_*.npz
+data/raw/*/*_maps.npz
+data/images_R512.npy
+data/masks_R512.npy

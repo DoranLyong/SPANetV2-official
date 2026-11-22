@@ -1,0 +1,10 @@
+IN1K: missing 0, unexpected 0, max|sum x4 - proj[0]| 8.94e-08, 74s
+COCO/MaskRCNN: missing 0, unexpected 4, max|sum x4 - proj[0]| 2.98e-08, 76s
+COCO/Cascade: missing 0, unexpected 4, max|sum x4 - proj[0]| 1.49e-08, 75s
+ADE20K/FPN: missing 0, unexpected 4, max|sum x4 - proj[0]| 1.19e-07, 77s
+ADE20K/UperNet: missing 0, unexpected 4, max|sum x4 - proj[0]| 4.47e-08, 78s
+IN1K: missing 0, unexpected 0, max|sum x4 - proj[0]| 2.98e-08, 62s
+COCO/MaskRCNN: missing 0, unexpected 4, max|sum x4 - proj[0]| 9.31e-09, 60s
+COCO/Cascade: missing 0, unexpected 4, max|sum x4 - proj[0]| 1.49e-08, 59s
+ADE20K/FPN: missing 0, unexpected 4, max|sum x4 - proj[0]| 5.96e-08, 59s
+ADE20K/UperNet: missing 0, unexpected 4, max|sum x4 - proj[0]| 1.86e-08, 57s
