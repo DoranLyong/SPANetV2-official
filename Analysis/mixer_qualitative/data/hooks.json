@@ -1,0 +1,215 @@
+{
+ "hooks": {
+  "spanetv2_s18_pure": {
+   "1": {
+    "block_index": 2,
+    "blocks_in_stage": 3,
+    "token_mixer": "ExSPAM",
+    "hooks": {
+     "stages.0.2.token_mixer.proj (pre-hook, input)": "SRF outputs s_i of the 4 heads",
+     "stages.0.2.token_mixer (output)": "mixer output"
+    },
+    "num_heads": 4
+   },
+   "2": {
+    "block_index": 2,
+    "blocks_in_stage": 3,
+    "token_mixer": "ExSPAM",
+    "hooks": {
+     "stages.1.2.token_mixer.proj (pre-hook, input)": "SRF outputs s_i of the 4 heads",
+     "stages.1.2.token_mixer (output)": "mixer output"
+    },
+    "num_heads": 4
+   },
+   "3": {
+    "block_index": 4,
+    "blocks_in_stage": 9,
+    "token_mixer": "ExSPAM",
+    "hooks": {
+     "stages.2.4.token_mixer.proj (pre-hook, input)": "SRF outputs s_i of the 4 heads",
+     "stages.2.4.token_mixer (output)": "mixer output"
+    },
+    "num_heads": 4
+   }
+  },
+  "convformer_s18": {
+   "1": {
+    "block_index": 2,
+    "blocks_in_stage": 3,
+    "token_mixer": "SepConv",
+    "hooks": {
+     "stages.0.2.token_mixer.dwconv (output)": "depthwise convolution output",
+     "stages.0.2.token_mixer (output)": "mixer output"
+    }
+   },
+   "2": {
+    "block_index": 2,
+    "blocks_in_stage": 3,
+    "token_mixer": "SepConv",
+    "hooks": {
+     "stages.1.2.token_mixer.dwconv (output)": "depthwise convolution output",
+     "stages.1.2.token_mixer (output)": "mixer output"
+    }
+   },
+   "3": {
+    "block_index": 4,
+    "blocks_in_stage": 9,
+    "token_mixer": "SepConv",
+    "hooks": {
+     "stages.2.4.token_mixer.dwconv (output)": "depthwise convolution output",
+     "stages.2.4.token_mixer (output)": "mixer output"
+    }
+   }
+  },
+  "dfformer_s18": {
+   "1": {
+    "block_index": 2,
+    "blocks_in_stage": 3,
+    "token_mixer": "DynamicFilter",
+    "hooks": {
+     "stages.0.2.token_mixer.act2 (pre-hook, input; act2 = Identity)": "irfft2 output right after the dynamic filter",
+     "stages.0.2.token_mixer.reweight (output)": "routing logits -> softmax over filters",
+     "stages.0.2.token_mixer (output)": "mixer output"
+    },
+    "num_filters": 4
+   },
+   "2": {
+    "block_index": 2,
+    "blocks_in_stage": 3,
+    "token_mixer": "DynamicFilter",
+    "hooks": {
+     "stages.1.2.token_mixer.act2 (pre-hook, input; act2 = Identity)": "irfft2 output right after the dynamic filter",
+     "stages.1.2.token_mixer.reweight (output)": "routing logits -> softmax over filters",
+     "stages.1.2.token_mixer (output)": "mixer output"
+    },
+    "num_filters": 4
+   },
+   "3": {
+    "block_index": 4,
+    "blocks_in_stage": 9,
+    "token_mixer": "DynamicFilter",
+    "hooks": {
+     "stages.2.4.token_mixer.act2 (pre-hook, input; act2 = Identity)": "irfft2 output right after the dynamic filter",
+     "stages.2.4.token_mixer.reweight (output)": "routing logits -> softmax over filters",
+     "stages.2.4.token_mixer (output)": "mixer output"
+    },
+    "num_filters": 4
+   }
+  },
+  "caformer_s18": {
+   "3": {
+    "block_index": 4,
+    "blocks_in_stage": 9,
+    "token_mixer": "Attention",
+    "hooks": {
+     "stages.2.4.token_mixer (output)": "attention (token mixer) output"
+    }
+   }
+  }
+ },
+ "weights": {
+  "spanetv2_s18_pure": {
+   "file": "freq_robustness/weights/cls/spanetv2_s18_pure_res-scale_Full-ExSPAM/spanetv2_s18_pure_res-scale_Full-ExSPAM.pth",
+   "sha256": "7450b229eddf819fae7bb882a073db1371489173ad4110807e83c92693c83804",
+   "weights_only": true,
+   "state_dict": "flat",
+   "missing": [],
+   "unexpected": [],
+   "top1_labels_imagenet": [
+    224,
+    511,
+    850,
+    636,
+    768,
+    561,
+    944,
+    533,
+    698,
+    415,
+    970,
+    762
+   ]
+  },
+  "convformer_s18": {
+   "file": "freq_robustness/weights/cls/convformer_s18/convformer_s18.pth",
+   "sha256": "0daa1afe607d4611548baf64de666b32ab10dc5faa2c9559094156e9f75349f6",
+   "weights_only": true,
+   "state_dict": "flat",
+   "missing": [],
+   "unexpected": [],
+   "top1_labels_imagenet": [
+    224,
+    511,
+    850,
+    636,
+    768,
+    561,
+    944,
+    533,
+    698,
+    860,
+    970,
+    831
+   ]
+  },
+  "dfformer_s18": {
+   "file": "freq_robustness/weights/cls/dfformer_s18/dfformer_s18.pth",
+   "sha256": "f6a4a2c06a5209e996e24070a008da0b513be0a8cbe81422d6d6547147a50876",
+   "weights_only": true,
+   "state_dict": "flat",
+   "missing": [],
+   "unexpected": [],
+   "top1_labels_imagenet": [
+    224,
+    511,
+    850,
+    636,
+    768,
+    561,
+    944,
+    533,
+    698,
+    860,
+    970,
+    762
+   ]
+  },
+  "caformer_s18": {
+   "file": "freq_robustness/weights/cls/caformer_s18/caformer_s18.pth",
+   "sha256": "6c396866b2457ae5e1c48933ff5e7a95b663e64d99c4b0a4dd32756d8db4d162",
+   "weights_only": true,
+   "state_dict": "flat",
+   "missing": [],
+   "unexpected": [],
+   "top1_labels_imagenet": [
+    224,
+    511,
+    773,
+    636,
+    768,
+    561,
+    944,
+    533,
+    743,
+    860,
+    970,
+    762
+   ]
+  }
+ },
+ "torch": "2.8.0+cu128",
+ "images": [
+  "n02114367/ILSVRC2012_val_00041991.JPEG",
+  "n03100240/ILSVRC2012_val_00009569.JPEG",
+  "n04399382/ILSVRC2012_val_00025815.JPEG",
+  "n03709823/ILSVRC2012_val_00046592.JPEG",
+  "n04118538/ILSVRC2012_val_00002555.JPEG",
+  "n03384352/ILSVRC2012_val_00043793.JPEG",
+  "n07718747/ILSVRC2012_val_00035395.JPEG",
+  "n03207743/ILSVRC2012_val_00009860.JPEG",
+  "ADE_val_00000597.jpg",
+  "ADE_val_00001673.jpg",
+  "ADE_val_00000219.jpg",
+  "ADE_val_00000523.jpg"
+ ]
+}

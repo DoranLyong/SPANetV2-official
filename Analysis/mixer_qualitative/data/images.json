@@ -1,0 +1,111 @@
+{
+ "rule": "Pick the 12 images (fixed seeds) and store them after the models' evaluation preprocessing.\n\n    python select_images.py [--imnet-cache ../freq_robustness/cache] [--ade ../freq_robustness/cache/datasets/ade20k/ADEChallengeData2016]\n\nAll four models (SPANetV2-S18-pure, ConvFormer-S18, DFFormer-S18, CAFormer-S18) evaluate with\nResize(224, bicubic) on the shorter side -> CenterCrop(224) (crop_pct 1.0, see ../freq_robustness/report.md 0), so one\n224x224 crop per image serves every model.\n  group 'imnet_random' : 4 ImageNet-1K val images, numpy default_rng(0).choice(50000, 4)\n  group 'imnet_sobel'  : 4 images drawn with default_rng(1) from the ImageNet val images whose Sobel gradient energy\n                         (mean of gx^2 + gy^2 on the grey 224x224 crop, cv2.Sobel ksize 3) is in the top 25 %,\n                         excluding the 'imnet_random' images\n  group 'ade_random'   : 4 ADE20K val images, default_rng(2).choice(2000, 4) over the sorted file list\nMain-text figures use the first 3 images of 'imnet_random' and of 'imnet_sobel' (in drawing order); the other 6\n(1 + 1 + 4 ADE20K) go to the appendix figures.",
+ "sobel_top25_threshold": 0.3753446042537689,
+ "sobel_energy_median_all": 0.24147160351276398,
+ "images": [
+  {
+   "group": "imnet_random",
+   "source": "ImageNet-1K val",
+   "file": "n02114367/ILSVRC2012_val_00041991.JPEG",
+   "val_index": 13489,
+   "label": 269,
+   "sobel_energy": 0.18541067838668823,
+   "figure": "main"
+  },
+  {
+   "group": "imnet_random",
+   "source": "ImageNet-1K val",
+   "file": "n03100240/ILSVRC2012_val_00009569.JPEG",
+   "val_index": 25556,
+   "label": 511,
+   "sobel_energy": 0.5441899299621582,
+   "figure": "main"
+  },
+  {
+   "group": "imnet_random",
+   "source": "ImageNet-1K val",
+   "file": "n04399382/ILSVRC2012_val_00025815.JPEG",
+   "val_index": 42528,
+   "label": 850,
+   "sobel_energy": 0.12110558152198792,
+   "figure": "main"
+  },
+  {
+   "group": "imnet_random",
+   "source": "ImageNet-1K val",
+   "file": "n03709823/ILSVRC2012_val_00046592.JPEG",
+   "val_index": 31846,
+   "label": 636,
+   "sobel_energy": 0.3378537893295288,
+   "figure": "appendix"
+  },
+  {
+   "group": "imnet_sobel",
+   "source": "ImageNet-1K val",
+   "file": "n04118538/ILSVRC2012_val_00002555.JPEG",
+   "val_index": 38402,
+   "label": 768,
+   "sobel_energy": 0.4832485616207123,
+   "figure": "main"
+  },
+  {
+   "group": "imnet_sobel",
+   "source": "ImageNet-1K val",
+   "file": "n03384352/ILSVRC2012_val_00043793.JPEG",
+   "val_index": 28095,
+   "label": 561,
+   "sobel_energy": 0.4090910851955414,
+   "figure": "main"
+  },
+  {
+   "group": "imnet_sobel",
+   "source": "ImageNet-1K val",
+   "file": "n07718747/ILSVRC2012_val_00035395.JPEG",
+   "val_index": 47232,
+   "label": 944,
+   "sobel_energy": 0.5194506645202637,
+   "figure": "main"
+  },
+  {
+   "group": "imnet_sobel",
+   "source": "ImageNet-1K val",
+   "file": "n03207743/ILSVRC2012_val_00009860.JPEG",
+   "val_index": 26657,
+   "label": 533,
+   "sobel_energy": 0.48874229192733765,
+   "figure": "appendix"
+  },
+  {
+   "group": "ade_random",
+   "source": "ADE20K val",
+   "file": "ADE_val_00000597.jpg",
+   "index": 596,
+   "sobel_energy": 0.24773085117340088,
+   "figure": "appendix"
+  },
+  {
+   "group": "ade_random",
+   "source": "ADE20K val",
+   "file": "ADE_val_00001673.jpg",
+   "index": 1672,
+   "sobel_energy": 0.39673879742622375,
+   "figure": "appendix"
+  },
+  {
+   "group": "ade_random",
+   "source": "ADE20K val",
+   "file": "ADE_val_00000219.jpg",
+   "index": 218,
+   "sobel_energy": 0.22584494948387146,
+   "figure": "appendix"
+  },
+  {
+   "group": "ade_random",
+   "source": "ADE20K val",
+   "file": "ADE_val_00000523.jpg",
+   "index": 522,
+   "sobel_energy": 0.4557354152202606,
+   "figure": "appendix"
+  }
+ ]
+}

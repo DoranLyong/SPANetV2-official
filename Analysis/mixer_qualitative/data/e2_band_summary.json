@@ -1,0 +1,290 @@
+{
+ "1|SPANetV2 k=3 psi": {
+  "stage": 1,
+  "branch": "SPANetV2 k=3 psi",
+  "DC": 0.36708912560622353,
+  "band_low": 0.47951927649993953,
+  "band_mid": 0.5030935457887062,
+  "band_high": 0.5046296620558213
+ },
+ "1|SPANetV2 k=5 psi": {
+  "stage": 1,
+  "branch": "SPANetV2 k=5 psi",
+  "DC": 0.4231322185570108,
+  "band_low": 0.48696132736044645,
+  "band_mid": 0.4929970126940207,
+  "band_high": 0.4982506088866179
+ },
+ "1|SPANetV2 k=7 psi": {
+  "stage": 1,
+  "branch": "SPANetV2 k=7 psi",
+  "DC": 0.4496426638067783,
+  "band_low": 0.4690948038066566,
+  "band_mid": 0.4857762136879429,
+  "band_high": 0.4980490586144369
+ },
+ "1|SPANetV2 k=9 psi": {
+  "stage": 1,
+  "branch": "SPANetV2 k=9 psi",
+  "DC": 0.5520897052639105,
+  "band_low": 0.4513039297196144,
+  "band_mid": 0.47884324589318583,
+  "band_high": 0.49150102696118775
+ },
+ "1|ConvFormer |K| dwconv": {
+  "stage": 1,
+  "branch": "ConvFormer |K| dwconv",
+  "band_low": 1.628554144386964,
+  "band_mid": 1.0754353751260506,
+  "band_high": 0.948855214358497,
+  "DC": 2.0102667457540493
+ },
+ "1|SPANetV2 k=3 effective": {
+  "stage": 1,
+  "branch": "SPANetV2 k=3 effective",
+  "band_low": 0.6491796059826599,
+  "band_mid": 0.7355360569337306,
+  "band_high": 1.0693860017572376,
+  "DC": 0.5718054638051876
+ },
+ "1|SPANetV2 k=5 effective": {
+  "stage": 1,
+  "branch": "SPANetV2 k=5 effective",
+  "band_low": 1.1492177998189583,
+  "band_mid": 1.0756313117179328,
+  "band_high": 0.977336425676089,
+  "DC": 1.003035008900839
+ },
+ "1|SPANetV2 k=7 effective": {
+  "stage": 1,
+  "branch": "SPANetV2 k=7 effective",
+  "band_low": 2.236097314454914,
+  "band_mid": 1.2717822517703294,
+  "band_high": 0.8766801780324268,
+  "DC": 3.0865434634268767
+ },
+ "1|SPANetV2 k=9 effective": {
+  "stage": 1,
+  "branch": "SPANetV2 k=9 effective",
+  "band_low": 2.2977524281451274,
+  "band_mid": 1.1003305532960932,
+  "band_high": 0.9038579480974215,
+  "DC": 4.945660855339383
+ },
+ "1|DFFormer predicted |filter| image 1": {
+  "stage": 1,
+  "branch": "DFFormer predicted |filter| image 1",
+  "band_low": 0.6350159692338708,
+  "band_mid": 0.798505602332606,
+  "band_high": 1.0585541194453087,
+  "DC": 0.7789937105444061
+ },
+ "1|DFFormer predicted |filter| image 5": {
+  "stage": 1,
+  "branch": "DFFormer predicted |filter| image 5",
+  "band_low": 0.610577303505724,
+  "band_mid": 0.786115585994372,
+  "band_high": 1.0622626752677742,
+  "DC": 0.7881974791693679
+ },
+ "1|DFFormer predicted |filter| image 9": {
+  "stage": 1,
+  "branch": "DFFormer predicted |filter| image 9",
+  "band_low": 0.6318427833418163,
+  "band_mid": 0.8105267236352722,
+  "band_high": 1.0565531292800892,
+  "DC": 0.7193231249796814
+ },
+ "2|SPANetV2 k=3 psi": {
+  "stage": 2,
+  "branch": "SPANetV2 k=3 psi",
+  "DC": 0.35643638851006876,
+  "band_low": 0.485632165279318,
+  "band_mid": 0.4965529271507161,
+  "band_high": 0.5075565373367417
+ },
+ "2|SPANetV2 k=5 psi": {
+  "stage": 2,
+  "branch": "SPANetV2 k=5 psi",
+  "DC": 0.3568628745645302,
+  "band_low": 0.4648710835037877,
+  "band_mid": 0.48036518265239697,
+  "band_high": 0.5040163846415724
+ },
+ "2|SPANetV2 k=7 psi": {
+  "stage": 2,
+  "branch": "SPANetV2 k=7 psi",
+  "DC": 0.3814308261821784,
+  "band_low": 0.46786329689942713,
+  "band_mid": 0.47543053590535217,
+  "band_high": 0.49532085845299456
+ },
+ "2|SPANetV2 k=9 psi": {
+  "stage": 2,
+  "branch": "SPANetV2 k=9 psi",
+  "DC": 0.39349856815866147,
+  "band_low": 0.44068349687395975,
+  "band_mid": 0.47041175161342424,
+  "band_high": 0.49139301758136983
+ },
+ "2|ConvFormer |K| dwconv": {
+  "stage": 2,
+  "branch": "ConvFormer |K| dwconv",
+  "band_low": 2.1955154394883296,
+  "band_mid": 1.5585991420304697,
+  "band_high": 0.8313246907927553,
+  "DC": 2.5071616176079194
+ },
+ "2|SPANetV2 k=3 effective": {
+  "stage": 2,
+  "branch": "SPANetV2 k=3 effective",
+  "band_low": 0.646824630551357,
+  "band_mid": 0.7763672931992937,
+  "band_high": 1.0604371288656826,
+  "DC": 0.38359963212175324
+ },
+ "2|SPANetV2 k=5 effective": {
+  "stage": 2,
+  "branch": "SPANetV2 k=5 effective",
+  "band_low": 0.5443406966431725,
+  "band_mid": 0.8328195309509241,
+  "band_high": 1.0565113410697315,
+  "DC": 0.24324587506280076
+ },
+ "2|SPANetV2 k=7 effective": {
+  "stage": 2,
+  "branch": "SPANetV2 k=7 effective",
+  "band_low": 1.2257685918049857,
+  "band_mid": 1.2447177073265727,
+  "band_high": 0.9435718818806823,
+  "DC": 1.295802480211103
+ },
+ "2|SPANetV2 k=9 effective": {
+  "stage": 2,
+  "branch": "SPANetV2 k=9 effective",
+  "band_low": 1.3857731011757461,
+  "band_mid": 1.0405852718721147,
+  "band_high": 0.9689864622570381,
+  "DC": 2.2602143747771386
+ },
+ "2|DFFormer predicted |filter| image 1": {
+  "stage": 2,
+  "branch": "DFFormer predicted |filter| image 1",
+  "band_low": 1.7778003375646354,
+  "band_mid": 1.4525245283359125,
+  "band_high": 0.8749036961914698,
+  "DC": 1.752593592467557
+ },
+ "2|DFFormer predicted |filter| image 5": {
+  "stage": 2,
+  "branch": "DFFormer predicted |filter| image 5",
+  "band_low": 1.7613560102181784,
+  "band_mid": 1.4728026047018825,
+  "band_high": 0.872287080327196,
+  "DC": 1.7349958977652755
+ },
+ "2|DFFormer predicted |filter| image 9": {
+  "stage": 2,
+  "branch": "DFFormer predicted |filter| image 9",
+  "band_low": 1.763035258826239,
+  "band_mid": 1.4641762314538693,
+  "band_high": 0.8737870966167838,
+  "DC": 1.6881864077643118
+ },
+ "3|SPANetV2 k=3 psi": {
+  "stage": 3,
+  "branch": "SPANetV2 k=3 psi",
+  "DC": 0.4400317131437321,
+  "band_low": 0.5257033852315457,
+  "band_mid": 0.5022820259513916,
+  "band_high": 0.5049887251756926
+ },
+ "3|SPANetV2 k=5 psi": {
+  "stage": 3,
+  "branch": "SPANetV2 k=5 psi",
+  "DC": 0.49075329882830465,
+  "band_low": 0.5017115191325943,
+  "band_mid": 0.4851666985621554,
+  "band_high": 0.5083215318662353
+ },
+ "3|SPANetV2 k=7 psi": {
+  "stage": 3,
+  "branch": "SPANetV2 k=7 psi",
+  "DC": 0.4525786658806819,
+  "band_low": 0.4811533784158679,
+  "band_mid": 0.46922189427891414,
+  "band_high": 0.4979152111490973
+ },
+ "3|SPANetV2 k=9 psi": {
+  "stage": 3,
+  "branch": "SPANetV2 k=9 psi",
+  "DC": 0.48724212556711244,
+  "band_low": 0.45627404312025754,
+  "band_mid": 0.4619741358125099,
+  "band_high": 0.48352500608710597
+ },
+ "3|ConvFormer |K| dwconv": {
+  "stage": 3,
+  "branch": "ConvFormer |K| dwconv",
+  "band_low": 2.946052927561181,
+  "band_mid": 1.6343394978514276,
+  "band_high": 0.7746011180932332,
+  "DC": 3.5084928628465066
+ },
+ "3|SPANetV2 k=3 effective": {
+  "stage": 3,
+  "branch": "SPANetV2 k=3 effective",
+  "band_low": 1.1356922871452693,
+  "band_mid": 1.125522145071942,
+  "band_high": 0.9723209769588571,
+  "DC": 0.800806304365187
+ },
+ "3|SPANetV2 k=5 effective": {
+  "stage": 3,
+  "branch": "SPANetV2 k=5 effective",
+  "band_low": 1.2565256267330078,
+  "band_mid": 1.2967443066825417,
+  "band_high": 0.9357754147083387,
+  "DC": 0.8506634603988943
+ },
+ "3|SPANetV2 k=7 effective": {
+  "stage": 3,
+  "branch": "SPANetV2 k=7 effective",
+  "band_low": 1.7669552050657267,
+  "band_mid": 1.4825494770718637,
+  "band_high": 0.8749079213129815,
+  "DC": 1.2426135126979398
+ },
+ "3|SPANetV2 k=9 effective": {
+  "stage": 3,
+  "branch": "SPANetV2 k=9 effective",
+  "band_low": 2.312762688468164,
+  "band_mid": 1.6678063101587728,
+  "band_high": 0.8092577717949089,
+  "DC": 2.1273360924185405
+ },
+ "3|DFFormer predicted |filter| image 1": {
+  "stage": 3,
+  "branch": "DFFormer predicted |filter| image 1",
+  "band_low": 1.7107342642197108,
+  "band_mid": 1.252250676290617,
+  "band_high": 0.9173487349270616,
+  "DC": 1.3926580967022257
+ },
+ "3|DFFormer predicted |filter| image 5": {
+  "stage": 3,
+  "branch": "DFFormer predicted |filter| image 5",
+  "band_low": 1.692094286710173,
+  "band_mid": 1.3040271443173936,
+  "band_high": 0.9095204620833094,
+  "DC": 1.3367321941853891
+ },
+ "3|DFFormer predicted |filter| image 9": {
+  "stage": 3,
+  "branch": "DFFormer predicted |filter| image 9",
+  "band_low": 1.7508270060857805,
+  "band_mid": 1.3344689262132792,
+  "band_high": 0.9009733727033158,
+  "DC": 1.3734877575147082
+ }
+}
